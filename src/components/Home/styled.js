@@ -1,24 +1,18 @@
 import Styled from "styled-components";
 
 import colors from "../../constants/colors";
-import screenSizes from "../../constants/screenSizes";
 
 export const FaceImg = Styled.img`
     text-align:center;
-    width: 200px;
+    width: 100%;
     border-radius:50%;
-    float: left;
-    margin-bottom: 10px;
-    margin-right: 30px;
-
-    @media screen and (max-width: ${screenSizes.phone}) {
-        width: 150px;
-    }
+    max-width: 200px;
 `;
 
 export const Text = Styled.div`
     color: ${colors.flippingElementColor};
     line-height: 25px;
+    margin-bottom: 30px;
 `;
 
 export const ContainerHome = Styled.div`
@@ -29,12 +23,15 @@ export const Card = Styled.div`
    padding:2px;
    border-radius: 10px;
    border: 1px ${colors.cardBorderColor} solid;
-   width: 250px;
+   width: 100%;
    background-color: ${colors.cardBgColor};
+   max-width: 200px;
+   margin:auto;
 `;
 
 export const CardContent = Styled.div`
     display: inline-flex;
+    align-items: center;
 `;
 
 export const CardHeader = Styled.div`
@@ -55,11 +52,14 @@ export const ImgDownload = Styled.img`
 `;
 
 export const DownloadLabel = Styled.div`
-    font-size: 20px;
+    font-size: 12px;
 `;
 
 export const LinkCard = Styled.a`
-    float: right;
-    margin-top: 200px;
     color: ${colors.cardLinkColor};
+`;
+
+export const ContainerImg = Styled.div`
+    Width: 100%;
+    text-align: center;
 `;
