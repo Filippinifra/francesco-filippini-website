@@ -27,8 +27,3 @@ export const TextRow = Styled.div`
     text-align:center;
     line-height: 30px;
 `;
-
-export const Link = Styled.a`
-    text-decoration: underline;
-    color: ${colors.modalLinkColor};
-`;
