@@ -35,7 +35,7 @@ export const textSecondParagraph = [
   {
     text: `During the university period I started an extra experience. Me and my
     brother founded Saint Mary Boulevard, an Italian Startup created from
-    scratch specialized in clothig selling.`
+    scratch specialized in selling clothes.`
   },
   {
     text: `My first working experience was in 2019: I took Software Engineer
