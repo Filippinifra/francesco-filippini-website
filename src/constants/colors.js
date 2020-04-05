@@ -4,6 +4,7 @@ const LIGHT_GREY = "#7c818c";
 const MIDDLE_GREY = "#4b5162";
 const DARK_GREY = "#383c4a";
 const BLACK = "black";
+const CREAM = "#bdbec0";
 
 const colors = {
   bodyBgColor: MIDDLE_GREY,
@@ -12,7 +13,7 @@ const colors = {
   headerShade: BLACK,
   flippingElementBgColor: LIGHT_GREY,
   flippingElementColor: BLACK,
-  cardBgColor: BLUE,
+  cardBgColor: CREAM,
   cardBorderColor: MIDDLE_GREY,
   cardLinkColor: BLACK,
   footerColor: LIGHT_GREY,
