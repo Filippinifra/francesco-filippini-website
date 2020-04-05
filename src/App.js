@@ -34,9 +34,12 @@ const App = () => {
 
   const prepareNewAnimation = value => {
     setTimeout(() => {
-      setFacesSwapper([value, value]);
+      setFacesSwapper(["none", value]);
+    }, lifeTimeAnimation / 2);
+    setTimeout(() => {
       setAnimationActive(false);
       setNextDirectionFlip();
+      setFacesSwapper([value, value]);
     }, lifeTimeAnimation);
   };
 

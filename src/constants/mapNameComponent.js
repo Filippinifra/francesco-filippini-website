@@ -9,7 +9,8 @@ const mapNameComponent = {
   home: <Home />,
   education: <Education />,
   work: <Work />,
-  contacts: <Contacts />
+  contacts: <Contacts />,
+  none: <div style={{ height: "100%", width: "100%" }} />
 };
 
 export default mapNameComponent;
