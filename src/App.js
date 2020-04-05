@@ -17,7 +17,8 @@ import CurtainOpening from "./components/CurtainOpening";
 import { checkNewSession, setExistingSession } from "./utils/session";
 
 const App = () => {
-  const [facesSwapper, setFacesSwapper] = useState(["home", "home"]);
+  const [frontFaceSwapper, setFrontFace] = useState("home");
+  const [backFaceSwapper, setBackFace] = useState("");
   const [indexEffectArray, setIndexEffectArray] = useState(0);
   const [animationIsActive, setAnimationActive] = useState(false);
 
@@ -34,39 +35,31 @@ const App = () => {
 
   const prepareNewAnimation = value => {
     setTimeout(() => {
-      setFacesSwapper(["none", value]);
+      setFrontFace(value);
     }, lifeTimeAnimation / 2);
     setTimeout(() => {
       setAnimationActive(false);
       setNextDirectionFlip();
-      setFacesSwapper([value, value]);
     }, lifeTimeAnimation);
   };
 
   const startAnimation = value => {
-    setFacesSwapper([facesSwapper[0], value]);
+    setBackFace(value);
     setAnimationActive(true);
     prepareNewAnimation(value);
   };
 
   const handleMenuClick = value => {
-    const currentElementName = getCurrentElementName();
+    const currentElementName = frontFaceSwapper;
     if (!animationIsActive && value !== currentElementName) {
       startAnimation(value);
     }
   };
 
-  const getFaceComponent = numberFace => {
-    const namePage = facesSwapper[numberFace];
-    const componentLinked = getContentElement(namePage);
-    return componentLinked;
-  };
-
   const getContentElement = pageLabel => mapNameComponent[pageLabel];
-  const getCurrentElement = () => getFaceComponent(0);
-  const getNextElement = () => getFaceComponent(1);
+  const getCurrentElement = () => getContentElement(frontFaceSwapper);
+  const getNextElement = () => getContentElement(backFaceSwapper);
   const getDirectionFlip = () => effectTransformation[indexEffectArray];
-  const getCurrentElementName = () => facesSwapper[1];
 
   useEffect(() => {
     setTimeout(() => {
@@ -80,7 +73,7 @@ const App = () => {
       <CurtainOpening isloading={pageIsLoading}>
         <PageLayout
           handleChange={handleMenuClick}
-          currentSection={getCurrentElementName()}
+          currentSection={frontFaceSwapper}
           currentElement={getCurrentElement()}
           nextElement={getNextElement()}
           animationIsActive={animationIsActive}
