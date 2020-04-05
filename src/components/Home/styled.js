@@ -7,6 +7,10 @@ export const FaceImg = Styled.img`
     width: 100%;
     border-radius:50%;
     max-width: 200px;
+
+    -webkit-box-shadow: 20px 20px 142px -42px ${colors.flippinImgShadowColor};
+    -moz-box-shadow: 20px 20px 142px -42px ${colors.flippinImgShadowColor};
+    box-shadow: 20px 20px 142px -42px ${colors.flippinImgShadowColor};
 `;
 
 export const Text = Styled.div`
@@ -16,7 +20,7 @@ export const Text = Styled.div`
 `;
 
 export const ContainerHome = Styled.div`
-   padding:30px;
+   padding:50px 30px;
 `;
 
 export const Card = Styled.div`
@@ -27,6 +31,9 @@ export const Card = Styled.div`
    background-color: ${colors.cardBgColor};
    max-width: 200px;
    margin:auto;
+   -webkit-box-shadow: 20px 20px 142px -42px ${colors.flippinImgShadowColor};
+    -moz-box-shadow: 20px 20px 142px -42px ${colors.flippinImgShadowColor};
+    box-shadow: 20px 20px 142px -42px ${colors.flippinImgShadowColor};
 `;
 
 export const CardContent = Styled.div`
