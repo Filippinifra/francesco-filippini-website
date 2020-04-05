@@ -1,5 +1,5 @@
 import Styled from "styled-components";
-
+import Image from "react-graceful-image";
 import { Grid } from "@material-ui/core";
 import colors from "../../constants/colors";
 import screenSizes from "../../constants/screenSizes";
@@ -29,7 +29,7 @@ export const GridItem = Styled(Grid)`
     width:50%;
 `;
 
-export const Icon = Styled.img`
+export const Icon = Styled(Image)`
     height: fit-content;
 
     @media screen and (max-width: ${screenSizes.tablet}) {

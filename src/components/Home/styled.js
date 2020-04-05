@@ -1,8 +1,8 @@
 import Styled from "styled-components";
-
+import Image from "react-graceful-image";
 import colors from "../../constants/colors";
 
-export const FaceImg = Styled.img`
+export const FaceImg = Styled(Image)`
     text-align:center;
     width: 100%;
     border-radius:50%;
@@ -45,14 +45,14 @@ export const CardHeader = Styled.div`
     margin-bottom: 2px;
 `;
 
-export const ImgCVPreview = Styled.img`
+export const ImgCVPreview = Styled(Image)`
     height:100%;
     width:100%;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
 `;
 
-export const ImgDownload = Styled.img`
+export const ImgDownload = Styled(Image)`
     height: 25px;
     width: 25px;
     margin-right: 5px;

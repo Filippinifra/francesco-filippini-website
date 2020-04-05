@@ -1,4 +1,5 @@
 import Styled from "styled-components";
+import Image from "react-graceful-image";
 
 import colors from "../../constants/colors";
 
@@ -17,7 +18,7 @@ export const ContainerImg = Styled.div`
     text-align: center;
 `;
 
-export const LogoImg = Styled.img`
+export const LogoImg = Styled(Image)`
     text-align:center;
     width: 100%;
     border-radius:50%;
