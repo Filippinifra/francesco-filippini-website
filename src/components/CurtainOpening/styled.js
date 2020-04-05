@@ -20,7 +20,7 @@ export const CurtainLeftPanel = Styled.div`
   float: left;
   position: relative; 
   z-index: 2; 
-  transition: all 1s ease-out; 
+  transition: 1s ease-in-out; 
 
   transform: ${props => (props.loaded ? `translateX(0)` : `translateX(-100%)`)};
 
@@ -36,7 +36,7 @@ export const CurtainRightPanel = Styled.div`
   float: left; 
   position: relative;
   z-index: 2; 
-  transition: all 1s ease-out; 
+  transition: all 1s ease-in-out; 
 
   transform: ${props => (props.loaded ? `translateX(0)` : `translateX(100%)`)};
 
