@@ -1,9 +1,16 @@
 import React from "react";
 
+import { Grid } from "@material-ui/core";
+
 import face from "../../img/face.png";
 
-import curriculum from "../../img/FrancescoFilippiniCV.png";
-import download from "../../img/download.svg";
+import downloadImg from "../../img/download.svg";
+
+import {
+  textFirstParagraph,
+  textSecondParagraph,
+  cardDownloadSettings
+} from "../../constants/commonsHome";
 
 import {
   FaceImg,
@@ -15,45 +22,60 @@ import {
   ImgCVPreview,
   ImgDownload,
   DownloadLabel,
-  LinkCard
+  LinkCard,
+  ContainerImg
 } from "./styled";
 
 const Home = () => (
   <ContainerHome>
-    <FaceImg src={face} />
-    <LinkCard href={curriculum} download>
-      <Card>
-        <CardHeader>
-          <ImgCVPreview src={curriculum} />
-        </CardHeader>
-        <CardContent>
-          <ImgDownload src={download} height="20px" width="20px" />
-          <DownloadLabel>FilippiniFCV.pdf</DownloadLabel>
-        </CardContent>
-      </Card>
-    </LinkCard>
-    <Text>
-      ciao michiamo dcfvdgfsb gbfv feg vdsfdgvfgdvbfe gfregfrgb fegfegfegef
-      gefgfeg freg feg ciao michiamo dcfvdgfsb gbfv feg vdsfdgvfgdvbfe gfregfrgb
-      fegfegfegef gefgfeg freg feg ciao michiamo dcfvdgfsb gbfv feg
-      vdsfdgvfgdvbfe gfregfrgb fegfegfegef gefgfeg freg feg ciao michiamo
-      dcfvdgfsb gbfv feg vdsfdgvfgdvbfe gfregfrgb fegfegfegef gefgfeg freg feg
-      ciao michiamo dcfvdgfsb gbfv feg vdsfdgvfgdvbfe gfregfrgb fegfegfegef
-      gefgfeg freg feg ciao michiamo dcfvdgfsb gbfv feg vdsfdgvfgdvbfe gfregfrgb
-      fegfegfegef gefgfeg freg feg ciao michiamo dcfvdgfsb gbfv feg
-      vdsfdgvfgdvbfe gfregfrgb fegfegfegef gefgfeg freg feg ciao michiamo
-      dcfvdgfsb gbfv feg vdsfdgvfgdvbfe gfregfrgb fegfegfegef gefgfeg freg
-      fegciao michiamo dcfvdgfsb gbfv feg vdsfdgvfgdvbfe gfregfrgb fegfegfegef
-      gefgfeg freg feg ciao michiamo dcfvdgfsb gbfv feg vdsfdgvfgdvbfe gfregfrgb
-      fegfegfegef gefgfeg freg feg ciao michiamo dcfvdgfsb gbfv feg
-      vdsfdgvfgdvbfe gfregfrgb fegfegfegef gefgfeg freg feg ciao michiamo
-      dcfvdgfsb gbfv feg vdsfdgvfgdvbfe gfregfrgb fegfegfegef gefgfeg freg feg
-      ciao michiamo dcfvdgfsb gbfv feg vdsfdgvfgdvbfe gfregfrgb fegfegfegef
-      gefgfeg freg feg ciao michiamo dcfvdgfsb gbfv feg vdsfdgvfgdvbfe gfregfrgb
-      fegfegfegef gefgfeg freg feg ciao michiamo dcfvdgfsb gbfv feg
-      vdsfdgvfgdvbfe gfregfrgb fegfegfegef gefgfeg freg feg ciao michiamo
-      dcfvdgfsb gbfv feg vdsfdgvfgdvbfe gfregfrgb fegfegfegef gefgfeg freg feg
-    </Text>
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="flex-start"
+      spacing={5}
+    >
+      <Grid item xs={12} md={3}>
+        <ContainerImg>
+          <FaceImg src={face} />
+        </ContainerImg>
+      </Grid>
+      <Grid item xs={12} md={9}>
+        {textFirstParagraph.map(value => (
+          <Text>{value.text}</Text>
+        ))}
+      </Grid>
+    </Grid>
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="flex-start"
+      spacing={5}
+    >
+      <Grid item xs={12} md={3}>
+        <ContainerImg>
+          <LinkCard href={cardDownloadSettings.curriculumPdf} download>
+            <Card>
+              <CardHeader>
+                <ImgCVPreview src={cardDownloadSettings.curriculumImg} />
+              </CardHeader>
+              <CardContent>
+                <ImgDownload src={downloadImg} height="20px" width="20px" />
+                <DownloadLabel>
+                  {cardDownloadSettings.downloadLabel}
+                </DownloadLabel>
+              </CardContent>
+            </Card>
+          </LinkCard>
+        </ContainerImg>
+      </Grid>
+      <Grid item xs={12} md={9}>
+        {textSecondParagraph.map(value => (
+          <Text>{value.text}</Text>
+        ))}
+      </Grid>
+    </Grid>
   </ContainerHome>
 );
 
