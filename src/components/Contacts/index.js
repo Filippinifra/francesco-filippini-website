@@ -16,6 +16,8 @@ import mailIcon from "../../img/email.svg";
 import addressIcon from "../../img/placeholder.svg";
 import linkedinIcon from "../../img/linkedin.svg";
 
+import { commonsContacts } from "../../constants/commonsContacts";
+
 const Contacts = () => (
   <ContainerContacts>
     <RowContact>
@@ -26,22 +28,22 @@ const Contacts = () => (
         alignItems="center"
       >
         <GridItem item xs={12} sm={6}>
-          <Link href="tel:+393466876007">
+          <Link href={`tel:${commonsContacts.phoneNumber}`}>
             <ContentCentered>
               <Icon src={phoneIcon} />
             </ContentCentered>
-            <TextInformation>+39_346_6876007</TextInformation>
+            <TextInformation>{commonsContacts.phoneNumber}</TextInformation>
           </Link>
         </GridItem>
         <GridItem item xs={12} sm={6}>
           <Link
-            href="mailto:filippinifra123@gmail.com?subject=Richiesta"
+            href={`mailto:${commonsContacts.email}?subject=Richiesta`}
             target="_blank"
           >
             <ContentCentered>
               <Icon src={mailIcon} />
             </ContentCentered>
-            <TextInformation>filippinifra123@gmail.com</TextInformation>
+            <TextInformation>{commonsContacts.email}</TextInformation>
           </Link>
         </GridItem>
       </GridRow>
@@ -54,22 +56,19 @@ const Contacts = () => (
         alignItems="center"
       >
         <GridItem item xs={12} sm={6}>
-          <Link href="https://goo.gl/maps/AcDb9StsUgyt7n2b9" target="_blank">
+          <Link href={commonsContacts.mapsLinkToAddress} target="_blank">
             <ContentCentered>
               <Icon src={addressIcon} />
             </ContentCentered>
-            <TextInformation>Via Riccardo Pitteri 91, Milano</TextInformation>
+            <TextInformation>{commonsContacts.address}</TextInformation>
           </Link>
         </GridItem>
         <GridItem item xs={12} sm={6}>
-          <Link
-            href="https://www.linkedin.com/in/francescofilippini96/"
-            target="_blank"
-          >
+          <Link href={commonsContacts.linkedinLink} target="_blank">
             <ContentCentered>
               <Icon src={linkedinIcon} />
             </ContentCentered>
-            <TextInformation>/francescofilippini96</TextInformation>
+            <TextInformation>{commonsContacts.linkedinId}</TextInformation>
           </Link>
         </GridItem>
       </GridRow>
