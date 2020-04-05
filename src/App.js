@@ -19,6 +19,7 @@ import { checkNewSession, setExistingSession } from "./utils/session";
 const App = () => {
   const [frontFaceSwapper, setFrontFace] = useState("home");
   const [backFaceSwapper, setBackFace] = useState("");
+
   const [indexEffectArray, setIndexEffectArray] = useState(0);
   const [animationIsActive, setAnimationActive] = useState(false);
 
@@ -39,17 +40,23 @@ const App = () => {
     }, lifeTimeAnimation / 2);
   };
 
-  const setActionAtEndAnimation = value => {
+  const prepareSwitchFaces = value => {
     setTimeout(() => {
       setFrontFace(value);
+    }, lifeTimeAnimation / 1.5);
+  };
+
+  const setActionAtEndAnimation = () => {
+    setTimeout(() => {
       setAnimationActive(false);
       setNextDirectionFlip();
     }, lifeTimeAnimation);
   };
 
   const prepareNewAnimation = value => {
-    setActionDuringMidAnimationTime(value);
-    setActionAtEndAnimation(value);
+    setActionDuringMidAnimationTime();
+    setActionAtEndAnimation();
+    prepareSwitchFaces(value);
   };
 
   const startAnimation = value => {
