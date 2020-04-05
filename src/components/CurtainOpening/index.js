@@ -10,15 +10,17 @@ import {
   RightTitle
 } from "./styled.js";
 
+import { leftPanelText, rightPanelText } from "../../constants/commonsCurtain";
+
 const CurtainOpening = ({ isloading, children }) => (
   <Curtain>
     <CurtainWrapper>
       <CurtainLeftPanel loaded={isloading}>
-        <LeftTitle>WELCOME TO FRANCESCO</LeftTitle>
+        <LeftTitle>{leftPanelText}</LeftTitle>
       </CurtainLeftPanel>
       <CurtainContent>{children}</CurtainContent>
       <CurtainRightPanel loaded={isloading}>
-        <RightTitle>FILIPPINI WEBSITE</RightTitle>
+        <RightTitle>{rightPanelText}</RightTitle>
       </CurtainRightPanel>
     </CurtainWrapper>
   </Curtain>
