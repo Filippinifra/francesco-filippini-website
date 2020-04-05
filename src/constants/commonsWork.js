@@ -1,5 +1,5 @@
 import finleapLogo from "../img/finleap.png";
-import smbLogo from "../img/smb.svg";
+import smbLogo from "../img/smb.png";
 
 const workList = [
   {
