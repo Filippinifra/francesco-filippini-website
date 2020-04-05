@@ -10,7 +10,6 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${colors.bodyBgColor};
         height: 100vh;
         width: 100%;
-        overflow:hidden;
     }
   
     code {
