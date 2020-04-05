@@ -31,7 +31,7 @@ export const FlipCardFront = Styled.div`
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     background-color: ${colors.flippingElementBgColor};
-    color: black;
+    color: ${colors.flippingElementColor};
     border-radius: 20px;
     overflow: scroll !important;
     z-index:1;
@@ -45,7 +45,7 @@ export const FlipCardBack = Styled.div`
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     background-color: ${colors.flippingElementBgColor};
-    color: black;
+    color: ${colors.flippingElementColor};
     ${props => `transform: ${props.rotationString};`}
     overflow: scroll !important;
 `;
