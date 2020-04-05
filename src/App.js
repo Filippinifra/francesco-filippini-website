@@ -33,14 +33,23 @@ const App = () => {
       : setIndexEffectArray(nextIndexEffect);
   };
 
-  const prepareNewAnimation = value => {
+  const setActionDuringMidAnimationTime = () => {
+    setTimeout(() => {
+      setFrontFace("none");
+    }, lifeTimeAnimation / 2);
+  };
+
+  const setActionAtEndAnimation = value => {
     setTimeout(() => {
       setFrontFace(value);
-    }, lifeTimeAnimation / 2);
-    setTimeout(() => {
       setAnimationActive(false);
       setNextDirectionFlip();
     }, lifeTimeAnimation);
+  };
+
+  const prepareNewAnimation = value => {
+    setActionDuringMidAnimationTime(value);
+    setActionAtEndAnimation(value);
   };
 
   const startAnimation = value => {
