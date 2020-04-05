@@ -25,7 +25,7 @@ export const FlipCard = Styled.div`
 `;
 
 export const FlipCardFront = Styled.div`
-    position: ${props => (props.animationIsActive ? `absolute` : `relative`)};
+    position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
@@ -39,7 +39,7 @@ export const FlipCardFront = Styled.div`
 
 export const FlipCardBack = Styled.div`
     border-radius: 20px;
-    position: ${props => (props.animationIsActive ? `absolute` : `relative`)};
+    position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
