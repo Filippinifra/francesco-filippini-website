@@ -13,6 +13,7 @@ const colors = {
   headerShade: BLACK,
   flippingElementBgColor: LIGHT_GREY,
   flippingElementColor: BLACK,
+  flippinImgShadowColor: BLACK,
   cardBgColor: CREAM,
   cardBorderColor: MIDDLE_GREY,
   cardLinkColor: BLACK,
