@@ -3,6 +3,11 @@ import Drawer from "@material-ui/core/Drawer";
 
 import { footerLabel, contentModal } from "../../constants/commonsFooter";
 
+import {
+  delayModalFooterAppear,
+  sideAppearModalFooter
+} from "../../constants/animationSettings";
+
 import { ButtonModal, ContainerModal, TextRow } from "./styled";
 
 const Footer = () => {
@@ -11,7 +16,7 @@ const Footer = () => {
   const openModalWithDelay = () => {
     setTimeout(() => {
       setModalOpen(true);
-    }, 300);
+    }, delayModalFooterAppear);
   };
 
   const closeModal = () => {
@@ -21,7 +26,11 @@ const Footer = () => {
   return (
     <>
       <ButtonModal onClick={openModalWithDelay}>{footerLabel}</ButtonModal>
-      <Drawer anchor={"bottom"} open={modalOpen} onClose={closeModal}>
+      <Drawer
+        anchor={sideAppearModalFooter}
+        open={modalOpen}
+        onClose={closeModal}
+      >
         <ContainerModal>
           <div>
             {contentModal.map(element => (

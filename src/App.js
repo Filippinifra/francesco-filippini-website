@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 import {
-  effectTransformation,
-  lifeTimeAnimation
+  stringTransformSwapper,
+  lifeTimeSwapper
 } from "./constants/animationSettings";
 
 import { ThemeProvider } from "@material-ui/core/styles";
@@ -29,7 +29,7 @@ const App = () => {
 
   const setNextDirectionFlip = () => {
     const nextIndexEffect = indexEffectArray + 1;
-    nextIndexEffect >= effectTransformation.length
+    nextIndexEffect >= stringTransformSwapper.length
       ? setIndexEffectArray(0)
       : setIndexEffectArray(nextIndexEffect);
   };
@@ -37,20 +37,20 @@ const App = () => {
   const setActionDuringMidAnimationTime = () => {
     setTimeout(() => {
       setFrontFace("none");
-    }, lifeTimeAnimation / 2);
+    }, lifeTimeSwapper / 2);
   };
 
   const prepareSwitchFaces = value => {
     setTimeout(() => {
       setFrontFace(value);
-    }, lifeTimeAnimation / 1.5);
+    }, lifeTimeSwapper / 1.5);
   };
 
   const setActionAtEndAnimation = () => {
     setTimeout(() => {
       setAnimationActive(false);
       setNextDirectionFlip();
-    }, lifeTimeAnimation);
+    }, lifeTimeSwapper);
   };
 
   const prepareNewAnimation = value => {
@@ -75,7 +75,7 @@ const App = () => {
   const getContentElement = pageLabel => mapNameComponent[pageLabel];
   const getCurrentElement = () => getContentElement(frontFaceSwapper);
   const getNextElement = () => getContentElement(backFaceSwapper);
-  const getDirectionFlip = () => effectTransformation[indexEffectArray];
+  const getDirectionFlip = () => stringTransformSwapper[indexEffectArray];
 
   useEffect(() => {
     setTimeout(() => {

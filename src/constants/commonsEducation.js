@@ -5,7 +5,7 @@ import stJonesLogo from "../img/stJones.png";
 const educationList = [
   {
     logoImg: politecnicoLogo,
-    title: "Politecnico Di Mialno",
+    title: "Politecnico Di Milano",
     extraInfo: "Bachelor of Computer Engineering",
     periodAndLocation: "Milan, 2015 - 2020",
     textList: [

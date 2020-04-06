@@ -1,6 +1,6 @@
 import Styled from "styled-components";
 
-import { lifeTimeAnimation } from "../../constants/animationSettings";
+import { lifeTimeSwapper } from "../../constants/animationSettings";
 
 import colors from "../../constants/colors";
 
@@ -8,7 +8,7 @@ export const FlipCardInner = Styled.div`
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform ${lifeTimeAnimation / 1000}s;
+    transition: transform ${lifeTimeSwapper / 1000}s;
     transform-style: preserve-3d;
 
     ${props =>
