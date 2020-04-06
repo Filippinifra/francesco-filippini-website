@@ -7,7 +7,7 @@ export const CentralContainer = Styled.div`
     height: calc(100vh - 160px);
     width: calc(100% - 160px);
     margin-left:80px;
-    margin-top:25px;
+    margin-top:95px;
 
     @media screen and (max-width: ${screenSizes.phone}) {
         width: calc(100% - 80px);
