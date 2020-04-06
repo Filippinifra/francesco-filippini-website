@@ -1,4 +1,4 @@
-import curriculumPdf from "../file/FrancescoFilippiniCV.pdf";
+import curriculumPdf from "../files/FrancescoFilippiniCV.pdf";
 import curriculumImg from "../img/FrancescoFilippiniCV.png";
 
 export const cardDownloadSettings = {
