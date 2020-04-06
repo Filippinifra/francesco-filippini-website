@@ -11,10 +11,10 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${colors.bodyBgColor};
         height: 100vh;
         width: 100%;
-        overflow: scroll;
+        overflow: hidden;
 
         @media screen and (min-width: ${screenSizes.phone}) {
-            overflow: auto;
+            overflow: scroll;
         }
     }
   
