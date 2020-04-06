@@ -59,6 +59,6 @@ export const LeftTitle = Styled.div`
 `;
 
 export const RightTitle = Styled.div`
-  margin-left:3px;
+  margin-left:5px;
   color: ${colors.curtainColor};
 `;
