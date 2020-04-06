@@ -44,6 +44,10 @@ export const GridItem = Styled(Grid)`
 export const Icon = Styled.img`
     height: 100%;
     width:100%;
+
+    @media screen and (max-width: ${screenSizes.phone}) {
+        width: 50%;
+    }
 `;
 
 export const TextInformation = Styled.div`
