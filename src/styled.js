@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         overflow: hidden;
 
-        @media screen and (min-width: ${screenSizes.phone}) {
+        @media screen and (max-width: ${screenSizes.phone}) {
             overflow: scroll;
         }
     }
