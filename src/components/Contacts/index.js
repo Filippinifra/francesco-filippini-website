@@ -7,8 +7,9 @@ import {
   Icon,
   TextInformation,
   Link,
-  ContentCentered,
-  GridItem
+  GridItem,
+  ContainerImgAndText,
+  WrapperImg
 } from "./styled";
 
 import phoneIcon from "../../img/phonebook.svg";
@@ -29,10 +30,12 @@ const Contacts = () => (
       >
         <GridItem item xs={12} sm={6}>
           <Link href={`tel:${commonsContacts.phoneNumber}`}>
-            <ContentCentered>
-              <Icon src={phoneIcon} />
-            </ContentCentered>
-            <TextInformation>{commonsContacts.phoneNumber}</TextInformation>
+            <ContainerImgAndText>
+              <WrapperImg>
+                <Icon src={phoneIcon} />
+              </WrapperImg>
+              <TextInformation>{commonsContacts.phoneNumber}</TextInformation>
+            </ContainerImgAndText>
           </Link>
         </GridItem>
         <GridItem item xs={12} sm={6}>
@@ -40,10 +43,12 @@ const Contacts = () => (
             href={`mailto:${commonsContacts.email}?subject=Richiesta`}
             target="_blank"
           >
-            <ContentCentered>
-              <Icon src={mailIcon} />
-            </ContentCentered>
-            <TextInformation>{commonsContacts.email}</TextInformation>
+            <ContainerImgAndText>
+              <WrapperImg>
+                <Icon src={mailIcon} />
+              </WrapperImg>
+              <TextInformation>{commonsContacts.email}</TextInformation>
+            </ContainerImgAndText>
           </Link>
         </GridItem>
       </GridRow>
@@ -57,18 +62,22 @@ const Contacts = () => (
       >
         <GridItem item xs={12} sm={6}>
           <Link href={commonsContacts.mapsLinkToAddress} target="_blank">
-            <ContentCentered>
-              <Icon src={addressIcon} />
-            </ContentCentered>
-            <TextInformation>{commonsContacts.address}</TextInformation>
+            <ContainerImgAndText>
+              <WrapperImg>
+                <Icon src={addressIcon} />
+              </WrapperImg>
+              <TextInformation>{commonsContacts.address}</TextInformation>
+            </ContainerImgAndText>
           </Link>
         </GridItem>
         <GridItem item xs={12} sm={6}>
           <Link href={commonsContacts.linkedinLink} target="_blank">
-            <ContentCentered>
-              <Icon src={linkedinIcon} />
-            </ContentCentered>
-            <TextInformation>{commonsContacts.linkedinId}</TextInformation>
+            <ContainerImgAndText>
+              <WrapperImg>
+                <Icon src={linkedinIcon} />
+              </WrapperImg>
+              <TextInformation>{commonsContacts.linkedinId}</TextInformation>
+            </ContainerImgAndText>
           </Link>
         </GridItem>
       </GridRow>

@@ -5,18 +5,19 @@ import screenSizes from "../../constants/screenSizes";
 
 export const RowContact = Styled.div`
     height:50%;
+    @media screen and (max-width: ${screenSizes.phone}) {
+        height: auto;
+    }
 `;
 
 export const ContainerContacts = Styled.div`
     padding: 50px 100px;
-    height: -webkit-fill-available;
+    height: calc(100% - 100px);
 
     @media screen and (max-width: ${screenSizes.tablet}) {
-        padding: 30px 60px;
-    }
+        padding: 20px 50px;
+        height: calc(100% - 40px);
 
-    @media screen and (max-width: ${screenSizes.tablet}) {
-        padding: 20px 30px;
     }
 `;
 
@@ -26,14 +27,12 @@ export const GridRow = Styled(Grid)`
 
 export const GridItem = Styled(Grid)`
     width:50%;
+    height: 100%;
 `;
 
 export const Icon = Styled.img`
-    height: fit-content;
-
-    @media screen and (max-width: ${screenSizes.tablet}) {
-        height: 100px;
-    }
+    height: 100%;
+    width:100%;
 `;
 
 export const TextInformation = Styled.div`
@@ -41,12 +40,14 @@ export const TextInformation = Styled.div`
     text-align:center;
     max-width: fit-content;
     margin: 0 auto;
+    hyphens:auto;
 
     @media screen and (max-width: ${screenSizes.tablet}) {
         font-size: 15px;
     }
 
     @media screen and (max-width: ${screenSizes.phone}) {
+        font-size: 25px;
         margin: auto;
     }
 `;
@@ -61,4 +62,16 @@ export const Link = Styled.a`
 
 export const ContentCentered = Styled.div`
     text-align: center;
+`;
+
+export const ContainerImgAndText = Styled.div`
+    padding: 20px;
+    height: calc(100% - 40px);
+    width: 100%;
+`;
+
+export const WrapperImg = Styled.div`
+    height: calc(80% - 40px);
+    text-align: center;
+    padding: 20px;
 `;
