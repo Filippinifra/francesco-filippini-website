@@ -17,7 +17,12 @@ export const ContainerContacts = Styled.div`
     @media screen and (max-width: ${screenSizes.tablet}) {
         padding: 20px 50px;
         height: calc(100% - 40px);
+    }
 
+    @media screen and (max-width: ${screenSizes.phone}) {
+        padding: 0;
+        height: 100%;
+        width: 100%;
     }
 `;
 
@@ -28,6 +33,12 @@ export const GridRow = Styled(Grid)`
 export const GridItem = Styled(Grid)`
     width:50%;
     height: 100%;
+
+    @media screen and (max-width: ${screenSizes.phone}) {
+        padding: 10px;
+        height: calc(100%-20px);
+        width: calc(100%-20px);
+    }
 `;
 
 export const Icon = Styled.img`
@@ -38,9 +49,11 @@ export const Icon = Styled.img`
 export const TextInformation = Styled.div`
     font-size: 20px;
     text-align:center;
-    max-width: fit-content;
+    width: 100%;
     margin: 0 auto;
-    hyphens:auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 
     @media screen and (max-width: ${screenSizes.tablet}) {
         font-size: 15px;
@@ -55,6 +68,7 @@ export const TextInformation = Styled.div`
 export const Link = Styled.a`
     text-decoration: none;
     color: ${colors.flippingElementColor};
+
     @media screen and (max-width: ${screenSizes.phone}) {
         display:flex;
     }
@@ -67,11 +81,21 @@ export const ContentCentered = Styled.div`
 export const ContainerImgAndText = Styled.div`
     padding: 20px;
     height: calc(100% - 40px);
-    width: 100%;
+    width: calc(100% - 40px);
+
+    @media screen and (max-width: ${screenSizes.phone}) {
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
 `;
 
 export const WrapperImg = Styled.div`
     height: calc(80% - 40px);
     text-align: center;
     padding: 20px;
+`;
+
+export const TextContainer = Styled.div`
+    width:100%;
 `;

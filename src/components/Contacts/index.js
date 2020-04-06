@@ -9,7 +9,8 @@ import {
   Link,
   GridItem,
   ContainerImgAndText,
-  WrapperImg
+  WrapperImg,
+  TextContainer
 } from "./styled";
 
 import phoneIcon from "../../img/phonebook.svg";
@@ -34,7 +35,9 @@ const Contacts = () => (
               <WrapperImg>
                 <Icon src={phoneIcon} />
               </WrapperImg>
-              <TextInformation>{commonsContacts.phoneNumber}</TextInformation>
+              <TextContainer>
+                <TextInformation>{commonsContacts.phoneNumber}</TextInformation>
+              </TextContainer>
             </ContainerImgAndText>
           </Link>
         </GridItem>
@@ -47,7 +50,9 @@ const Contacts = () => (
               <WrapperImg>
                 <Icon src={mailIcon} />
               </WrapperImg>
-              <TextInformation>{commonsContacts.email}</TextInformation>
+              <TextContainer>
+                <TextInformation>{commonsContacts.email}</TextInformation>
+              </TextContainer>
             </ContainerImgAndText>
           </Link>
         </GridItem>
