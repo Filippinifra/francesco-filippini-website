@@ -9,6 +9,7 @@ export const CentralContainer = Styled.div`
     margin-left:80px;
     margin-top:95px;
     margin-bottom: 65px;
+    position: fixed;
 
     @media screen and (max-width: ${screenSizes.phone}) {
         width: calc(100% - 80px);
