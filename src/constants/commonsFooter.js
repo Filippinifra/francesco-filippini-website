@@ -7,7 +7,7 @@ const Link = Styled.a`
     color: ${colors.modalLinkColor};
 `;
 
-export const footerLabel = "Created from scratch using React / Thanks";
+export const footerLabel = "Created from scratch using React";
 
 export const contentModal = [
   {
@@ -15,7 +15,7 @@ export const contentModal = [
       <div>
         Made with <span style={{ color: "#e25555" }}>&hearts;</span> using
       </div>
-    )
+    ),
   },
   {
     content: (
@@ -28,7 +28,7 @@ export const contentModal = [
           Material UI
         </Link>
       </>
-    )
+    ),
   },
   {
     content: (
@@ -41,7 +41,7 @@ export const contentModal = [
           Styled Components
         </Link>
       </>
-    )
+    ),
   },
   {
     content: (
@@ -51,6 +51,6 @@ export const contentModal = [
       >
         Click for website repo
       </Link>
-    )
-  }
+    ),
+  },
 ];
