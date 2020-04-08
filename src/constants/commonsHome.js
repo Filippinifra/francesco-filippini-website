@@ -24,14 +24,14 @@ export const textFirstParagraph = [
 export const textSecondParagraph = [
   {
     text: `My software education started in Politecnico di Milano where I graduated with a Bachelor in Computer Engineering.
-    I loved my university, but I was especially excited about working on coding projects where I always got my best results.`,
+      I loved my university, but I was especially excited about working on coding projects where I always got my best results.`,
   },
   {
     text: `During my university time, I started a side project: me and my brother founded Saint Mary Boulevard, a business specialized in selling clothes and branding our local community.
-    It then grew up to be a major reality in the clothing space of my city.`,
+      It then grew up to be a major reality in the clothing space of my city.`,
   },
   {
     text: `My first working experience was in 2019: I was a Software Engineer Intern in Finleap, a fintech company. 
-    During this experience I was able to specialise in frontend, learning React and I felt in love with it.`,
+      During this experience I was able to specialise in frontend, learning React and I felt in love with it.`,
   },
 ];
