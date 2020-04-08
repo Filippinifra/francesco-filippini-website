@@ -4,7 +4,7 @@ import colors from "../../constants/colors";
 import screenSizes from "../../constants/screenSizes";
 
 export const CentralContainer = Styled.div`
-    height: calc(100vh - 160px);
+    height: calc(100% - 160px);
     width: calc(100% - 160px);
     margin-left:80px;
     margin-top:95px;
