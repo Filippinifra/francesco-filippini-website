@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import {
   stringTransformSwapper,
-  lifeTimeSwapper
+  lifeTimeSwapper,
 } from "./constants/animationSettings";
 
 import { ThemeProvider } from "@material-ui/core/styles";
@@ -14,8 +14,6 @@ import PageLayout from "./components/PageLayout";
 import theme from "./constants/theme";
 import CurtainOpening from "./components/CurtainOpening";
 
-import { checkNewSession, setExistingSession } from "./utils/session";
-
 const App = () => {
   const [frontFaceSwapper, setFrontFace] = useState("home");
   const [backFaceSwapper, setBackFace] = useState("");
@@ -23,9 +21,7 @@ const App = () => {
   const [indexEffectArray, setIndexEffectArray] = useState(0);
   const [animationIsActive, setAnimationActive] = useState(false);
 
-  const isNewSession = checkNewSession();
-
-  const [pageIsLoading, setPageLoading] = useState(isNewSession);
+  const [pageIsLoading, setPageLoading] = useState(true);
 
   const setNextDirectionFlip = () => {
     const nextIndexEffect = indexEffectArray + 1;
@@ -40,7 +36,7 @@ const App = () => {
     }, lifeTimeSwapper / 2);
   };
 
-  const prepareSwitchFaces = value => {
+  const prepareSwitchFaces = (value) => {
     setTimeout(() => {
       setFrontFace(value);
     }, lifeTimeSwapper / 1.5);
@@ -53,26 +49,26 @@ const App = () => {
     }, lifeTimeSwapper);
   };
 
-  const prepareNewAnimation = value => {
+  const prepareNewAnimation = (value) => {
     setActionDuringMidAnimationTime();
     setActionAtEndAnimation();
     prepareSwitchFaces(value);
   };
 
-  const startAnimation = value => {
+  const startAnimation = (value) => {
     setBackFace(value);
     setAnimationActive(true);
     prepareNewAnimation(value);
   };
 
-  const handleMenuClick = value => {
+  const handleMenuClick = (value) => {
     const currentElementName = frontFaceSwapper;
     if (!animationIsActive && value !== currentElementName) {
       startAnimation(value);
     }
   };
 
-  const getContentElement = pageLabel => mapNameComponent[pageLabel];
+  const getContentElement = (pageLabel) => mapNameComponent[pageLabel];
   const getCurrentElement = () => getContentElement(frontFaceSwapper);
   const getNextElement = () => getContentElement(backFaceSwapper);
   const getDirectionFlip = () => stringTransformSwapper[indexEffectArray];
@@ -80,7 +76,6 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setPageLoading(false);
-      setExistingSession();
     }, 2000);
   });
 
