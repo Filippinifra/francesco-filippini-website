@@ -6,14 +6,12 @@ import screenSizes from "../../constants/screenSizes";
 export const CentralContainer = Styled.div`
     height: calc(100% - 160px);
     width: calc(100% - 160px);
-    margin-left:80px;
-    margin-top:95px;
-    margin-bottom: 65px;
+    margin: 95px 80px 65px 80px;
     position: fixed;
 
     @media screen and (max-width: ${screenSizes.phone}) {
         width: calc(100% - 80px);
-        margin-left:40px;
+        margin: 95px 40px 65px 40px;
     }
 `;
 
