@@ -11,18 +11,18 @@ import {
   LogoImg,
   StrongTitle,
   MediumTitle,
-  ContainerGrid
+  ContainerGrid,
 } from "./styled";
 
 const Education = () => (
   <ContainerHome>
-    {educationList.map(educationExperience => {
+    {educationList.map((educationExperience) => {
       const {
         logoImg,
         title,
         extraInfo,
         periodAndLocation,
-        textList
+        textList,
       } = educationExperience;
       return (
         <ContainerGrid>
@@ -33,16 +33,16 @@ const Education = () => (
             alignItems="flex-start"
             spacing={5}
           >
-            <Grid item xs={12} md={3}>
+            <Grid item xs={12} md={2}>
               <ContainerImg>
                 <LogoImg src={logoImg} />
               </ContainerImg>
             </Grid>
-            <Grid item xs={12} md={9}>
+            <Grid item xs={12} md={10}>
               <StrongTitle>{title}</StrongTitle>
               <MediumTitle>{extraInfo}</MediumTitle>
               <MediumTitle>{periodAndLocation}</MediumTitle>
-              {textList.map(paragraph => (
+              {textList.map((paragraph) => (
                 <Text>{paragraph.text}</Text>
               ))}
             </Grid>

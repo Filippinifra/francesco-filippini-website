@@ -11,7 +11,7 @@ export const FlipCardInner = Styled.div`
     transition: transform ${lifeTimeSwapper / 1000}s;
     transform-style: preserve-3d;
 
-    ${props =>
+    ${(props) =>
       props.animationIsActive === true
         ? `transform: ${props.rotationString};`
         : `transition: transform 0s; transform: none;`}
@@ -32,13 +32,13 @@ export const FlipCardFront = Styled.div`
     backface-visibility: hidden;
     background-color: ${colors.flippingElementBgColor};
     color: ${colors.flippingElementColor};
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: scroll !important;
     z-index:1;
 `;
 
 export const FlipCardBack = Styled.div`
-    border-radius: 20px;
+    border-radius: 10px;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -46,6 +46,6 @@ export const FlipCardBack = Styled.div`
     backface-visibility: hidden;
     background-color: ${colors.flippingElementBgColor};
     color: ${colors.flippingElementColor};
-    ${props => `transform: ${props.rotationString};`}
+    ${(props) => `transform: ${props.rotationString};`}
     overflow: scroll !important;
 `;

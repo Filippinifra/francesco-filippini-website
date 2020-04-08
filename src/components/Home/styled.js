@@ -24,7 +24,7 @@ export const ContainerHome = Styled.div`
 
 export const Card = Styled.div`
    padding:2px;
-   border-radius: 10px;
+   border-radius: 5px;
    border: 1px ${colors.cardBorderColor} solid;
    width: 100%;
    background-color: ${colors.cardBgColor};
@@ -47,8 +47,8 @@ export const CardHeader = Styled.div`
 export const ImgCVPreview = Styled.img`
     height:100%;
     width:100%;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
 `;
 
 export const ImgDownload = Styled.img`
