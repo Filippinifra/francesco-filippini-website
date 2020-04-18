@@ -9,27 +9,34 @@ const SEA_SERPENT = "#40BCD8";
 const DEEP_SAFFRON = "#F39237";
 const PERSIAN_RED = "#D63230";
 
+const primaryColor = BRIGHT_NAVY_BLUE;
+const secondaryColor = MAXIMUM_BLUE;
+const tertiaryColor = SEA_SERPENT;
+
+const quaternaryColor = DEEP_SAFFRON;
+const quinaryColor = PERSIAN_RED;
+
 const colors = {
-  bodyBgColor: BRIGHT_NAVY_BLUE,
-  headerBgColor: BRIGHT_NAVY_BLUE,
+  bodyBgColor: primaryColor,
+  headerBgColor: primaryColor,
   headerColor: WHITE,
   headerShade: BLACK,
-  flippingElementBgColor: SEA_SERPENT,
+  flippingElementBgColor: tertiaryColor,
   flippingElementColor: BLACK,
   flippinImgShadowColor: BLACK,
-  cardBgColor: MAXIMUM_BLUE,
+  cardBgColor: secondaryColor,
   cardBorderColor: BLACK,
   cardLinkColor: BLACK,
   footerColor: BLACK,
-  footerBgColor: DEEP_SAFFRON,
+  footerBgColor: quaternaryColor,
   footerShade: TRANSPARENT,
-  modalLinkColor: PERSIAN_RED,
+  modalLinkColor: quinaryColor,
   modalColor: BLACK,
-  modalBgColor: DEEP_SAFFRON,
-  selectionBgColor: PERSIAN_RED,
-  selectionColor: DEEP_SAFFRON,
-  curtainBgColor: DEEP_SAFFRON,
-  curtainColor: PERSIAN_RED,
+  modalBgColor: quaternaryColor,
+  selectionBgColor: quinaryColor,
+  selectionColor: quaternaryColor,
+  curtainBgColor: quaternaryColor,
+  curtainColor: quinaryColor,
 };
 
 export default colors;
