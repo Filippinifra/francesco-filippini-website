@@ -17,7 +17,7 @@ export const CurtainLeftPanel = Styled.div`
   width: 50%; 
   height: 100vh;
   float: left;
-  position: relative; 
+  position: fixed; 
   z-index: 2; 
   transition: 1s ease-in-out; 
 
@@ -31,10 +31,11 @@ export const CurtainLeftPanel = Styled.div`
 
 export const CurtainRightPanel = Styled.div`
   background-color: ${colors.curtainBgColor};
+  margin-left: 50%;
   width: 50%; 
   height: 100vh; 
   float: left; 
-  position: relative;
+  position: fixed;
   z-index: 2; 
   transition: all 1s ease-in-out; 
 
