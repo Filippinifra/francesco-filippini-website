@@ -22,10 +22,6 @@ const GlobalStyle = createGlobalStyle`
             color: ${colors.selectionColor};
         }
     }
-
-    ::-webkit-scrollbar {
-        display:none;
-    }
 `;
 
 export default GlobalStyle;
