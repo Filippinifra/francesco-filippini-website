@@ -1,16 +1,19 @@
 import React from "react";
 
-import Home from "../components/Home";
+import About from "../components/About";
 import Contacts from "../components/Contacts";
 import Work from "../components/Work";
 import Education from "../components/Education";
 
-const mapNameComponent = {
-  home: <Home />,
-  education: <Education />,
-  work: <Work />,
-  contacts: <Contacts />,
-  none: <div style={{ height: "100%", width: "100%" }} />
-};
+export const aboutLabel = "about";
+export const educationLabel = "education";
+export const workLabel = "work";
+export const contactsLabel = "contacts";
 
-export default mapNameComponent;
+export const mapNameComponent = {
+  aboutLabel: <About />,
+  educationLabel: <Education />,
+  workLabel: <Work />,
+  contactsLabel: <Contacts />,
+  none: <div style={{ height: "100%", width: "100%" }} />,
+};

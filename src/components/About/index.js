@@ -2,20 +2,20 @@ import React from "react";
 
 import { Grid } from "@material-ui/core";
 
-import face from "../../img/face.png";
+import face from "../../img/faceImage.png";
 
-import downloadImg from "../../img/download.svg";
+import downloadImg from "../../img/downloadLogo.svg";
 
 import {
   textFirstParagraph,
   textSecondParagraph,
-  cardDownloadSettings
-} from "../../constants/commonsHome";
+  cardDownloadSettings,
+} from "../../constants/commonsAbout";
 
 import {
   FaceImg,
   Text,
-  ContainerHome,
+  ContainerAbout,
   Card,
   CardContent,
   CardHeader,
@@ -23,11 +23,11 @@ import {
   ImgDownload,
   DownloadLabel,
   LinkCard,
-  ContainerImg
+  ContainerImg,
 } from "./styled";
 
-const Home = () => (
-  <ContainerHome>
+const About = () => (
+  <ContainerAbout>
     <Grid
       container
       direction="row"
@@ -41,7 +41,7 @@ const Home = () => (
         </ContainerImg>
       </Grid>
       <Grid item xs={12} md={9}>
-        {textFirstParagraph.map(value => (
+        {textFirstParagraph.map((value) => (
           <Text>{value.text}</Text>
         ))}
       </Grid>
@@ -71,12 +71,12 @@ const Home = () => (
         </ContainerImg>
       </Grid>
       <Grid item xs={12} md={9}>
-        {textSecondParagraph.map(value => (
+        {textSecondParagraph.map((value) => (
           <Text>{value.text}</Text>
         ))}
       </Grid>
     </Grid>
-  </ContainerHome>
+  </ContainerAbout>
 );
 
-export default Home;
+export default About;

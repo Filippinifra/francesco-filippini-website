@@ -1,6 +1,6 @@
-import politecnicoLogo from "../img/politecnicoMilano.png";
-import fracastoroLogo from "../img/liceoFracastoro.png";
-import stJonesLogo from "../img/stJones.png";
+import politecnicoLogo from "../img/politecnicoMilanoLogo.png";
+import fracastoroLogo from "../img/liceoFracastoroLogo.png";
+import stJonesLogo from "../img/stJonesLogo.png";
 
 const educationList = [
   {
@@ -11,10 +11,10 @@ const educationList = [
     textList: [
       {
         text:
-          "Courses attended: Fundamentals of Computer Science - Fundamentals of Internet and Networks - Computer Architecture and Operating Systems - Algorithms and Principles of Computer Science - Fundamentals of Automatic - Probability and Statistics for Information Technology - Databases - Logical Networking - Hypermedia Applications - Software Engineering - Information System"
-      }
+          "Courses attended: Fundamentals of Computer Science - Fundamentals of Internet and Networks - Computer Architecture and Operating Systems - Algorithms and Principles of Computer Science - Fundamentals of Automatic - Probability and Statistics for Information Technology - Databases - Logical Networking - Hypermedia Applications - Software Engineering - Information System",
+      },
     ],
-    images: []
+    images: [],
   },
   {
     logoImg: fracastoroLogo,
@@ -22,7 +22,7 @@ const educationList = [
     extraInfo: "Italian High School Diploma",
     periodAndLocation: "Verona, 2010 - 2015",
     textList: [],
-    images: []
+    images: [],
   },
   {
     logoImg: stJonesLogo,
@@ -30,8 +30,8 @@ const educationList = [
     extraInfo: "English 1 month course",
     periodAndLocation: "New York, July 2012",
     textList: [],
-    images: []
-  }
+    images: [],
+  },
 ];
 
 export default educationList;

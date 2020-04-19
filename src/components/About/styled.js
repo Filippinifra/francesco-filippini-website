@@ -18,7 +18,7 @@ export const Text = Styled.div`
     margin-bottom: 30px;
 `;
 
-export const ContainerHome = Styled.div`
+export const ContainerAbout = Styled.div`
    padding:50px 30px;
 `;
 

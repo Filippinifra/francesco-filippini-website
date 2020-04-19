@@ -1,5 +1,5 @@
 import curriculumPdf from "../files/FrancescoFilippiniCV.pdf";
-import curriculumImg from "../img/FrancescoFilippiniCV.png";
+import curriculumImg from "../img/FrancescoFilippiniCVPreview.png";
 
 export const cardDownloadSettings = {
   curriculumPdf: curriculumPdf,
