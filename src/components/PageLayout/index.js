@@ -1,34 +1,60 @@
 import React from "react";
 
 import Header from "../Header";
-import CentralPageElement from "../CentralPageElement";
+import { Element, scroller } from "react-scroll";
 
 import Footer from "../Footer";
 
-import { CentralContainer, FooterContainer } from "./styled";
+import { FooterContainer, HeaderContainer, ContentContainer } from "./styled";
 
-const PageLayout = ({
-  handleChange,
-  currentElement,
-  currentSection,
-  nextElement,
-  animationIsActive,
-  rotationString
-}) => {
+import {
+  aboutLabel,
+  educationLabel,
+  workLabel,
+  contactsLabel,
+} from "../../constants/labels";
+
+import About from "../About";
+import Work from "../Work";
+import Education from "../Education";
+import Contacts from "../Contacts";
+
+const PageLayout = () => {
+  const handleMenuClick = (idElement) => {
+    scroller.scrollTo(idElement, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+      offset: -50,
+    });
+  };
+
   return (
     <>
-      <Header handleChange={handleChange} currentSection={currentSection} />
+      <HeaderContainer>
+        <Header
+          handleNavClick={handleMenuClick}
+          handleLightClick={() => {}}
+          lightIsOn={true}
+        />
+      </HeaderContainer>
+      <ContentContainer>
+        <Element name={aboutLabel}>
+          <About />
+        </Element>
+        <Element name={workLabel}>
+          <Work />
+        </Element>
+        <Element name={educationLabel}>
+          <Education />
+        </Element>
+        <Element name={contactsLabel}>
+          <Contacts />
+        </Element>
+      </ContentContainer>
       <FooterContainer>
         <Footer />
       </FooterContainer>
-      <CentralContainer>
-        <CentralPageElement
-          currentElement={currentElement}
-          nextElement={nextElement}
-          animationIsActive={animationIsActive}
-          rotationString={rotationString}
-        />
-      </CentralContainer>
     </>
   );
 };

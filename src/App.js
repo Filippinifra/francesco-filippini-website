@@ -7,21 +7,20 @@ import {
 
 import { ThemeProvider } from "@material-ui/core/styles";
 
-import mapNameComponent from "./constants/mapNameComponent";
-
 import PageLayout from "./components/PageLayout";
 
 import theme from "./constants/theme";
 import CurtainOpening from "./components/CurtainOpening";
 
 const App = () => {
+  const [pageIsLoading, setPageLoading] = useState(true);
+
+  /*
   const [frontFaceSwapper, setFrontFace] = useState("home");
   const [backFaceSwapper, setBackFace] = useState("");
 
   const [indexEffectArray, setIndexEffectArray] = useState(0);
   const [animationIsActive, setAnimationActive] = useState(false);
-
-  const [pageIsLoading, setPageLoading] = useState(true);
 
   const setNextDirectionFlip = () => {
     const nextIndexEffect = indexEffectArray + 1;
@@ -73,6 +72,8 @@ const App = () => {
   const getNextElement = () => getContentElement(backFaceSwapper);
   const getDirectionFlip = () => stringTransformSwapper[indexEffectArray];
 
+  */
+
   useEffect(() => {
     setTimeout(() => {
       setPageLoading(false);
@@ -82,14 +83,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CurtainOpening isloading={pageIsLoading}>
-        <PageLayout
-          handleChange={handleMenuClick}
-          currentSection={frontFaceSwapper}
-          currentElement={getCurrentElement()}
-          nextElement={getNextElement()}
-          animationIsActive={animationIsActive}
-          rotationString={getDirectionFlip()}
-        />
+        <PageLayout />
       </CurtainOpening>
     </ThemeProvider>
   );
