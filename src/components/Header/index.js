@@ -25,7 +25,7 @@ import {
   educationLabel,
   workLabel,
   contactsLabel,
-} from "../../constants/mapNameComponent";
+} from "../../constants/labels";
 
 import sizes from "../../constants/screenSizes";
 

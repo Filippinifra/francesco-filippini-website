@@ -85,11 +85,11 @@ export const NavMobileButton = Styled.button`
 `;
 
 export const ContainerMobileLink = Styled.div`
-    max-height: ${(props) => (props.hamburgerActive ? "164px" : "0")};
+    max-height: ${(props) => (props.hamburgerActive ? "162px" : "0")};
     transition: max-height 0.6s ease-in-out;
     overflow: hidden;
 `;
 
 export const BorderContainer = Styled.div`
-    border: 2px ${colors.headerColor} solid;
+    border: 1px ${colors.headerColor} solid;
 `;

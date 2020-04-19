@@ -10,13 +10,13 @@ import {
   GridItem,
   ContainerImgAndText,
   WrapperImg,
-  TextContainer
+  TextContainer,
 } from "./styled";
 
-import phoneIcon from "../../img/phonebook.svg";
-import mailIcon from "../../img/email.svg";
-import addressIcon from "../../img/placeholder.svg";
-import linkedinIcon from "../../img/linkedin.svg";
+import phoneIcon from "../../img/phonebookLogo.svg";
+import mailIcon from "../../img/emailLogo.svg";
+import addressIcon from "../../img/locationLogo.svg";
+import linkedinIcon from "../../img/linkedinLogo.svg";
 
 import { commonsContacts } from "../../constants/commonsContacts";
 
