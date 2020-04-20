@@ -78,7 +78,6 @@ const App = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      scroll.scrollTo(0);
       setPageLoading(false);
     }, 2000);
   });

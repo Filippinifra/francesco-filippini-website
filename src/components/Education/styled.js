@@ -1,7 +1,5 @@
 import Styled from "styled-components";
-
 import colors from "../../constants/colors";
-
 import screenSizes from "../../constants/screenSizes";
 
 export const ContainerEducation = Styled.div`
@@ -17,7 +15,7 @@ export const ContainerEducation = Styled.div`
 export const Text = Styled.div`
     color: ${colors.contentColor};
     line-height: 25px;
-    margin-top: 30px;
+    margin-top: 50px;
 `;
 
 export const ContainerImg = Styled.div`

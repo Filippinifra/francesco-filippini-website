@@ -16,6 +16,7 @@ export const FooterContainer = Styled.div`
 export const HeaderContainer = Styled.div`
     position: fixed;
     width: 100%;
+    z-index:1;
 `;
 
 export const ContentContainer = Styled.div`

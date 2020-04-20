@@ -28,6 +28,7 @@ import { scrollAnimation } from "../../constants/animationSettings";
 
 import bigImgPolimi from "../../img/bigImgPolimi.png";
 import bigImgSmb from "../../img/bigImgSmb.png";
+import Websites from "../Websites";
 
 const PageLayout = () => {
   const handleMenuClick = (idElement) => {
@@ -56,6 +57,8 @@ const PageLayout = () => {
         <Element name={educationLabel}>
           <Education />
         </Element>
+        <ContainerDivider />
+        <Websites lightIsOn={true} />
         <ContainerDivider />
         <Element name={contactsLabel}>
           <Contacts />

@@ -15,7 +15,7 @@ export const ContainerWork = Styled.div`
 export const Text = Styled.div`
     color: ${colors.contentColor};
     line-height: 25px;
-    margin-top: 30px;
+    margin-top: 50px;
 `;
 
 export const ContainerImg = Styled.div`
