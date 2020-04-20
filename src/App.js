@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import { animateScroll as scroll } from "react-scroll";
+
 import {
   stringTransformSwapper,
   lifeTimeSwapper,
@@ -76,6 +78,7 @@ const App = () => {
 
   useEffect(() => {
     setTimeout(() => {
+      scroll.scrollTo(0);
       setPageLoading(false);
     }, 2000);
   });

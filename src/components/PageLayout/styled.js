@@ -19,8 +19,8 @@ export const HeaderContainer = Styled.div`
 `;
 
 export const ContentContainer = Styled.div`
-    margin-top: 50px;
-    margin-bottom: 33px;
     width: 100%;
     overflow: scroll;
+    max-width: 1500px;
+    margin: 50px auto 33px;
 `;

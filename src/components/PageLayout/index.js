@@ -19,16 +19,19 @@ import Work from "../Work";
 import Education from "../Education";
 import Contacts from "../Contacts";
 import HeroSection from "../HeroSection";
+
+import ParallaxElemenet from "../ParallaxElement";
+
 import { ContainerDivider } from "../ContentDivider/styled";
+
+import { scrollAnimation } from "../../constants/animationSettings";
+
+import bigImgPolimi from "../../img/bigImgPolimi.png";
+import bigImgSmb from "../../img/bigImgSmb.png";
 
 const PageLayout = () => {
   const handleMenuClick = (idElement) => {
-    scroller.scrollTo(idElement, {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-      offset: -50,
-    });
+    scroller.scrollTo(idElement, scrollAnimation);
   };
 
   return (
@@ -45,11 +48,11 @@ const PageLayout = () => {
         <Element name={aboutLabel}>
           <About />
         </Element>
-        <ContainerDivider />
+        <ParallaxElemenet imgSrc={bigImgSmb} />
         <Element name={workLabel}>
           <Work />
         </Element>
-        <ContainerDivider />
+        <ParallaxElemenet imgSrc={bigImgPolimi} />
         <Element name={educationLabel}>
           <Education />
         </Element>
