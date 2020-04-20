@@ -1,16 +1,12 @@
 import React from "react";
 
-import { withSize } from "react-sizeme";
+import { isMobile } from "react-device-detect";
 
 import { Parallax } from "./styled";
-import screenSizes from "../../constants/screenSizes";
-import { ContainerDivider } from "../ContentDivider/styled";
 
-const ParallaxElemenet = ({ imgSrc, size }) =>
-  size.width > screenSizes.tabletStep ? (
-    <Parallax imgSrc={imgSrc} />
-  ) : (
-    <ContainerDivider />
-  );
+import ContentDivider from "../ContentDivider";
 
-export default withSize()(ParallaxElemenet);
+const ParallaxElemenet = ({ imgSrc }) =>
+  isMobile ? <ContentDivider /> : <Parallax imgSrc={imgSrc} />;
+
+export default ParallaxElemenet;

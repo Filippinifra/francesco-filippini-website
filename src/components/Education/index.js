@@ -12,6 +12,8 @@ import {
   StrongTitle,
   MediumTitle,
   ContainerGrid,
+  ContainerGallery,
+  ImgSectionGallery,
 } from "./styled";
 
 const Education = () => (
@@ -24,6 +26,7 @@ const Education = () => (
         period,
         location,
         textList,
+        images,
       } = educationExperience;
       return (
         <ContainerGrid>
@@ -47,6 +50,21 @@ const Education = () => (
               {textList.map((paragraph) => (
                 <Text>{paragraph.text}</Text>
               ))}
+              <ContainerGallery>
+                <Grid
+                  container
+                  direction="row"
+                  justify="center"
+                  alignItems="flex-start"
+                  spacing={4}
+                >
+                  {images.map((image) => (
+                    <Grid item xs={12} sm={6} md={4}>
+                      <ImgSectionGallery src={image} />
+                    </Grid>
+                  ))}
+                </Grid>
+              </ContainerGallery>
             </Grid>
             <br />
           </Grid>

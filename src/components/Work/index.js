@@ -12,6 +12,8 @@ import {
   StrongTitle,
   MediumTitle,
   ContainerGrid,
+  ImgSectionGallery,
+  ContainerGallery,
 } from "./styled";
 
 const Work = () => (
@@ -24,6 +26,7 @@ const Work = () => (
         period,
         location,
         textList,
+        images,
       } = workExperience;
       return (
         <ContainerGrid>
@@ -47,6 +50,21 @@ const Work = () => (
               {textList.map((paragraph) => (
                 <Text>{paragraph.text}</Text>
               ))}
+              <ContainerGallery>
+                <Grid
+                  container
+                  direction="row"
+                  justify="center"
+                  alignItems="flex-start"
+                  spacing={4}
+                >
+                  {images.map((image) => (
+                    <Grid item xs={6} md={4}>
+                      <ImgSectionGallery src={image} />
+                    </Grid>
+                  ))}
+                </Grid>
+              </ContainerGallery>
             </Grid>
             <br />
           </Grid>

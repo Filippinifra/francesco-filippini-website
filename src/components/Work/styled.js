@@ -52,3 +52,11 @@ export const MediumTitle = Styled.div`
 export const ContainerGrid = Styled.div`
     margin-bottom: 50px;
 `;
+
+export const ImgSectionGallery = Styled.img`
+    width: 100%;
+`;
+
+export const ContainerGallery = Styled.div`
+    margin-top: 50px;
+`;

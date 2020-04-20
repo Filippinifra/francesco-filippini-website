@@ -1,6 +1,13 @@
 import finleapLogo from "../img/finleapLogo.png";
 import smbLogo from "../img/smbLogo.png";
 
+import smb1 from "../img/smbImages/smb1.png";
+import smb2 from "../img/smbImages/smb2.png";
+import smb3 from "../img/smbImages/smb3.png";
+import smb4 from "../img/smbImages/smb4.png";
+import smb5 from "../img/smbImages/smb5.png";
+import smb6 from "../img/smbImages/smb6.png";
+
 const workList = [
   {
     logoImg: finleapLogo,
@@ -40,7 +47,7 @@ const workList = [
           "During these years I learnt how to manage a business and all the components that revolve around it: relationship with customers and suppliers, taxes, marketing tactics and managing my own business.",
       },
     ],
-    images: [],
+    images: [smb1, smb2, smb3, smb4, smb5, smb6],
   },
 ];
 
