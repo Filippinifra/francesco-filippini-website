@@ -6,7 +6,8 @@ const workList = [
     logoImg: finleapLogo,
     title: "Finleap",
     position: "Junior Frontend Developer",
-    periodAndLocation: "Milan, October 2019 - April 2020",
+    period: "October 2019 - April 2020",
+    location: "Milan",
     textList: [
       {
         text:
@@ -24,7 +25,8 @@ const workList = [
     logoImg: smbLogo,
     title: "Saint Mary Boulevard",
     position: "Manager and Founder",
-    periodAndLocation: "Verona, March 2016 - Ongoing",
+    period: "March 2016 - Ongoing",
+    location: "Verona",
     textList: [
       {
         text: "I started this project when I was 20 together with my brother.",

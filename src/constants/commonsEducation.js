@@ -7,7 +7,8 @@ const educationList = [
     logoImg: politecnicoLogo,
     title: "Politecnico Di Milano",
     extraInfo: "Bachelor of Computer Engineering",
-    periodAndLocation: "Milan, 2015 - 2020",
+    period: "2015 - 2020",
+    location: "Milan",
     textList: [
       {
         text:
@@ -20,7 +21,8 @@ const educationList = [
     logoImg: fracastoroLogo,
     title: "Liceo Scientifico Girolamo Fracastoro",
     extraInfo: "Italian High School Diploma",
-    periodAndLocation: "Verona, 2010 - 2015",
+    period: "2010 - 2015",
+    location: "Verona",
     textList: [],
     images: [],
   },
@@ -28,7 +30,8 @@ const educationList = [
     logoImg: stJonesLogo,
     title: "St. John's University",
     extraInfo: "English 1 month course",
-    periodAndLocation: "New York, July 2012",
+    period: "July 2012",
+    location: "New York (USA)",
     textList: [],
     images: [],
   },

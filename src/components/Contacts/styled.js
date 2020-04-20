@@ -9,7 +9,7 @@ export const ContainerContacts = Styled.div`
     background-color: ${colors.contentBgColor};
 
     @media screen and (max-width: ${screenSizes.phone}) {
-        padding:60px 60px;
+        padding:60px 60px 80px;
     }
 `;
 

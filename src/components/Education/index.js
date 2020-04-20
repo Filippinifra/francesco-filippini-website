@@ -21,7 +21,8 @@ const Education = () => (
         logoImg,
         title,
         extraInfo,
-        periodAndLocation,
+        period,
+        location,
         textList,
       } = educationExperience;
       return (
@@ -41,7 +42,8 @@ const Education = () => (
             <Grid item xs={12} md={9}>
               <StrongTitle>{title}</StrongTitle>
               <MediumTitle>{extraInfo}</MediumTitle>
-              <MediumTitle>{periodAndLocation}</MediumTitle>
+              <MediumTitle>{period}</MediumTitle>
+              <MediumTitle>{location}</MediumTitle>
               {textList.map((paragraph) => (
                 <Text>{paragraph.text}</Text>
               ))}

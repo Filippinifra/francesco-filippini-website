@@ -21,7 +21,8 @@ const Work = () => (
         logoImg,
         title,
         position,
-        periodAndLocation,
+        period,
+        location,
         textList,
       } = workExperience;
       return (
@@ -41,7 +42,8 @@ const Work = () => (
             <Grid item xs={12} md={9}>
               <StrongTitle>{title}</StrongTitle>
               <MediumTitle>{position}</MediumTitle>
-              <MediumTitle>{periodAndLocation}</MediumTitle>
+              <MediumTitle>{period}</MediumTitle>
+              <MediumTitle>{location}</MediumTitle>
               {textList.map((paragraph) => (
                 <Text>{paragraph.text}</Text>
               ))}
