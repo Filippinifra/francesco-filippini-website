@@ -5,12 +5,12 @@ import { footerLabel, contentModal } from "../../constants/commonsFooter";
 
 import {
   delayModalFooterAppear,
-  sideAppearModalFooter
+  sideAppearModalFooter,
 } from "../../constants/animationSettings";
 
 import { ButtonModal, ContainerModal, TextRow } from "./styled";
 
-const Footer = () => {
+const Footer = ({ colors }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModalWithDelay = () => {
@@ -25,15 +25,17 @@ const Footer = () => {
 
   return (
     <>
-      <ButtonModal onClick={openModalWithDelay}>{footerLabel}</ButtonModal>
+      <ButtonModal colors={colors} onClick={openModalWithDelay}>
+        {footerLabel}
+      </ButtonModal>
       <Drawer
         anchor={sideAppearModalFooter}
         open={modalOpen}
         onClose={closeModal}
       >
-        <ContainerModal>
+        <ContainerModal colors={colors}>
           <div>
-            {contentModal.map(element => (
+            {contentModal.map((element) => (
               <TextRow>{element.content}</TextRow>
             ))}
           </div>

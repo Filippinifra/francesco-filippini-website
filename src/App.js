@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import GlobalStyle from "./styled.js";
+
 import { animateScroll as scroll } from "react-scroll";
 
 import {
@@ -13,9 +15,19 @@ import PageLayout from "./components/PageLayout";
 
 import theme from "./constants/theme";
 import CurtainOpening from "./components/CurtainOpening";
+import { colorsLightOn, colorsLightOff } from "./constants/colors";
 
 const App = () => {
   const [pageIsLoading, setPageLoading] = useState(true);
+
+  const [lightOn, setLightOn] = useState(true);
+
+  const getColors = () => (lightOn ? colorsLightOn : colorsLightOff);
+
+  console.log(colorsLightOn);
+
+  const handleLightClick = () =>
+    lightOn ? setLightOn(false) : setLightOn(true);
 
   /*
   const [frontFaceSwapper, setFrontFace] = useState("home");
@@ -84,8 +96,13 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <CurtainOpening isloading={pageIsLoading}>
-        <PageLayout />
+      <GlobalStyle colors={getColors()} />
+      <CurtainOpening isloading={pageIsLoading} colors={getColors()}>
+        <PageLayout
+          lightIsOn={lightOn}
+          handleLightClick={handleLightClick}
+          colors={getColors()}
+        />
       </CurtainOpening>
     </ThemeProvider>
   );

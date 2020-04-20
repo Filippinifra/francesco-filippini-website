@@ -19,11 +19,11 @@ import linkedinIcon from "../../img/contactLogos/linkedinLogo.svg";
 
 import { commonsContacts } from "../../constants/commonsContacts";
 
-const Contacts = () => (
-  <ContainerContacts>
+const Contacts = ({ colors }) => (
+  <ContainerContacts colors={colors}>
     <GridRow container direction="row" justify="center" alignItems="flex-start">
       <GridItem item xs={12} sm={6} md={3}>
-        <Link href={`tel:${commonsContacts.phoneNumber}`}>
+        <Link colors={colors} href={`tel:${commonsContacts.phoneNumber}`}>
           <ContainerImgAndText>
             <WrapperImg>
               <Icon src={phoneIcon} />
@@ -36,6 +36,7 @@ const Contacts = () => (
       </GridItem>
       <GridItem item xs={12} sm={6} md={3}>
         <Link
+          colors={colors}
           href={`mailto:${commonsContacts.email}?subject=Richiesta`}
           target="_blank"
         >
@@ -50,7 +51,11 @@ const Contacts = () => (
         </Link>
       </GridItem>
       <GridItem item xs={12} sm={6} md={3}>
-        <Link href={commonsContacts.mapsLinkToAddress} target="_blank">
+        <Link
+          colors={colors}
+          href={commonsContacts.mapsLinkToAddress}
+          target="_blank"
+        >
           <ContainerImgAndText>
             <WrapperImg>
               <Icon src={addressIcon} />
@@ -60,7 +65,11 @@ const Contacts = () => (
         </Link>
       </GridItem>
       <GridItem item xs={12} sm={6} md={3}>
-        <Link href={commonsContacts.linkedinLink} target="_blank">
+        <Link
+          colors={colors}
+          href={commonsContacts.linkedinLink}
+          target="_blank"
+        >
           <ContainerImgAndText>
             <WrapperImg>
               <Icon src={linkedinIcon} />

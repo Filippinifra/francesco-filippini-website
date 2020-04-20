@@ -1,5 +1,4 @@
 import Styled from "styled-components";
-import colors from "../../constants/colors";
 import screenSizes from "../../constants/screenSizes";
 
 export const FaceImg = Styled.img`
@@ -8,13 +7,16 @@ export const FaceImg = Styled.img`
     border-radius:50%;
     max-width: 200px;
 
-    -webkit-box-shadow: 20px 20px 142px -42px ${colors.contentImgShadow};
-    -moz-box-shadow: 20px 20px 142px -42px ${colors.contentImgShadow};
-    box-shadow: 20px 20px 142px -42px ${colors.contentImgShadow};
+    -webkit-box-shadow: 20px 20px 142px -42px ${(props) =>
+      props.colors.contentImgShadow};
+    -moz-box-shadow: 20px 20px 142px -42px ${(props) =>
+      props.colors.contentImgShadow};
+    box-shadow: 20px 20px 142px -42px ${(props) =>
+      props.colors.contentImgShadow};
 `;
 
 export const Text = Styled.div`
-    color: ${colors.contentColor};
+    color: ${(props) => props.colors.contentColor};
     line-height: 30px;
     margin-bottom: 50px;
 `;
@@ -22,7 +24,7 @@ export const Text = Styled.div`
 export const ContainerAbout = Styled.div`
     position: unset !important;
     padding:80px 100px;
-    background-color: ${colors.contentBgColor};
+    background-color: ${(props) => props.colors.contentBgColor};
 
     @media screen and (max-width: ${screenSizes.phone}) {
         padding:60px 60px;
@@ -32,14 +34,17 @@ export const ContainerAbout = Styled.div`
 export const Card = Styled.div`
    padding:2px;
    border-radius: 5px;
-   border: 1px ${colors.cardBorderColor} solid;
+   border: 1px ${(props) => props.colors.cardBorderColor} solid;
    width: 100%;
-   background-color: ${colors.cardBgColor};
+   background-color: ${(props) => props.colors.cardBgColor};
    max-width: 200px;
    margin:auto;
-   -webkit-box-shadow: 20px 20px 142px -42px ${colors.contentImgShadow};
-    -moz-box-shadow: 20px 20px 142px -42px ${colors.contentImgShadow};
-    box-shadow: 20px 20px 142px -42px ${colors.contentImgShadow};
+   -webkit-box-shadow: 20px 20px 142px -42px ${(props) =>
+     props.colors.contentImgShadow};
+    -moz-box-shadow: 20px 20px 142px -42px ${(props) =>
+      props.colors.contentImgShadow};
+    box-shadow: 20px 20px 142px -42px ${(props) =>
+      props.colors.contentImgShadow};
 `;
 
 export const CardContent = Styled.div`
@@ -69,7 +74,7 @@ export const DownloadLabel = Styled.div`
 `;
 
 export const LinkCard = Styled.a`
-    color: ${colors.cardLinkColor};
+    color: ${(props) => props.colors.cardLinkColor};
 `;
 
 export const ContainerImg = Styled.div`

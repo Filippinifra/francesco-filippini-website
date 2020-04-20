@@ -6,9 +6,9 @@ import { Parallax } from "./styled";
 
 import ContentDivider from "../ContentDivider";
 
-const ParallaxElemenet = ({ imgSrc }) =>
+const ParallaxElemenet = ({ imgSrc, colors }) =>
   isMobileOnly === true || isTablet === true ? (
-    <ContentDivider />
+    <ContentDivider colors={colors} />
   ) : (
     <Parallax imgSrc={imgSrc} />
   );

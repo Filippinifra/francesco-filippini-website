@@ -30,7 +30,7 @@ import bigImgPolimi from "../../img/bigImgPolimi.png";
 import bigImgSmb from "../../img/bigImgSmb.png";
 import Websites from "../Websites";
 
-const PageLayout = () => {
+const PageLayout = ({ lightIsOn, handleLightClick, colors }) => {
   const handleMenuClick = (idElement) => {
     scroller.scrollTo(idElement, scrollAnimation);
   };
@@ -40,32 +40,33 @@ const PageLayout = () => {
       <HeaderContainer>
         <Header
           handleNavClick={handleMenuClick}
-          handleLightClick={() => {}}
-          lightIsOn={true}
+          handleLightClick={handleLightClick}
+          lightIsOn={lightIsOn}
+          colors={colors}
         />
       </HeaderContainer>
       <ContentContainer>
-        <HeroSection />
+        <HeroSection colors={colors} />
         <Element name={aboutLabel}>
-          <About />
+          <About colors={colors} />
         </Element>
-        <ParallaxElemenet imgSrc={bigImgSmb} />
+        <ParallaxElemenet imgSrc={bigImgSmb} colors={colors} />
         <Element name={workLabel}>
-          <Work />
+          <Work colors={colors} />
         </Element>
-        <ParallaxElemenet imgSrc={bigImgPolimi} />
+        <ParallaxElemenet imgSrc={bigImgPolimi} colors={colors} />
         <Element name={educationLabel}>
-          <Education />
+          <Education colors={colors} />
         </Element>
-        <ContainerDivider />
-        <Websites lightIsOn={true} />
-        <ContainerDivider />
+        <ContainerDivider colors={colors} />
+        <Websites lightIsOn={lightIsOn} colors={colors} />
+        <ContainerDivider colors={colors} />
         <Element name={contactsLabel}>
-          <Contacts />
+          <Contacts colors={colors} />
         </Element>
       </ContentContainer>
-      <FooterContainer>
-        <Footer />
+      <FooterContainer colors={colors}>
+        <Footer colors={colors} />
       </FooterContainer>
     </>
   );

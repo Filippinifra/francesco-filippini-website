@@ -1,7 +1,5 @@
 import Styled from "styled-components";
 
-import colors from "../../constants/colors";
-
 import { Grid } from "@material-ui/core";
 
 export const GridItem = Styled(Grid)`
@@ -9,16 +7,17 @@ export const GridItem = Styled(Grid)`
 `;
 
 export const NavbarHeader = Styled.div`
-    background-color: ${colors.headerBgColor};
+    background-color: ${(props) => props.colors.headerBgColor};
     height: auto;
-    -webkit-box-shadow: 0px 5px 20px -9px ${colors.headerShade};
-    -moz-box-shadow: 0px 5px 20px -9px ${colors.headerShade};
-    box-shadow: 0px 5px 20px -9px ${colors.headerShade};
+    -webkit-box-shadow: 0px 5px 20px -9px ${(props) =>
+      props.colors.headerShade};
+    -moz-box-shadow: 0px 5px 20px -9px ${(props) => props.colors.headerShade};
+    box-shadow: 0px 5px 20px -9px ${(props) => props.colors.headerShade};
 `;
 
 export const ContainerNavbar = Styled.div`
-    background-color: ${colors.headerBgColor};
-    color: ${colors.headerColor};
+    background-color: ${(props) => props.colors.headerBgColor};
+    color: ${(props) => props.colors.headerColor};
     max-width: 1000px;
     margin: auto;
     height: 100%;
@@ -40,15 +39,15 @@ export const NavButton = Styled.button`
     letter-spacing: 2px;
     font-size: 15px;
     border: 0;
-    color: ${colors.headerColor};
+    color: ${(props) => props.colors.headerColor};
     outline: none;
     cursor: pointer;
     transition: background 0.6s;
     text-transform: uppercase;
 
     :hover {
-        background: ${colors.headerColor};
-        color: ${colors.headerBgColor};
+        background: ${(props) => props.colors.headerColor};
+        color: ${(props) => props.colors.headerBgColor};
     }
 `;
 
@@ -65,13 +64,13 @@ export const LeftGrid = Styled.div`
 `;
 
 export const NavMobileButton = Styled.button`
-    background-color: ${colors.headerBgColor};
+    background-color: ${(props) => props.colors.headerBgColor};
     height: 40px;
     padding: 16px auto;
     letter-spacing: 2px;
     font-size: 15px;
     border: 0;
-    color: ${colors.headerColor};
+    color: ${(props) => props.colors.headerColor};
     outline: none;
     cursor: pointer;
     transition: background 0.6s;
@@ -79,8 +78,8 @@ export const NavMobileButton = Styled.button`
     width: 100%;
 
     :hover {
-        background: ${colors.headerColor};
-        color: ${colors.headerBgColor};
+        background: ${(props) => props.colors.headerColor};
+        color: ${(props) => props.colors.headerBgColor};
     }
 `;
 
@@ -91,5 +90,5 @@ export const ContainerMobileLink = Styled.div`
 `;
 
 export const BorderContainer = Styled.div`
-    border: 1px ${colors.headerColor} solid;
+    border: 1px ${(props) => props.colors.headerColor} solid;
 `;

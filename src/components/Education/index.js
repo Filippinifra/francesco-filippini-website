@@ -16,8 +16,8 @@ import {
   ImgSectionGallery,
 } from "./styled";
 
-const Education = () => (
-  <ContainerEducation>
+const Education = ({ colors }) => (
+  <ContainerEducation colors={colors}>
     {educationList.map((educationExperience) => {
       const {
         logoImg,
@@ -39,16 +39,16 @@ const Education = () => (
           >
             <Grid item xs={12} md={3}>
               <ContainerImg>
-                <LogoImg src={logoImg} />
+                <LogoImg src={logoImg} colors={colors} />
               </ContainerImg>
             </Grid>
             <Grid item xs={12} md={9}>
-              <StrongTitle>{title}</StrongTitle>
-              <MediumTitle>{extraInfo}</MediumTitle>
-              <MediumTitle>{period}</MediumTitle>
-              <MediumTitle>{location}</MediumTitle>
+              <StrongTitle colors={colors}>{title}</StrongTitle>
+              <MediumTitle colors={colors}>{extraInfo}</MediumTitle>
+              <MediumTitle colors={colors}>{period}</MediumTitle>
+              <MediumTitle colors={colors}>{location}</MediumTitle>
               {textList.map((paragraph) => (
-                <Text>{paragraph.text}</Text>
+                <Text colors={colors}>{paragraph.text}</Text>
               ))}
               <ContainerGallery>
                 <Grid

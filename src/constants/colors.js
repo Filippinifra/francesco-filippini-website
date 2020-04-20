@@ -18,7 +18,7 @@ const tertiaryColor = SEA_SERPENT;
 const quaternaryColor = DEEP_SAFFRON;
 const quinaryColor = PERSIAN_RED;
 
-const colors = {
+export const colorsLightOn = {
   bodyBgColor: WHITE,
   heroSectionBgColor: primaryColor,
   heroSectionColor: WHITE,
@@ -37,7 +37,7 @@ const colors = {
   footerColor: BLACK,
   footerBgColor: quaternaryColor,
   footerShade: TRANSPARENT,
-  modalLinkColor: quinaryColor,
+  modalLinkColor: "red",
   modalColor: BLACK,
   modalBgColor: quaternaryColor,
   selectionBgColor: quinaryColor,
@@ -46,4 +46,30 @@ const colors = {
   curtainColor: quinaryColor,
 };
 
-export default colors;
+export const colorsLightOff = {
+  bodyBgColor: BLACK,
+  heroSectionBgColor: primaryColor,
+  heroSectionColor: WHITE,
+  contentBgColor: BLACK,
+  contentColor: WHITE,
+  contentImgShadow: primaryColor,
+  dividerBgColor: primaryColor,
+  headerBgColor: BLACK,
+  headerColor: WHITE,
+  headerShade: primaryColor,
+  flippingElementBgColor: tertiaryColor,
+  flippingElementColor: BLACK,
+  cardBgColor: secondaryColor,
+  cardBorderColor: BLACK,
+  cardLinkColor: BLACK,
+  footerColor: BLACK,
+  footerBgColor: quaternaryColor,
+  footerShade: TRANSPARENT,
+  modalLinkColor: quinaryColor,
+  modalColor: BLACK,
+  modalBgColor: quaternaryColor,
+  selectionBgColor: quinaryColor,
+  selectionColor: quaternaryColor,
+  curtainBgColor: quaternaryColor,
+  curtainColor: quinaryColor,
+};

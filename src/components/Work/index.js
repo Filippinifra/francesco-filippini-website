@@ -16,8 +16,8 @@ import {
   ContainerGallery,
 } from "./styled";
 
-const Work = () => (
-  <ContainerWork>
+const Work = ({ colors }) => (
+  <ContainerWork colors={colors}>
     {workList.map((workExperience) => {
       const {
         logoImg,
@@ -39,16 +39,16 @@ const Work = () => (
           >
             <Grid item xs={12} md={3}>
               <ContainerImg>
-                <LogoImg src={logoImg} />
+                <LogoImg colors={colors} src={logoImg} />
               </ContainerImg>
             </Grid>
             <Grid item xs={12} md={9}>
-              <StrongTitle>{title}</StrongTitle>
-              <MediumTitle>{position}</MediumTitle>
-              <MediumTitle>{period}</MediumTitle>
-              <MediumTitle>{location}</MediumTitle>
+              <StrongTitle colors={colors}>{title}</StrongTitle>
+              <MediumTitle colors={colors}>{position}</MediumTitle>
+              <MediumTitle colors={colors}>{period}</MediumTitle>
+              <MediumTitle colors={colors}>{location}</MediumTitle>
               {textList.map((paragraph) => (
-                <Text>{paragraph.text}</Text>
+                <Text colors={colors}>{paragraph.text}</Text>
               ))}
               <ContainerGallery>
                 <Grid

@@ -29,17 +29,17 @@ import {
   ContainerImg,
 } from "./styled";
 
-const About = ({ size }) => {
+const About = ({ size, colors }) => {
   const getGridItemPhoto = () => (
     <Grid item xs={12} md={3}>
       <ContainerImg>
-        <FaceImg src={face} />
+        <FaceImg src={face} colors={colors} />
       </ContainerImg>
     </Grid>
   );
 
   return (
-    <ContainerAbout>
+    <ContainerAbout colors={colors}>
       <Grid
         container
         direction="row"
@@ -50,7 +50,7 @@ const About = ({ size }) => {
         {size.width <= screenSizes.tabletStep ? getGridItemPhoto() : null}
         <Grid item xs={12} md={9}>
           {textFirstParagraph.map((value) => (
-            <Text>{value.text}</Text>
+            <Text colors={colors}>{value.text}</Text>
           ))}
         </Grid>
         {size.width > screenSizes.tabletStep ? getGridItemPhoto() : null}
@@ -64,8 +64,12 @@ const About = ({ size }) => {
       >
         <Grid item xs={12} md={3}>
           <ContainerImg>
-            <LinkCard href={cardDownloadSettings.curriculumPdf} download>
-              <Card>
+            <LinkCard
+              href={cardDownloadSettings.curriculumPdf}
+              download
+              colors={colors}
+            >
+              <Card colors={colors}>
                 <CardHeader>
                   <ImgCVPreview src={cardDownloadSettings.curriculumImg} />
                 </CardHeader>
@@ -81,7 +85,7 @@ const About = ({ size }) => {
         </Grid>
         <Grid item xs={12} md={9}>
           {textSecondParagraph.map((value) => (
-            <Text>{value.text}</Text>
+            <Text colors={colors}>{value.text}</Text>
           ))}
         </Grid>
       </Grid>

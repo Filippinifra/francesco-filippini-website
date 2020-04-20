@@ -1,13 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
-import colors from "./constants/colors";
 import typography from "./constants/typography";
 
 const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
         font-family: ${typography.fontFamily} !important;
-        background-color: ${colors.bodyBgColor};
+        background-color: ${(props) => props.colors.bodyBgColor};
         height: 100vh;
         width: 100%;
     }
@@ -18,8 +17,8 @@ const GlobalStyle = createGlobalStyle`
 
     *{
         ::selection{
-            background-color: ${colors.selectionBgColor};
-            color: ${colors.selectionColor};
+            background-color: ${(props) => props.colors.selectionBgColor};
+            color: ${(props) => props.colors.selectionColor};
         }
     }
 `;

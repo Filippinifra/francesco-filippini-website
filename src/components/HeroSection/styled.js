@@ -1,11 +1,10 @@
 import Styled from "styled-components";
-import colors from "../../constants/colors";
 import screenSizes from "../../constants/screenSizes";
 
 export const ContainerHeroSection = Styled.div`
     width: 100%;
-    background-color: ${colors.heroSectionBgColor};
-    color: ${colors.heroSectionColor};
+    background-color: ${(props) => props.colors.heroSectionBgColor};
+    color: ${(props) => props.colors.heroSectionColor};
     padding: 200px 0;
 `;
 

@@ -1,9 +1,7 @@
 import React from "react";
 import "./style.css";
 
-import colors from "../../../constants/colors";
-
-const Hamburger = ({ handleHamburgerClick, active }) => {
+const Hamburger = ({ handleHamburgerClick, active, colors }) => {
   const getClassHamburger = () => (active === true ? "active" : "");
 
   return (

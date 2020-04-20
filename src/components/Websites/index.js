@@ -16,13 +16,13 @@ import whiteFramePhone from "../../img/phoneFrameWhite.png";
 
 import { commonsWebsite } from "../../constants/commonsWebsites";
 
-const Websites = ({ lightIsOn }) => {
+const Websites = ({ lightIsOn, colors }) => {
   const { texts, imagesPreview } = commonsWebsite;
   const getRightFrame = () => (lightIsOn ? blackFramePhone : whiteFramePhone);
   return (
-    <ContainerWebsites>
+    <ContainerWebsites colors={colors}>
       {texts.map((text) => (
-        <Text>{text}</Text>
+        <Text colors={colors}>{text}</Text>
       ))}
       <ContainerFrame>
         <PhoneFrame src={getRightFrame()} />

@@ -1,12 +1,11 @@
 import Styled from "styled-components";
 import { Grid } from "@material-ui/core";
-import colors from "../../constants/colors";
 import screenSizes from "../../constants/screenSizes";
 
 export const ContainerContacts = Styled.div`
     position: unset !important;
     padding:80px 100px;
-    background-color: ${colors.contentBgColor};
+    background-color: ${(props) => props.colors.contentBgColor};
 
     @media screen and (max-width: ${screenSizes.phone}) {
         padding:60px 60px 80px;
@@ -37,7 +36,7 @@ export const TextInformation = Styled.div`
 
 export const Link = Styled.a`
     text-decoration: none;
-    color: ${colors.flippingElementColor};
+    color: ${(props) => props.colors.contentColor};
 `;
 
 export const ContentCentered = Styled.div`

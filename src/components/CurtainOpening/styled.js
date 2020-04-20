@@ -1,7 +1,5 @@
 import Styled from "styled-components";
 
-import colors from "../../constants/colors";
-
 export const Curtain = Styled.div`
   width: 100%; 
   height: 100vh;
@@ -13,7 +11,7 @@ export const CurtainWrapper = Styled.div`
 `;
 
 export const CurtainLeftPanel = Styled.div`
-  background-color: ${colors.curtainBgColor};
+  background-color: ${(props) => props.colors.curtainBgColor};
   width: 50%; 
   height: 100vh;
   float: left;
@@ -30,7 +28,7 @@ export const CurtainLeftPanel = Styled.div`
 `;
 
 export const CurtainRightPanel = Styled.div`
-  background-color: ${colors.curtainBgColor};
+  background-color: ${(props) => props.colors.curtainBgColor};
   margin-left: 50%;
   width: 50%; 
   height: 100vh; 
@@ -57,10 +55,10 @@ export const CurtainContent = Styled.div`
 export const LeftTitle = Styled.div`
   text-align: right;
   margin-right:3px;
-  color: ${colors.curtainColor};
+  color: ${(props) => props.colors.curtainColor};
 `;
 
 export const RightTitle = Styled.div`
   margin-left:5px;
-  color: ${colors.curtainColor};
+  color: ${(props) => props.colors.curtainColor};
 `;

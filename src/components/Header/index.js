@@ -31,7 +31,13 @@ import sizes from "../../constants/screenSizes";
 
 import Hamburger from "./Hamburger";
 
-const Header = ({ handleNavClick, handleLightClick, lightIsOn, size }) => {
+const Header = ({
+  handleNavClick,
+  handleLightClick,
+  lightIsOn,
+  size,
+  colors,
+}) => {
   const [hamburgerActive, setHamburgerActive] = useState(false);
   const getLightImage = () => (lightIsOn ? lightOn : lightOff);
   const handleClick = (name) => {
@@ -46,8 +52,8 @@ const Header = ({ handleNavClick, handleLightClick, lightIsOn, size }) => {
   };
 
   return (
-    <NavbarHeader>
-      <ContainerNavbar>
+    <NavbarHeader colors={colors}>
+      <ContainerNavbar colors={colors}>
         <GridContainer
           container
           direction="row"
@@ -64,16 +70,28 @@ const Header = ({ handleNavClick, handleLightClick, lightIsOn, size }) => {
             <RightGrid>
               {size.width > sizes.headerStep ? (
                 <>
-                  <NavButton onClick={() => handleClick(aboutLabel)}>
+                  <NavButton
+                    colors={colors}
+                    onClick={() => handleClick(aboutLabel)}
+                  >
                     {aboutLabel}
                   </NavButton>
-                  <NavButton onClick={() => handleClick(workLabel)}>
+                  <NavButton
+                    colors={colors}
+                    onClick={() => handleClick(workLabel)}
+                  >
                     {workLabel}
                   </NavButton>
-                  <NavButton onClick={() => handleClick(educationLabel)}>
+                  <NavButton
+                    colors={colors}
+                    onClick={() => handleClick(educationLabel)}
+                  >
                     {educationLabel}
                   </NavButton>
-                  <NavButton onClick={() => handleClick(contactsLabel)}>
+                  <NavButton
+                    colors={colors}
+                    onClick={() => handleClick(contactsLabel)}
+                  >
                     {contactsLabel}
                   </NavButton>
                 </>
@@ -81,6 +99,7 @@ const Header = ({ handleNavClick, handleLightClick, lightIsOn, size }) => {
                 <Hamburger
                   handleHamburgerClick={handleHamburgerClick}
                   active={hamburgerActive}
+                  colors={colors}
                 />
               )}
             </RightGrid>
@@ -88,17 +107,29 @@ const Header = ({ handleNavClick, handleLightClick, lightIsOn, size }) => {
         </GridContainer>
       </ContainerNavbar>
       <ContainerMobileLink hamburgerActive={hamburgerActive}>
-        <BorderContainer>
-          <NavMobileButton onClick={() => handleClick(aboutLabel)}>
+        <BorderContainer colors={colors}>
+          <NavMobileButton
+            colors={colors}
+            onClick={() => handleClick(aboutLabel)}
+          >
             {aboutLabel}
           </NavMobileButton>
-          <NavMobileButton onClick={() => handleClick(workLabel)}>
+          <NavMobileButton
+            colors={colors}
+            onClick={() => handleClick(workLabel)}
+          >
             {workLabel}
           </NavMobileButton>
-          <NavMobileButton onClick={() => handleClick(educationLabel)}>
+          <NavMobileButton
+            colors={colors}
+            onClick={() => handleClick(educationLabel)}
+          >
             {educationLabel}
           </NavMobileButton>
-          <NavMobileButton onClick={() => handleClick(contactsLabel)}>
+          <NavMobileButton
+            colors={colors}
+            onClick={() => handleClick(contactsLabel)}
+          >
             {contactsLabel}
           </NavMobileButton>
         </BorderContainer>

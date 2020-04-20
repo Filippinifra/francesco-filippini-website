@@ -1,10 +1,9 @@
 import React from "react";
 import Styled from "styled-components";
-import colors from "./colors";
 
 const Link = Styled.a`
     text-decoration: underline;
-    color: ${colors.modalLinkColor};
+    color: blue;
 `;
 
 export const footerLabel = "Created from scratch using React";

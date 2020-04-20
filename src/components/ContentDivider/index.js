@@ -2,6 +2,6 @@ import React from "react";
 
 import { ContainerDivider } from "./styled";
 
-const ContentDivider = () => <ContainerDivider />;
+const ContentDivider = ({ colors }) => <ContainerDivider colors={colors} />;
 
 export default ContentDivider;

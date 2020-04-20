@@ -4,8 +4,8 @@ import { Grid } from "@material-ui/core";
 
 import { ContainerHeroSection, TextLeft, TextCenter } from "./styled";
 
-const HeroSection = () => (
-  <ContainerHeroSection>
+const HeroSection = ({ colors }) => (
+  <ContainerHeroSection colors={colors}>
     <Grid
       container
       direction="row"
