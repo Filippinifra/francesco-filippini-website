@@ -24,7 +24,7 @@ const workList = [
     logoImg: smbLogo,
     title: "Saint Mary Boulevard",
     position: "Manager and Founder",
-    periodAndLocation: "Verona, March 2016 - March 2020",
+    periodAndLocation: "Verona, March 2016 - Ongoing",
     textList: [
       {
         text: "I started this project when I was 20 together with my brother.",

@@ -5,7 +5,7 @@ import { Grid } from "@material-ui/core";
 import workList from "../../constants/commonsWork";
 
 import {
-  ContainerHome,
+  ContainerWork,
   Text,
   ContainerImg,
   LogoImg,
@@ -15,7 +15,7 @@ import {
 } from "./styled";
 
 const Work = () => (
-  <ContainerHome>
+  <ContainerWork>
     {workList.map((workExperience) => {
       const {
         logoImg,
@@ -31,14 +31,14 @@ const Work = () => (
             direction="row"
             justify="center"
             alignItems="flex-start"
-            spacing={5}
+            spacing={10}
           >
-            <Grid item xs={12} md={2}>
+            <Grid item xs={12} md={3}>
               <ContainerImg>
                 <LogoImg src={logoImg} />
               </ContainerImg>
             </Grid>
-            <Grid item xs={12} md={10}>
+            <Grid item xs={12} md={9}>
               <StrongTitle>{title}</StrongTitle>
               <MediumTitle>{position}</MediumTitle>
               <MediumTitle>{periodAndLocation}</MediumTitle>
@@ -51,7 +51,7 @@ const Work = () => (
         </ContainerGrid>
       );
     })}
-  </ContainerHome>
+  </ContainerWork>
 );
 
 export default Work;

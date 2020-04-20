@@ -18,6 +18,8 @@ import About from "../About";
 import Work from "../Work";
 import Education from "../Education";
 import Contacts from "../Contacts";
+import HeroSection from "../HeroSection";
+import { ContainerDivider } from "../ContentDivider/styled";
 
 const PageLayout = () => {
   const handleMenuClick = (idElement) => {
@@ -39,15 +41,19 @@ const PageLayout = () => {
         />
       </HeaderContainer>
       <ContentContainer>
+        <HeroSection />
         <Element name={aboutLabel}>
           <About />
         </Element>
+        <ContainerDivider />
         <Element name={workLabel}>
           <Work />
         </Element>
+        <ContainerDivider />
         <Element name={educationLabel}>
           <Education />
         </Element>
+        <ContainerDivider />
         <Element name={contactsLabel}>
           <Contacts />
         </Element>

@@ -11,9 +11,9 @@ export const GridItem = Styled(Grid)`
 export const NavbarHeader = Styled.div`
     background-color: ${colors.headerBgColor};
     height: auto;
-    -webkit-box-shadow: 0px 5px 64px -9px ${colors.headerShade};
-    -moz-box-shadow: 0px 5px 64px -9px ${colors.headerShade};
-    box-shadow: 0px 5px 64px -9px ${colors.headerShade};
+    -webkit-box-shadow: 0px 5px 20px -9px ${colors.headerShade};
+    -moz-box-shadow: 0px 5px 20px -9px ${colors.headerShade};
+    box-shadow: 0px 5px 20px -9px ${colors.headerShade};
 `;
 
 export const ContainerNavbar = Styled.div`

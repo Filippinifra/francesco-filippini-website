@@ -2,19 +2,28 @@ import Styled from "styled-components";
 
 import colors from "../../constants/colors";
 
-export const ContainerHome = Styled.div`
-   padding: 50px 30px;
+import screenSizes from "../../constants/screenSizes";
+
+export const ContainerEducation = Styled.div`
+    position: unset !important;
+    padding:80px 100px;
+    background-color: ${colors.contentBgColor};
+
+    @media screen and (max-width: ${screenSizes.phone}) {
+        padding:60px 60px;
+    }
 `;
 
 export const Text = Styled.div`
-    color: ${colors.flippingElementColor};
+    color: ${colors.contentColor};
     line-height: 25px;
     margin-top: 30px;
 `;
 
 export const ContainerImg = Styled.div`
-    Width: 100%;
-    text-align: center;
+    width: 100%;
+    margin: auto;
+    max-width: 150px;
 `;
 
 export const LogoImg = Styled.img`
@@ -23,23 +32,23 @@ export const LogoImg = Styled.img`
     border-radius:50%;
     max-width: 200px;
 
-    -webkit-box-shadow: 20px 20px 142px -42px ${colors.flippinImgShadowColor};
-    -moz-box-shadow: 20px 20px 142px -42px ${colors.flippinImgShadowColor};
-    box-shadow: 20px 20px 142px -42px ${colors.flippinImgShadowColor};
+    -webkit-box-shadow: 20px 20px 142px -42px ${colors.contentImgShadow};
+    -moz-box-shadow: 20px 20px 142px -42px ${colors.contentImgShadow};
+    box-shadow: 20px 20px 142px -42px ${colors.contentImgShadow};
 `;
 
 export const StrongTitle = Styled.div`
     font-size: 30px;
     font-weight: 900;
     margin-bottom: 20px;
-    color: ${colors.flippingElementColor};
+    color: ${colors.contentColor};
 `;
 
 export const MediumTitle = Styled.div`
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 3px;
-    color: ${colors.flippingElementColor};
+    color: ${colors.contentColor};
 `;
 
 export const ContainerGrid = Styled.div`

@@ -1,5 +1,6 @@
 import Styled from "styled-components";
 import colors from "../../constants/colors";
+import screenSizes from "../../constants/screenSizes";
 
 export const FaceImg = Styled.img`
     text-align:center;
@@ -7,19 +8,25 @@ export const FaceImg = Styled.img`
     border-radius:50%;
     max-width: 200px;
 
-    -webkit-box-shadow: 20px 20px 142px -42px ${colors.flippinImgShadowColor};
-    -moz-box-shadow: 20px 20px 142px -42px ${colors.flippinImgShadowColor};
-    box-shadow: 20px 20px 142px -42px ${colors.flippinImgShadowColor};
+    -webkit-box-shadow: 20px 20px 142px -42px ${colors.contentImgShadow};
+    -moz-box-shadow: 20px 20px 142px -42px ${colors.contentImgShadow};
+    box-shadow: 20px 20px 142px -42px ${colors.contentImgShadow};
 `;
 
 export const Text = Styled.div`
-    color: ${colors.flippingElementColor};
-    line-height: 25px;
-    margin-bottom: 30px;
+    color: ${colors.contentColor};
+    line-height: 30px;
+    margin-bottom: 50px;
 `;
 
 export const ContainerAbout = Styled.div`
-   padding:50px 30px;
+    position: unset !important;
+    padding:80px 100px;
+    background-color: ${colors.contentBgColor};
+
+    @media screen and (max-width: ${screenSizes.phone}) {
+        padding:60px 60px;
+    }
 `;
 
 export const Card = Styled.div`
@@ -30,9 +37,9 @@ export const Card = Styled.div`
    background-color: ${colors.cardBgColor};
    max-width: 200px;
    margin:auto;
-   -webkit-box-shadow: 20px 20px 142px -42px ${colors.flippinImgShadowColor};
-    -moz-box-shadow: 20px 20px 142px -42px ${colors.flippinImgShadowColor};
-    box-shadow: 20px 20px 142px -42px ${colors.flippinImgShadowColor};
+   -webkit-box-shadow: 20px 20px 142px -42px ${colors.contentImgShadow};
+    -moz-box-shadow: 20px 20px 142px -42px ${colors.contentImgShadow};
+    box-shadow: 20px 20px 142px -42px ${colors.contentImgShadow};
 `;
 
 export const CardContent = Styled.div`
@@ -66,6 +73,7 @@ export const LinkCard = Styled.a`
 `;
 
 export const ContainerImg = Styled.div`
-    Width: 100%;
-    text-align: center;
+    width: 100%;
+    margin: auto;
+    max-width: 200px;
 `;

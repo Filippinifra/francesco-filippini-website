@@ -1,4 +1,4 @@
-import curriculumPdf from "../files/FrancescoFilippiniCV.pdf";
+import curriculumPdf from "../files/FilippiniFCV.pdf";
 import curriculumImg from "../img/FrancescoFilippiniCVPreview.png";
 
 export const cardDownloadSettings = {
@@ -9,7 +9,7 @@ export const cardDownloadSettings = {
 
 export const textFirstParagraph = [
   {
-    text: `Hello World! I'm Francesco, I was born in Verona where I lived for 18 years, before moving to Milan.`,
+    text: `I was born in Verona where I lived for 18 years, before moving to Milan.`,
   },
   {
     text: `I love everything about technology: from robots to cashier-free stores, from bluetooth headphones to Elon Musk's rockets.

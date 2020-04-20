@@ -2,12 +2,14 @@ const TRANSPARENT = "transparent";
 const BLACK = "black";
 const WHITE = "white";
 
-const BRIGHT_NAVY_BLUE = "#1C77C3";
+const BRIGHT_NAVY_BLUE = "#007df7";
 const MAXIMUM_BLUE = "#39A9DB";
 const SEA_SERPENT = "#40BCD8";
 
 const DEEP_SAFFRON = "#F39237";
 const PERSIAN_RED = "#D63230";
+
+const LIGHT_GREY = "#f6f6f6";
 
 const primaryColor = BRIGHT_NAVY_BLUE;
 const secondaryColor = MAXIMUM_BLUE;
@@ -17,13 +19,18 @@ const quaternaryColor = DEEP_SAFFRON;
 const quinaryColor = PERSIAN_RED;
 
 const colors = {
-  bodyBgColor: primaryColor,
+  bodyBgColor: WHITE,
+  heroSectionBgColor: primaryColor,
+  heroSectionColor: WHITE,
+  contentBgColor: LIGHT_GREY,
+  contentColor: BLACK,
+  contentImgShadow: BLACK,
+  dividerBgColor: WHITE,
   headerBgColor: primaryColor,
   headerColor: WHITE,
   headerShade: BLACK,
   flippingElementBgColor: tertiaryColor,
   flippingElementColor: BLACK,
-  flippinImgShadowColor: BLACK,
   cardBgColor: secondaryColor,
   cardBorderColor: BLACK,
   cardLinkColor: BLACK,
