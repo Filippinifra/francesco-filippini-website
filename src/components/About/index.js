@@ -5,8 +5,6 @@ import { Grid } from "@material-ui/core";
 
 import face from "../../img/faceImage.png";
 
-import downloadImg from "../../img/downloadLogo.svg";
-
 import {
   textFirstParagraph,
   textSecondParagraph,
@@ -19,15 +17,14 @@ import {
   FaceImg,
   Text,
   ContainerAbout,
-  Card,
-  CardContent,
-  CardHeader,
-  ImgCVPreview,
-  ImgDownload,
-  DownloadLabel,
-  LinkCard,
+  ContainerDownloadElement,
+  LinkDownload,
   ContainerImg,
+  ImageCurriculum,
+  LabelDownload,
 } from "./styled";
+
+import curriculumImage from "../../img/contactLogos/curriculum.svg";
 
 const About = ({ size, colors }) => {
   const getGridItemPhoto = () => (
@@ -64,23 +61,18 @@ const About = ({ size, colors }) => {
       >
         <Grid item xs={12} md={3}>
           <ContainerImg>
-            <LinkCard
+            <LinkDownload
               href={cardDownloadSettings.curriculumPdf}
               download
               colors={colors}
             >
-              <Card colors={colors}>
-                <CardHeader>
-                  <ImgCVPreview src={cardDownloadSettings.curriculumImg} />
-                </CardHeader>
-                <CardContent>
-                  <ImgDownload src={downloadImg} height="20px" width="20px" />
-                  <DownloadLabel>
-                    {cardDownloadSettings.downloadLabel}
-                  </DownloadLabel>
-                </CardContent>
-              </Card>
-            </LinkCard>
+              <ContainerDownloadElement>
+                <ImageCurriculum src={curriculumImage} />
+                <LabelDownload colors={colors}>
+                  {cardDownloadSettings.downloadLabel}
+                </LabelDownload>
+              </ContainerDownloadElement>
+            </LinkDownload>
           </ContainerImg>
         </Grid>
         <Grid item xs={12} md={9}>

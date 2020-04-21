@@ -31,54 +31,27 @@ export const ContainerAbout = Styled.div`
     }
 `;
 
-export const Card = Styled.div`
-   padding:2px;
-   border-radius: 5px;
-   border: 1px ${(props) => props.colors.cardBorderColor} solid;
-   width: 100%;
-   background-color: ${(props) => props.colors.cardBgColor};
-   max-width: 200px;
-   margin:auto;
-   -webkit-box-shadow: 20px 20px 142px -42px ${(props) =>
-     props.colors.contentImgShadow};
-    -moz-box-shadow: 20px 20px 142px -42px ${(props) =>
-      props.colors.contentImgShadow};
-    box-shadow: 20px 20px 142px -42px ${(props) =>
-      props.colors.contentImgShadow};
-`;
-
-export const CardContent = Styled.div`
-    display: inline-flex;
-    align-items: center;
-`;
-
-export const CardHeader = Styled.div`
-    margin-bottom: 2px;
-`;
-
-export const ImgCVPreview = Styled.img`
-    height:100%;
-    width:100%;
-    border-top-right-radius: 2px;
-    border-top-left-radius: 2px;
-`;
-
-export const ImgDownload = Styled.img`
-    height: 25px;
-    width: 25px;
-    margin-right: 5px;
-`;
-
-export const DownloadLabel = Styled.div`
-    font-size: 12px;
-`;
-
-export const LinkCard = Styled.a`
-    color: ${(props) => props.colors.cardLinkColor};
+export const LinkDownload = Styled.a`
+    text-decoration: none;   
 `;
 
 export const ContainerImg = Styled.div`
     width: 100%;
     margin: auto;
     max-width: 200px;
+`;
+
+export const ContainerDownloadElement = Styled.div`
+    width: 100%;
+    text-align: center;
+`;
+
+export const ImageCurriculum = Styled.img`
+    width: 100%;
+    max-width: 120px;
+`;
+
+export const LabelDownload = Styled.div`
+    margin-top: 20px;
+    color: ${(props) => props.colors.downloadLabelColor};
 `;

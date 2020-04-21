@@ -31,9 +31,6 @@ export const colorsLightOn = {
   headerShade: BLACK,
   flippingElementBgColor: tertiaryColor,
   flippingElementColor: BLACK,
-  cardBgColor: secondaryColor,
-  cardBorderColor: BLACK,
-  cardLinkColor: BLACK,
   footerColor: BLACK,
   footerBgColor: quaternaryColor,
   footerShade: TRANSPARENT,
@@ -44,6 +41,7 @@ export const colorsLightOn = {
   selectionColor: quaternaryColor,
   curtainBgColor: quaternaryColor,
   curtainColor: quinaryColor,
+  downloadLabelColor: BLACK,
 };
 
 export const colorsLightOff = {
@@ -59,9 +57,6 @@ export const colorsLightOff = {
   headerShade: primaryColor,
   flippingElementBgColor: tertiaryColor,
   flippingElementColor: BLACK,
-  cardBgColor: secondaryColor,
-  cardBorderColor: BLACK,
-  cardLinkColor: BLACK,
   footerColor: BLACK,
   footerBgColor: quaternaryColor,
   footerShade: TRANSPARENT,
@@ -72,4 +67,5 @@ export const colorsLightOff = {
   selectionColor: quaternaryColor,
   curtainBgColor: quaternaryColor,
   curtainColor: quinaryColor,
+  downloadLabelColor: WHITE,
 };

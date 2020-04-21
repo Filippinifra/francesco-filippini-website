@@ -1,10 +1,8 @@
 import curriculumPdf from "../files/FilippiniFCV.pdf";
-import curriculumImg from "../img/FrancescoFilippiniCVPreview.png";
 
 export const cardDownloadSettings = {
   curriculumPdf: curriculumPdf,
-  curriculumImg: curriculumImg,
-  downloadLabel: "FilippiniFCV.pdf",
+  downloadLabel: "myCurriculum.pdf",
 };
 
 export const textFirstParagraph = [
