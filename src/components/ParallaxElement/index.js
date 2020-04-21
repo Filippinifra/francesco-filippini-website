@@ -1,16 +1,26 @@
 import React from "react";
 
-import { isMobileOnly, isTablet, isIOS } from "react-device-detect";
+import {
+  isMobileOnly,
+  isTablet,
+  isIOS,
+  isIPad13,
+  isIPhone13,
+  isIPod13,
+} from "react-device-detect";
 
 import { Parallax } from "./styled";
 
 import ContentDivider from "../ContentDivider";
 
-const ParallaxElemenet = ({ imgSrc, colors }) =>
-  isMobileOnly || isTablet || isIOS ? (
+const ParallaxElemenet = ({ imgSrc, colors }) => {
+  const conditionNoParallax =
+    isMobileOnly || isTablet || isIOS || isIPhone13 || isIPad13 || isIPod13;
+  return conditionNoParallax ? (
     <ContentDivider colors={colors} />
   ) : (
     <Parallax imgSrc={imgSrc} />
   );
+};
 
 export default ParallaxElemenet;
