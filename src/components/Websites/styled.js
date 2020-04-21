@@ -56,11 +56,10 @@ export const ContainerFrame = Styled.div`
     margin-top: 50px;
     text-align: center;
     position: absolute;
-    margin-left: calc(50% - 200px);
-
-    @media screen and (max-width: ${screenSizes.phone}) {
-        margin-left: calc(50% - 160px);
-    }
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 `;
 
 export const PhoneFrame = Styled.img`
