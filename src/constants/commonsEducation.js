@@ -24,7 +24,7 @@ const educationList = [
         text: `Algorithms and Principles of Computer Science project - The task was to create an algorithm to implement a Touring Machine using C. We had to pay attention to temporal and spatial complexity.`,
       },
       {
-        text: `Logical Networks project - We used VHDL to satisfy the assignment of resolve a logical problem using electrical signals (like clock, data, reset signal).`,
+        text: `Logical Networks project - We used VHDL to satisfy the assignment and resolve a logical problem using electrical signals (like clock signal, data signal and reset signal).`,
       },
     ],
     images: [],

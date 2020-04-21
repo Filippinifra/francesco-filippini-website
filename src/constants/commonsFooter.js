@@ -1,11 +1,3 @@
-import React from "react";
-import Styled from "styled-components";
-
-const Link = Styled.a`
-    text-decoration: underline;
-    color: blue;
-`;
-
 export const footerLabel = "Created from scratch using React";
 
 export const contentModal = {

@@ -1,13 +1,13 @@
 import React from "react";
 
-import { isMobileOnly, isTablet } from "react-device-detect";
+import { isMobileOnly, isTablet, isIOS } from "react-device-detect";
 
 import { Parallax } from "./styled";
 
 import ContentDivider from "../ContentDivider";
 
 const ParallaxElemenet = ({ imgSrc, colors }) =>
-  isMobileOnly === true || isTablet === true ? (
+  isMobileOnly || isTablet || isIOS ? (
     <ContentDivider colors={colors} />
   ) : (
     <Parallax imgSrc={imgSrc} />

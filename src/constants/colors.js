@@ -3,7 +3,6 @@ const BLACK = "black";
 const WHITE = "white";
 
 const BRIGHT_NAVY_BLUE = "#007df7";
-const MAXIMUM_BLUE = "#39A9DB";
 const SEA_SERPENT = "#40BCD8";
 
 const DEEP_SAFFRON = "#F39237";
@@ -12,11 +11,10 @@ const PERSIAN_RED = "#D63230";
 const LIGHT_GREY = "#f6f6f6";
 
 const primaryColor = BRIGHT_NAVY_BLUE;
-const secondaryColor = MAXIMUM_BLUE;
-const tertiaryColor = SEA_SERPENT;
+const secondaryColor = SEA_SERPENT;
 
-const quaternaryColor = DEEP_SAFFRON;
-const quinaryColor = PERSIAN_RED;
+const tertiary = DEEP_SAFFRON;
+const quaternary = PERSIAN_RED;
 
 export const colorsLightOn = {
   bodyBgColor: WHITE,
@@ -29,18 +27,18 @@ export const colorsLightOn = {
   headerBgColor: primaryColor,
   headerColor: WHITE,
   headerShade: BLACK,
-  flippingElementBgColor: tertiaryColor,
+  flippingElementBgColor: secondaryColor,
   flippingElementColor: BLACK,
   footerColor: BLACK,
-  footerBgColor: quaternaryColor,
+  footerBgColor: tertiary,
   footerShade: TRANSPARENT,
-  modalLinkColor: quinaryColor,
+  modalLinkColor: quaternary,
   modalColor: BLACK,
-  modalBgColor: quaternaryColor,
-  selectionBgColor: quinaryColor,
-  selectionColor: quaternaryColor,
-  curtainBgColor: quaternaryColor,
-  curtainColor: quinaryColor,
+  modalBgColor: tertiary,
+  selectionBgColor: quaternary,
+  selectionColor: tertiary,
+  curtainBgColor: tertiary,
+  curtainColor: quaternary,
   downloadLabelColor: BLACK,
 };
 
@@ -55,17 +53,17 @@ export const colorsLightOff = {
   headerBgColor: BLACK,
   headerColor: WHITE,
   headerShade: primaryColor,
-  flippingElementBgColor: tertiaryColor,
+  flippingElementBgColor: secondaryColor,
   flippingElementColor: BLACK,
   footerColor: BLACK,
-  footerBgColor: quaternaryColor,
+  footerBgColor: tertiary,
   footerShade: TRANSPARENT,
-  modalLinkColor: quinaryColor,
+  modalLinkColor: quaternary,
   modalColor: BLACK,
-  modalBgColor: quaternaryColor,
-  selectionBgColor: quinaryColor,
-  selectionColor: quaternaryColor,
-  curtainBgColor: quaternaryColor,
-  curtainColor: quinaryColor,
+  modalBgColor: tertiary,
+  selectionBgColor: quaternary,
+  selectionColor: tertiary,
+  curtainBgColor: tertiary,
+  curtainColor: quaternary,
   downloadLabelColor: WHITE,
 };
