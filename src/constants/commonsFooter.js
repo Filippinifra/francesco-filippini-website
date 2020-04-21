@@ -8,48 +8,18 @@ const Link = Styled.a`
 
 export const footerLabel = "Created from scratch using React";
 
-export const contentModal = [
-  {
-    content: (
-      <div>
-        Made with <span style={{ color: "#e25555" }}>&hearts;</span> using
-      </div>
-    ),
-  },
-  {
-    content: (
-      <>
-        <Link href="https://reactjs.org/" target="_blank">
-          React
-        </Link>
-        {" - "}
-        <Link href="https://material-ui.com/" target="_blank">
-          Material UI
-        </Link>
-      </>
-    ),
-  },
-  {
-    content: (
-      <>
-        <Link href="https://flaticon.com/" target="_blank">
-          Flaticon
-        </Link>
-        {" - "}
-        <Link href="https://styled-components.com/" target="_blank">
-          Styled Components
-        </Link>
-      </>
-    ),
-  },
-  {
-    content: (
-      <Link
-        href="https://github.com/Filippinifra/francesco-filippini-website"
-        target="_blank"
-      >
-        Click for website repo
-      </Link>
-    ),
-  },
-];
+export const contentModal = {
+  firstText: "Made with ❤️ using",
+  libraries: [
+    [
+      { label: "React", link: "https://reactjs.org/" },
+      { label: "Material UI", link: "https://material-ui.com/" },
+    ],
+    [
+      { label: "Flaticon", link: "https://flaticon.com/" },
+      { label: "Styled Components", link: "https://styled-components.com/" },
+    ],
+  ],
+  repoText: "Click for website repo",
+  repoLink: "https://github.com/Filippinifra/francesco-filippini-website",
+};

@@ -9,18 +9,24 @@ export const ButtonModal = Styled(Button)`
 `;
 
 export const ContainerModal = Styled.div`
-    height: 200px;
     width:100%;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     background-color: ${(props) => props.colors.modalBgColor};
     color: ${(props) => props.colors.modalColor};
     border-top-left-radius:10px !important;
     border-top-right-radius:10px !important;
+    padding-top: 40px;
+    padding-bottom: 50px;
 `;
 
 export const TextRow = Styled.div`
     text-align:center;
     line-height: 30px;
+`;
+
+export const Link = Styled.a`
+    text-decoration: underline;
+    color: ${(props) => props.colors.modalLinkColor};
 `;

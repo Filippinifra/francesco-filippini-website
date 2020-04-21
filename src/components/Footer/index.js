@@ -8,10 +8,12 @@ import {
   sideAppearModalFooter,
 } from "../../constants/animationSettings";
 
-import { ButtonModal, ContainerModal, TextRow } from "./styled";
+import { ButtonModal, ContainerModal, TextRow, Link } from "./styled";
 
 const Footer = ({ colors }) => {
   const [modalOpen, setModalOpen] = useState(false);
+
+  const { firstText, libraries, repoText, repoLink } = contentModal;
 
   const openModalWithDelay = () => {
     setTimeout(() => {
@@ -34,11 +36,23 @@ const Footer = ({ colors }) => {
         onClose={closeModal}
       >
         <ContainerModal colors={colors}>
-          <div>
-            {contentModal.map((element) => (
-              <TextRow>{element.content}</TextRow>
-            ))}
-          </div>
+          <TextRow>{firstText}</TextRow>
+          {libraries.map((row) => (
+            <TextRow>
+              <Link colors={colors} href={row[0].link} target="_blank">
+                {row[0].label}
+              </Link>
+              {" - "}
+              <Link colors={colors} href={row[1].link} target="_blank">
+                {row[1].label}
+              </Link>
+            </TextRow>
+          ))}
+          <TextRow>
+            <Link colors={colors} href={repoLink} target="_blank">
+              {repoText}
+            </Link>
+          </TextRow>
         </ContainerModal>
       </Drawer>
     </>

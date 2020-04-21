@@ -37,7 +37,7 @@ export const colorsLightOn = {
   footerColor: BLACK,
   footerBgColor: quaternaryColor,
   footerShade: TRANSPARENT,
-  modalLinkColor: "red",
+  modalLinkColor: quinaryColor,
   modalColor: BLACK,
   modalBgColor: quaternaryColor,
   selectionBgColor: quinaryColor,
