@@ -34,6 +34,7 @@ import Hamburger from "./Hamburger";
 const Header = ({
   handleNavClick,
   handleLightClick,
+  scrollToTop,
   lightIsOn,
   size,
   colors,
@@ -62,7 +63,7 @@ const Header = ({
         >
           <GridItem item xs={6} sm={3}>
             <LeftGrid>
-              <LogoImg src={FFLogo} />
+              <LogoImg src={FFLogo} onClick={scrollToTop} />
               <LogoImg src={getLightImage()} onClick={handleLightClick} />
             </LeftGrid>
           </GridItem>

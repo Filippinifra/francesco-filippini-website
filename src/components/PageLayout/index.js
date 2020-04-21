@@ -1,7 +1,7 @@
 import React from "react";
 
 import Header from "../Header";
-import { Element, scroller } from "react-scroll";
+import { Element, scroller, animateScroll as scroll } from "react-scroll";
 
 import Footer from "../Footer";
 
@@ -35,12 +35,17 @@ const PageLayout = ({ lightIsOn, handleLightClick, colors }) => {
     scroller.scrollTo(idElement, scrollAnimation);
   };
 
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <>
       <HeaderContainer>
         <Header
           handleNavClick={handleMenuClick}
           handleLightClick={handleLightClick}
+          scrollToTop={scrollToTop}
           lightIsOn={lightIsOn}
           colors={colors}
         />

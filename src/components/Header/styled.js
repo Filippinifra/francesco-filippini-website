@@ -30,6 +30,7 @@ export const GridContainer = Styled(Grid)`
 export const LogoImg = Styled.img`
     height: 30px;
     margin: 10px;
+    cursor: pointer;
 `;
 
 export const NavButton = Styled.button`
