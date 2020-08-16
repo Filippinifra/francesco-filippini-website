@@ -10,7 +10,7 @@ import {
 
 import { ButtonModal, ContainerModal, TextRow, Link } from "./styled";
 
-const Footer = ({ colors }) => {
+export const Footer = ({ colors }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const { firstText, libraries, repoText, repoLink } = contentModal;
@@ -21,9 +21,7 @@ const Footer = ({ colors }) => {
     }, delayModalFooterAppear);
   };
 
-  const closeModal = () => {
-    setModalOpen(false);
-  };
+  const closeModal = () => setModalOpen(false);
 
   return (
     <>
@@ -58,5 +56,3 @@ const Footer = ({ colors }) => {
     </>
   );
 };
-
-export default Footer;

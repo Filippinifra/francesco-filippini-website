@@ -2,11 +2,11 @@ import React from "react";
 
 import { FlipCard, FlipCardInner, FlipCardFront, FlipCardBack } from "./styled";
 
-const Swapper = ({
+export const Swapper = ({
   currentElement,
   nextElement,
   animationIsActive,
-  rotationString
+  rotationString,
 }) => (
   <FlipCard>
     <FlipCardInner
@@ -25,5 +25,3 @@ const Swapper = ({
     </FlipCardInner>
   </FlipCard>
 );
-
-export default Swapper;

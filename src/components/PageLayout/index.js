@@ -3,7 +3,7 @@ import React from "react";
 import Header from "../Header";
 import { Element, scroller, animateScroll as scroll } from "react-scroll";
 
-import Footer from "../Footer";
+import { Footer } from "../Footer";
 
 import { FooterContainer, HeaderContainer, ContentContainer } from "./styled";
 
@@ -15,12 +15,12 @@ import {
 } from "../../constants/labels";
 
 import About from "../About";
-import Work from "../Work";
-import Education from "../Education";
-import Contacts from "../Contacts";
-import HeroSection from "../HeroSection";
+import { Work } from "../Work";
+import { Education } from "../Education";
+import { Contacts } from "../Contacts";
+import { HeroSection } from "../HeroSection";
 
-import ParallaxElemenet from "../ParallaxElement";
+import { ParallaxElemenet } from "../ParallaxElement";
 
 import { ContainerDivider } from "../ContentDivider/styled";
 
@@ -28,16 +28,13 @@ import { scrollAnimation } from "../../constants/animationSettings";
 
 import bigImgPolimi from "../../img/bigImgPolimi.png";
 import bigImgSmb from "../../img/bigImgSmb.png";
-import Websites from "../Websites";
+import { Websites } from "../Websites";
 
 const PageLayout = ({ lightIsOn, handleLightClick, colors }) => {
-  const handleMenuClick = (idElement) => {
+  const handleMenuClick = (idElement) =>
     scroller.scrollTo(idElement, scrollAnimation);
-  };
 
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
+  const scrollToTop = () => scroll.scrollToTop();
 
   return (
     <>

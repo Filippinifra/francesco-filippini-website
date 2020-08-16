@@ -16,19 +16,10 @@ import {
   ImgSectionGallery,
 } from "./styled";
 
-const Education = ({ colors }) => (
+export const Education = ({ colors }) => (
   <ContainerEducation colors={colors}>
-    {educationList.map((educationExperience) => {
-      const {
-        logoImg,
-        title,
-        extraInfo,
-        period,
-        location,
-        textList,
-        images,
-      } = educationExperience;
-      return (
+    {educationList.map(
+      ({ logoImg, title, extraInfo, period, location, textList, images }) => (
         <ContainerGrid>
           <Grid
             container
@@ -69,9 +60,7 @@ const Education = ({ colors }) => (
             <br />
           </Grid>
         </ContainerGrid>
-      );
-    })}
+      )
+    )}
   </ContainerEducation>
 );
-
-export default Education;

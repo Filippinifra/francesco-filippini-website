@@ -56,9 +56,11 @@ export const LeftTitle = Styled.div`
   text-align: right;
   margin-right:3px;
   color: ${(props) => props.colors.curtainColor};
+  white-space: pre-line;
 `;
 
 export const RightTitle = Styled.div`
   margin-left:5px;
   color: ${(props) => props.colors.curtainColor};
+  white-space: pre-line;
 `;

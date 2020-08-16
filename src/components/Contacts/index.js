@@ -19,7 +19,7 @@ import linkedinIcon from "../../img/contactLogos/linkedinLogo.svg";
 
 import { commonsContacts } from "../../constants/commonsContacts";
 
-const Contacts = ({ colors }) => (
+export const Contacts = ({ colors }) => (
   <ContainerContacts colors={colors}>
     <GridRow container direction="row" justify="center" alignItems="flex-start">
       <GridItem item xs={12} sm={6} md={3}>
@@ -81,5 +81,3 @@ const Contacts = ({ colors }) => (
     </GridRow>
   </ContainerContacts>
 );
-
-export default Contacts;

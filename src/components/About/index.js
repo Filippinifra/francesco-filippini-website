@@ -27,7 +27,7 @@ import {
 import curriculumImage from "../../img/contactLogos/curriculum.svg";
 
 const About = ({ size, colors }) => {
-  const getGridItemPhoto = () => (
+  const GridItemPhoto = () => (
     <Grid item xs={12} md={3}>
       <ContainerImg>
         <FaceImg src={face} colors={colors} />
@@ -44,13 +44,13 @@ const About = ({ size, colors }) => {
         alignItems="flex-start"
         spacing={7}
       >
-        {size.width <= screenSizes.tabletStep ? getGridItemPhoto() : null}
+        {size.width <= screenSizes.tabletStep && <GridItemPhoto />}
         <Grid item xs={12} md={9}>
           {textFirstParagraph.map((value) => (
             <Text colors={colors}>{value.text}</Text>
           ))}
         </Grid>
-        {size.width > screenSizes.tabletStep ? getGridItemPhoto() : null}
+        {size.width > screenSizes.tabletStep && <GridItemPhoto />}
       </Grid>
       <Grid
         container

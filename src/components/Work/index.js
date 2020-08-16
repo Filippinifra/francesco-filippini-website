@@ -16,19 +16,10 @@ import {
   ContainerGallery,
 } from "./styled";
 
-const Work = ({ colors }) => (
+export const Work = ({ colors }) => (
   <ContainerWork colors={colors}>
-    {workList.map((workExperience) => {
-      const {
-        logoImg,
-        title,
-        position,
-        period,
-        location,
-        textList,
-        images,
-      } = workExperience;
-      return (
+    {workList.map(
+      ({ logoImg, title, position, period, location, textList, images }) => (
         <ContainerGrid>
           <Grid
             container
@@ -69,9 +60,7 @@ const Work = ({ colors }) => (
             <br />
           </Grid>
         </ContainerGrid>
-      );
-    })}
+      )
+    )}
   </ContainerWork>
 );
-
-export default Work;

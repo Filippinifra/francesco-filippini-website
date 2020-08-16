@@ -9,10 +9,10 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import PageLayout from "./components/PageLayout";
 
 import theme from "./constants/theme";
-import CurtainOpening from "./components/CurtainOpening";
+import { CurtainOpening } from "./components/CurtainOpening";
 import { colorsLightOn, colorsLightOff } from "./constants/colors";
 
-const App = () => {
+export const App = () => {
   const [pageIsLoading, setPageLoading] = useState(true);
 
   const [lightOn, setLightOn] = useState(true);
@@ -42,5 +42,3 @@ const App = () => {
     </ThemeProvider>
   );
 };
-
-export default App;

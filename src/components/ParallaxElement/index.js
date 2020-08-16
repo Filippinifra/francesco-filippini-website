@@ -11,9 +11,9 @@ import {
 
 import { Parallax } from "./styled";
 
-import ContentDivider from "../ContentDivider";
+import { ContentDivider } from "../ContentDivider";
 
-const ParallaxElemenet = ({ imgSrc, colors }) => {
+export const ParallaxElemenet = ({ imgSrc, colors }) => {
   const conditionNoParallax =
     isMobileOnly || isTablet || isIOS || isIPhone13 || isIPad13 || isIPod13;
   return conditionNoParallax ? (
@@ -22,5 +22,3 @@ const ParallaxElemenet = ({ imgSrc, colors }) => {
     <Parallax imgSrc={imgSrc} />
   );
 };
-
-export default ParallaxElemenet;

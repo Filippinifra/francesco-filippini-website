@@ -12,7 +12,7 @@ import {
 
 import { leftPanelText, rightPanelText } from "../../constants/commonsCurtain";
 
-const CurtainOpening = ({ isloading, children, colors }) => (
+export const CurtainOpening = ({ isloading, children, colors }) => (
   <Curtain>
     <CurtainWrapper>
       <CurtainLeftPanel loaded={isloading} colors={colors}>
@@ -25,4 +25,3 @@ const CurtainOpening = ({ isloading, children, colors }) => (
     </CurtainWrapper>
   </Curtain>
 );
-export default CurtainOpening;

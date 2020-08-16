@@ -40,7 +40,9 @@ const Header = ({
   colors,
 }) => {
   const [hamburgerActive, setHamburgerActive] = useState(false);
+
   const getLightImage = () => (lightIsOn ? lightOn : lightOff);
+
   const handleClick = (name) => {
     if (hamburgerActive === true) setHamburgerActive(false);
     handleNavClick(name);
