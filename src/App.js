@@ -19,8 +19,6 @@ const App = () => {
 
   const getColors = () => (lightOn ? colorsLightOn : colorsLightOff);
 
-  console.log(colorsLightOn);
-
   const handleLightClick = () =>
     lightOn ? setLightOn(false) : setLightOn(true);
 
