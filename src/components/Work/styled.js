@@ -62,3 +62,10 @@ export const ImgSectionGallery = Styled.img`
 export const ContainerGallery = Styled.div`
     margin-top: 50px;
 `;
+
+export const ToolsText = Styled.div`
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 3px;
+    color: ${(props) => props.colors.toolsTitleColor};
+`;

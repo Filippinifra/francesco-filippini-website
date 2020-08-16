@@ -1,5 +1,6 @@
 import finleapLogo from "../img/finleapLogo.png";
 import smbLogo from "../img/smbLogo.png";
+import boomLogo from "../img/boomLogo.png";
 
 import smb1 from "../img/smbImages/smb1.png";
 import smb2 from "../img/smbImages/smb2.png";
@@ -9,6 +10,24 @@ import smb5 from "../img/smbImages/smb5.png";
 import smb6 from "../img/smbImages/smb6.png";
 
 const workList = [
+  {
+    logoImg: boomLogo,
+    title: "BOOM Image Studio",
+    position: "Junior Frontend Engineer",
+    period: "April 2020 - Ongoing",
+    location: "Milan",
+    textList: [
+      {
+        text:
+          "My team builds the core product of the company: a platform used to connect professionals photographers to big companies that need photos for their products.",
+      },
+      { text: "I contributed by building parts of the website frontend." },
+      {
+        text: `I created the website frontend for "SalesBook", a project launched by BOOM used to complete the photos business flow.`,
+      },
+    ],
+    tools: "React, Redux, Git, Jira.",
+  },
   {
     logoImg: finleapLogo,
     title: "Finleap",
@@ -26,7 +45,7 @@ const workList = [
           "I work in React and I learnt a lot both on the tech side (software development best practices and team work) and on the personal side as I got to enjoy a young workspace and disrupting company environment.",
       },
     ],
-    images: [],
+    tools: "React, Apollo GraphQL, NodeJS, Git, ClickUp.",
   },
   {
     logoImg: smbLogo,

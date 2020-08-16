@@ -40,6 +40,7 @@ export const colorsLightOn = {
   curtainBgColor: tertiary,
   curtainColor: quaternary,
   downloadLabelColor: BLACK,
+  toolsTitleColor: quaternary,
 };
 
 export const colorsLightOff = {
@@ -66,4 +67,5 @@ export const colorsLightOff = {
   curtainBgColor: tertiary,
   curtainColor: quaternary,
   downloadLabelColor: WHITE,
+  toolsTitleColor: tertiary,
 };

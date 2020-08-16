@@ -14,12 +14,22 @@ import {
   ContainerGrid,
   ImgSectionGallery,
   ContainerGallery,
+  ToolsText,
 } from "./styled";
 
 export const Work = ({ colors }) => (
   <ContainerWork colors={colors}>
     {workList.map(
-      ({ logoImg, title, position, period, location, textList, images }) => (
+      ({
+        logoImg,
+        title,
+        position,
+        period,
+        location,
+        textList,
+        images,
+        tools,
+      }) => (
         <ContainerGrid>
           <Grid
             container
@@ -41,21 +51,24 @@ export const Work = ({ colors }) => (
               {textList.map((paragraph) => (
                 <Text colors={colors}>{paragraph.text}</Text>
               ))}
-              <ContainerGallery>
-                <Grid
-                  container
-                  direction="row"
-                  justify="center"
-                  alignItems="flex-start"
-                  spacing={4}
-                >
-                  {images.map((image) => (
-                    <Grid item xs={6} md={4}>
-                      <ImgSectionGallery src={image} />
-                    </Grid>
-                  ))}
-                </Grid>
-              </ContainerGallery>
+              {tools && <ToolsText colors={colors}>{tools}</ToolsText>}
+              {images && (
+                <ContainerGallery>
+                  <Grid
+                    container
+                    direction="row"
+                    justify="center"
+                    alignItems="flex-start"
+                    spacing={4}
+                  >
+                    {images.map((image) => (
+                      <Grid item xs={6} md={4}>
+                        <ImgSectionGallery src={image} />
+                      </Grid>
+                    ))}
+                  </Grid>
+                </ContainerGallery>
+              )}
             </Grid>
             <br />
           </Grid>
