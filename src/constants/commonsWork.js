@@ -19,11 +19,14 @@ const workList = [
     textList: [
       {
         text:
-          "My team builds the core product of the company: a platform used to connect professionals photographers to big companies that need photos for their products.",
+          "My team builds the core product of the company: a platform in which professional photographers can connect to companies who need photos for their product.",
       },
-      { text: "I contributed by building parts of the website frontend." },
       {
-        text: `I created the website frontend for "SalesBook", a project launched by BOOM used to complete the photos business flow.`,
+        text:
+          "I significantly contributed building part of the website frontend.",
+      },
+      {
+        text: `I worked 1 month building the website frontend for "SalesBook", a project launched by BOOM and used to complete the photo business flow.`,
       },
     ],
     tools: "React, Redux, Git, Jira.",
