@@ -1,8 +1,7 @@
 const screenSizes = {
-  tablet: "959px",
-  phone: "599px",
+  tablet: 959,
+  phone: 599,
   headerStep: 768,
-  tabletStep: 959,
 };
 
 export default screenSizes;
