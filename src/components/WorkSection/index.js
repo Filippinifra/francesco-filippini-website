@@ -20,7 +20,7 @@ import {
   StackRowWrapper,
 } from "./styled";
 
-export const Work = ({ colors }) => (
+export const WorkSection = ({ colors }) => (
   <ContainerWork colors={colors}>
     {workList.map(
       ({

@@ -26,7 +26,7 @@ import {
 
 import curriculumImage from "../../img/contactLogos/curriculum.svg";
 
-const About = ({ size, colors }) => {
+const AboutSection = ({ size, colors }) => {
   const GridItemPhoto = () => (
     <Grid item xs={12} md={3}>
       <ContainerImg>
@@ -85,4 +85,4 @@ const About = ({ size, colors }) => {
   );
 };
 
-export default withSize()(About);
+export default withSize()(AboutSection);

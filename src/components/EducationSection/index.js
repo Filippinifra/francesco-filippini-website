@@ -16,7 +16,7 @@ import {
   ImgSectionGallery,
 } from "./styled";
 
-export const Education = ({ colors }) => (
+export const EducationSection = ({ colors }) => (
   <ContainerEducation colors={colors}>
     {educationList.map(
       ({ logoImg, title, extraInfo, period, location, textList, images }) => (

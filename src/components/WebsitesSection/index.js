@@ -16,7 +16,7 @@ import whiteFramePhone from "../../img/phoneFrameWhite.png";
 
 import { commonsWebsite } from "../../constants/commonsWebsites";
 
-export const Websites = ({ lightIsOn, colors }) => {
+export const WebsitesSection = ({ lightIsOn, colors }) => {
   const { texts, imagesPreview } = commonsWebsite;
 
   const getRightFrame = () => (lightIsOn ? blackFramePhone : whiteFramePhone);

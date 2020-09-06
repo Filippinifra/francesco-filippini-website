@@ -14,11 +14,12 @@ import {
   contactsLabel,
 } from "../../constants/labels";
 
-import About from "../About";
-import { Work } from "../Work";
-import { Education } from "../Education";
-import { Contacts } from "../Contacts";
+import AboutSection from "../AboutSection";
+import { WorkSection } from "../WorkSection";
+import { EducationSection } from "../EducationSection";
+import { ContactsSection } from "../ContactsSection";
 import { HeroSection } from "../HeroSection";
+import { WebsitesSection } from "../WebsitesSection";
 
 import { ParallaxElemenet } from "../ParallaxElement";
 
@@ -28,7 +29,6 @@ import { scrollAnimation } from "../../constants/animationSettings";
 
 import bigImgPolimi from "../../img/bigImgPolimi.png";
 import bigImgSmb from "../../img/bigImgSmb.png";
-import { Websites } from "../Websites";
 
 const PageLayout = ({ lightIsOn, handleLightClick, colors }) => {
   const handleMenuClick = (idElement) =>
@@ -50,21 +50,21 @@ const PageLayout = ({ lightIsOn, handleLightClick, colors }) => {
       <ContentContainer>
         <HeroSection colors={colors} />
         <Element name={aboutLabel}>
-          <About colors={colors} />
+          <AboutSection colors={colors} />
         </Element>
         <ParallaxElemenet imgSrc={bigImgSmb} colors={colors} />
         <Element name={workLabel}>
-          <Work colors={colors} />
+          <WorkSection colors={colors} />
         </Element>
         <ParallaxElemenet imgSrc={bigImgPolimi} colors={colors} />
         <Element name={educationLabel}>
-          <Education colors={colors} />
+          <EducationSection colors={colors} />
         </Element>
         <ContainerDivider colors={colors} />
-        <Websites lightIsOn={lightIsOn} colors={colors} />
+        <WebsitesSection lightIsOn={lightIsOn} colors={colors} />
         <ContainerDivider colors={colors} />
         <Element name={contactsLabel}>
-          <Contacts colors={colors} />
+          <ContactsSection colors={colors} />
         </Element>
       </ContentContainer>
       <FooterContainer colors={colors}>
