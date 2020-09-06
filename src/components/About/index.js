@@ -44,13 +44,13 @@ const About = ({ size, colors }) => {
         alignItems="flex-start"
         spacing={7}
       >
-        {size.width <= screenSizes.tabletStep && <GridItemPhoto />}
+        {size.width <= screenSizes.tablet && <GridItemPhoto />}
         <Grid item xs={12} md={9}>
           {textFirstParagraph.map((value) => (
             <Text colors={colors}>{value.text}</Text>
           ))}
         </Grid>
-        {size.width > screenSizes.tabletStep && <GridItemPhoto />}
+        {size.width > screenSizes.tablet && <GridItemPhoto />}
       </Grid>
       <Grid
         container

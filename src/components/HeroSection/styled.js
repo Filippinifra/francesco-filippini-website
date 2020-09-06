@@ -13,7 +13,7 @@ export const TextLeft = Styled.div`
     font-size: 13px;
     margin-top: 15px;
 
-    @media screen and (max-width: ${screenSizes.tablet}) {
+    @media screen and (max-width: ${screenSizes.tablet}px) {
         text-align: center;
         margin-top: 0;
         margin-bottom: 20px;
