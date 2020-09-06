@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 import GlobalStyle from "./styled.js";
 
@@ -17,7 +17,10 @@ export const App = () => {
 
   const [lightOn, setLightOn] = useState(true);
 
-  const getColors = () => (lightOn ? colorsLightOn : colorsLightOff);
+  const getColors = useCallback(
+    () => (lightOn ? colorsLightOn : colorsLightOff),
+    [lightOn]
+  );
 
   const handleLightClick = () =>
     lightOn ? setLightOn(false) : setLightOn(true);
