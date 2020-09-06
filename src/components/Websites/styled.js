@@ -4,7 +4,7 @@ import screenSizes from "../../constants/screenSizes";
 export const ContainerWebsites = Styled.div`
     position: unset !important;
     padding:80px 100px;
-    background-color: ${(props) => props.colors.contentBgColor};
+    background-color: ${({ colors }) => colors.contentBgColor};
 
     @media screen and (max-width: ${screenSizes.phone}) {
         padding:60px 60px;
@@ -12,7 +12,7 @@ export const ContainerWebsites = Styled.div`
 `;
 
 export const Text = Styled.div`
-    color: ${(props) => props.colors.contentColor};
+    color: ${({ colors }) => colors.contentColor};
     margin-bottom: 50px;
 `;
 

@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
         font-family: ${typography.fontFamily} !important;
-        background-color: ${(props) => props.colors.bodyBgColor};
+        background-color: ${({ colors }) => colors.bodyBgColor};
         height: 100vh;
         width: 100%;
     }
@@ -17,8 +17,8 @@ const GlobalStyle = createGlobalStyle`
 
     *{
         ::selection{
-            background-color: ${(props) => props.colors.selectionBgColor};
-            color: ${(props) => props.colors.selectionColor};
+            background-color: ${({ colors }) => colors.selectionBgColor};
+            color: ${({ colors }) => colors.selectionColor};
         }
     }
 `;

@@ -4,7 +4,7 @@ import screenSizes from "../../constants/screenSizes";
 export const ContainerEducation = Styled.div`
     position: unset !important;
     padding:80px 100px;
-    background-color: ${(props) => props.colors.contentBgColor};
+    background-color: ${({ colors }) => colors.contentBgColor};
 
     @media screen and (max-width: ${screenSizes.phone}) {
         padding:60px 60px;
@@ -12,7 +12,7 @@ export const ContainerEducation = Styled.div`
 `;
 
 export const Text = Styled.div`
-    color: ${(props) => props.colors.contentColor};
+    color: ${({ colors }) => colors.contentColor};
     line-height: 25px;
     margin-top: 50px;
 `;
@@ -41,14 +41,14 @@ export const StrongTitle = Styled.div`
     font-size: 30px;
     font-weight: 900;
     margin-bottom: 20px;
-    color: ${(props) => props.colors.contentColor};
+    color: ${({ colors }) => colors.contentColor};
 `;
 
 export const MediumTitle = Styled.div`
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 3px;
-    color: ${(props) => props.colors.contentColor};
+    color: ${({ colors }) => colors.contentColor};
 `;
 
 export const ContainerGrid = Styled.div`

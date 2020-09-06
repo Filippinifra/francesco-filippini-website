@@ -11,7 +11,7 @@ export const CurtainWrapper = Styled.div`
 `;
 
 export const CurtainLeftPanel = Styled.div`
-  background-color: ${(props) => props.colors.curtainBgColor};
+  background-color: ${({ colors }) => colors.curtainBgColor};
   width: 50%; 
   height: 100vh;
   float: left;
@@ -28,7 +28,7 @@ export const CurtainLeftPanel = Styled.div`
 `;
 
 export const CurtainRightPanel = Styled.div`
-  background-color: ${(props) => props.colors.curtainBgColor};
+  background-color: ${({ colors }) => colors.curtainBgColor};
   margin-left: 50%;
   width: 50%; 
   height: 100vh; 
@@ -55,12 +55,12 @@ export const CurtainContent = Styled.div`
 export const LeftTitle = Styled.div`
   text-align: right;
   margin-right:3px;
-  color: ${(props) => props.colors.curtainColor};
+  color: ${({ colors }) => colors.curtainColor};
   white-space: pre-line;
 `;
 
 export const RightTitle = Styled.div`
   margin-left:5px;
-  color: ${(props) => props.colors.curtainColor};
+  color: ${({ colors }) => colors.curtainColor};
   white-space: pre-line;
 `;

@@ -3,8 +3,8 @@ import screenSizes from "../../constants/screenSizes";
 
 export const ContainerHeroSection = Styled.div`
     width: 100%;
-    background-color: ${(props) => props.colors.heroSectionBgColor};
-    color: ${(props) => props.colors.heroSectionColor};
+    background-color: ${({ colors }) => colors.heroSectionBgColor};
+    color: ${({ colors }) => colors.heroSectionColor};
     padding: 200px 0;
 `;
 

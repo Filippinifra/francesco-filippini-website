@@ -5,7 +5,7 @@ import screenSizes from "../../constants/screenSizes";
 export const ContainerContacts = Styled.div`
     position: unset !important;
     padding:80px 100px;
-    background-color: ${(props) => props.colors.contentBgColor};
+    background-color: ${({ colors }) => colors.contentBgColor};
 
     @media screen and (max-width: ${screenSizes.phone}) {
         padding:60px 60px 80px;
@@ -36,7 +36,7 @@ export const TextInformation = Styled.div`
 
 export const Link = Styled.a`
     text-decoration: none;
-    color: ${(props) => props.colors.contentColor};
+    color: ${({ colors }) => colors.contentColor};
 `;
 
 export const ContentCentered = Styled.div`
