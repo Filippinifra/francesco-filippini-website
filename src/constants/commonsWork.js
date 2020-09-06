@@ -29,7 +29,7 @@ const workList = [
         text: `I worked 1 month building the website frontend for "SalesBook", a project launched by BOOM and used to complete the photo business flow.`,
       },
     ],
-    tools: "React, Redux, Git, Jira.",
+    tools: "React, Redux, Typescript, Git, Jira.",
   },
   {
     logoImg: finleapLogo,
