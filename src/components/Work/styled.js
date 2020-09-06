@@ -65,7 +65,11 @@ export const ContainerGallery = Styled.div`
 
 export const ToolsText = Styled.div`
     font-weight: 700;
-    margin-top: 50px;
-    margin-bottom: 3px;
+    margin: 50px 0 3px 10px;
     color: ${(props) => props.colors.toolsTitleColor};
+`;
+
+export const StackRowWrapper = Styled.div`
+    display:flex;
+    align-items: baseline;
 `;

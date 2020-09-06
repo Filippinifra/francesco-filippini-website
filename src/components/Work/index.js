@@ -15,6 +15,7 @@ import {
   ImgSectionGallery,
   ContainerGallery,
   ToolsText,
+  StackRowWrapper,
 } from "./styled";
 
 export const Work = ({ colors }) => (
@@ -51,7 +52,12 @@ export const Work = ({ colors }) => (
               {textList.map((paragraph) => (
                 <Text colors={colors}>{paragraph.text}</Text>
               ))}
-              {tools && <ToolsText colors={colors}>{tools}</ToolsText>}
+              {tools && (
+                <StackRowWrapper>
+                  <Text colors={colors}>{`Stack:`}</Text>
+                  <ToolsText colors={colors}>{tools}</ToolsText>
+                </StackRowWrapper>
+              )}
               {images && (
                 <ContainerGallery>
                   <Grid
