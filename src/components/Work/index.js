@@ -4,6 +4,8 @@ import { Grid } from "@material-ui/core";
 
 import workList from "../../constants/commonsWork";
 
+import { stackLabel } from "constants/labels";
+
 import {
   ContainerWork,
   Text,
@@ -54,7 +56,7 @@ export const Work = ({ colors }) => (
               ))}
               {tools && (
                 <StackRowWrapper>
-                  <Text colors={colors}>{`Stack:`}</Text>
+                  <Text colors={colors}>{stackLabel}</Text>
                   <ToolsText colors={colors}>{tools}</ToolsText>
                 </StackRowWrapper>
               )}
