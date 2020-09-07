@@ -7,12 +7,7 @@ import { Footer } from "../Footer";
 
 import { FooterContainer, HeaderContainer, ContentContainer } from "./styled";
 
-import {
-  aboutLabel,
-  educationLabel,
-  workLabel,
-  contactsLabel,
-} from "../../constants/labels";
+import { useTranslation } from "react-i18next";
 
 import AboutSection from "../AboutSection";
 import { WorkSection } from "../WorkSection";
@@ -36,6 +31,8 @@ const PageLayout = ({ lightIsOn, handleLightClick, colors }) => {
 
   const scrollToTop = () => scroll.scrollToTop();
 
+  const { t } = useTranslation();
+
   return (
     <>
       <HeaderContainer>
@@ -49,21 +46,21 @@ const PageLayout = ({ lightIsOn, handleLightClick, colors }) => {
       </HeaderContainer>
       <ContentContainer>
         <HeroSection colors={colors} />
-        <Element name={aboutLabel}>
+        <Element name={t("labels.about")}>
           <AboutSection colors={colors} />
         </Element>
         <ParallaxElemenet imgSrc={bigImgSmb} colors={colors} />
-        <Element name={workLabel}>
+        <Element name={t("labels.work")}>
           <WorkSection colors={colors} />
         </Element>
         <ParallaxElemenet imgSrc={bigImgPolimi} colors={colors} />
-        <Element name={educationLabel}>
+        <Element name={t("labels.education")}>
           <EducationSection colors={colors} />
         </Element>
         <ContainerDivider colors={colors} />
         <WebsitesSection lightIsOn={lightIsOn} colors={colors} />
         <ContainerDivider colors={colors} />
-        <Element name={contactsLabel}>
+        <Element name={t("labels.contacts")}>
           <ContactsSection colors={colors} />
         </Element>
       </ContentContainer>
