@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Grid } from "@material-ui/core";
+import { leftContent, centerContent } from "constants/commonsHeroSection";
 
 import { ContainerHeroSection, TextLeft, TextCenter } from "./styled";
 
@@ -14,10 +15,10 @@ export const HeroSection = ({ colors }) => (
       spacing={0}
     >
       <Grid item xs={12} md={3}>
-        <TextLeft>Let me introduce myself, I'm</TextLeft>
+        <TextLeft>{leftContent}</TextLeft>
       </Grid>
       <Grid item xs={12} md={6}>
-        <TextCenter>Francesco Filippini</TextCenter>
+        <TextCenter>{centerContent}</TextCenter>
       </Grid>
       <Grid item xs={12} md={3}></Grid>
     </Grid>
