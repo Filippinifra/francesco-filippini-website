@@ -8,16 +8,25 @@ export const DropDownContainer = styled.div`
   cursor: pointer;
 `;
 
+export const DropDownIndicator = styled.div`
+  vertical-align: middle;
+  color: ${({ color }) => color};
+`;
+
 export const DropDownTitle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: ${(props) => props.heightElement || "30"}px;
   width: 100%;
-`;
+  transition: background 0.6s;
 
-export const DropDownIndicator = styled.div`
-  vertical-align: middle;
+  :hover {
+    background-color: ${({ color }) => color};
+  }
+  &:hover ${DropDownIndicator} {
+    color: ${({ bgColor }) => bgColor};
+  }
 `;
 
 export const DropDownContent = styled.div`
@@ -41,5 +50,10 @@ export const ChoiceContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background 0.6s;
   height: ${({ height }) => height || 30}px;
+
+  :hover {
+    background-color: ${({ color }) => color};
+  }
 `;

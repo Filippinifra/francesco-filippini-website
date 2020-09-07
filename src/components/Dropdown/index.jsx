@@ -34,20 +34,21 @@ export const Dropdown = ({
       <DropDownContainer
         widthElement={widthElement}
         isOpen={isOpen}
-        bgColor={bgColor}
         style={{ ...style }}
         onClick={onClick}
       >
         <DropDownTitle
           onClick={() => setIsOpen(!isOpen)}
           heightElement={heightElement}
+          color={color}
+          bgColor={bgColor}
         >
-          {title}
-          <DropDownIndicator style={{ color: color }}>
+          <div style={{ marginLeft: 5 }}>{title}</div>
+          <DropDownIndicator color={color} bgColor={bgColor}>
             {isOpen ? (
-              <ExpandLess style={{ marginTop: 5, marginLeft: 5 }} />
+              <ExpandLess style={{ marginTop: 5, marginLeft: 0, width: 22 }} />
             ) : (
-              <ExpandMore style={{ marginTop: 5, marginLeft: 5 }} />
+              <ExpandMore style={{ marginTop: 5, marginLeft: 0, width: 22 }} />
             )}
           </DropDownIndicator>
         </DropDownTitle>
@@ -65,6 +66,7 @@ export const Dropdown = ({
                 element.onCta();
                 setIsOpen(false);
               }}
+              color={color}
             >
               {element.text}
             </ChoiceContainer>

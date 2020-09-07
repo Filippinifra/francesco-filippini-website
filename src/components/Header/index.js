@@ -54,7 +54,7 @@ const Header = ({
   const DropdownLangs = useCallback(
     () => (
       <ChangeLangDropDown
-        widthElement={50}
+        widthElement={60}
         heightElement={50}
         color={colors.headerColor}
         bgColor={colors.headerBgColor}
