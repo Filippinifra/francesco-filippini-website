@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 import {
   ContainerWebsites,
@@ -19,7 +19,10 @@ import { commonsWebsite } from "../../constants/commonsWebsites";
 export const WebsitesSection = ({ lightIsOn, colors }) => {
   const { texts, imagesPreview } = commonsWebsite;
 
-  const getRightFrame = () => (lightIsOn ? blackFramePhone : whiteFramePhone);
+  const getRightFrame = useCallback(
+    () => (lightIsOn ? blackFramePhone : whiteFramePhone),
+    [lightIsOn]
+  );
 
   return (
     <ContainerWebsites colors={colors}>

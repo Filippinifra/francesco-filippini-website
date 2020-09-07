@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { withSize } from "react-sizeme";
 
 import { Grid } from "@material-ui/core";
@@ -27,12 +27,15 @@ import {
 import curriculumImage from "../../img/contactLogos/curriculum.svg";
 
 const AboutSection = ({ size, colors }) => {
-  const GridItemPhoto = () => (
-    <Grid item xs={12} md={3}>
-      <ContainerImg>
-        <FaceImg src={face} colors={colors} />
-      </ContainerImg>
-    </Grid>
+  const GridItemPhoto = useCallback(
+    () => (
+      <Grid item xs={12} md={3}>
+        <ContainerImg>
+          <FaceImg src={face} colors={colors} />
+        </ContainerImg>
+      </Grid>
+    ),
+    [colors]
   );
 
   return (

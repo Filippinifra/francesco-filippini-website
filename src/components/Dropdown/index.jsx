@@ -24,7 +24,7 @@ export const Dropdown = ({
   const [isOpen, setIsOpen] = useState(false);
 
   const handleBlur = () => {
-    if (isOpen === true) {
+    if (isOpen) {
       setIsOpen(false);
     }
   };

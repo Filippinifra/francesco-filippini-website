@@ -28,7 +28,7 @@ export const DropDownContent = styled.div`
   z-index: 1;
   margin-top: ${(props) => props.heightElement || 36}px;
 
-  max-height: ${(props) => (props.isOpen === true ? props.totalHeight : 0)}px;
+  max-height: ${(props) => (props.isOpen ? props.totalHeight : 0)}px;
 
   transition: max-height 0.5s ease-in-out;
 

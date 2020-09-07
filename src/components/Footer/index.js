@@ -21,8 +21,6 @@ export const Footer = ({ colors }) => {
     }, delayModalFooterAppear);
   };
 
-  const closeModal = () => setModalOpen(false);
-
   return (
     <>
       <ButtonModal colors={colors} onClick={openModalWithDelay}>
@@ -31,7 +29,7 @@ export const Footer = ({ colors }) => {
       <Drawer
         anchor={sideAppearModalFooter}
         open={modalOpen}
-        onClose={closeModal}
+        onClose={() => setModalOpen(false)}
       >
         <ContainerModal colors={colors}>
           <TextRow>{firstText}</TextRow>
