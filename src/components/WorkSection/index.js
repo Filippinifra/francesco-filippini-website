@@ -22,6 +22,7 @@ import {
 
 export const WorkSection = ({ colors }) => {
   const { t } = useTranslation();
+
   return (
     <ContainerWork colors={colors}>
       {workList.map(
