@@ -4,7 +4,7 @@ export const Parallax = Styled.div`
     position: unset !important;
 
     display: block;
-    background-image: url(${(props) => props.imgSrc});
+    background-image: url(${({ imgSrc }) => imgSrc});
 
     min-height: 400px;
     height:100%;

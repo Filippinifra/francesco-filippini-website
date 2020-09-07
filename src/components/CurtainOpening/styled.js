@@ -19,8 +19,8 @@ export const CurtainLeftPanel = Styled.div`
   z-index: 2; 
   transition: 1s ease-in-out; 
 
-  transform: ${(props) =>
-    props.loaded ? `translateX(0)` : `translateX(-100%)`};
+  transform: ${({ loaded }) =>
+    loaded ? `translateX(0)` : `translateX(-100%)`};
 
   display: flex;
   flex-direction: column;
@@ -37,8 +37,7 @@ export const CurtainRightPanel = Styled.div`
   z-index: 2; 
   transition: all 1s ease-in-out; 
 
-  transform: ${(props) =>
-    props.loaded ? `translateX(0)` : `translateX(100%)`};
+  transform: ${({ loaded }) => (loaded ? `translateX(0)` : `translateX(100%)`)};
 
   display: flex;
   flex-direction: column;

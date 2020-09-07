@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const DropDownContainer = styled.div`
   position: relative;
-  width: ${(props) => props.widthElement || "100"}px;
-  background-color: ${(props) => props.bgColor};
+  width: ${({ widthElement }) => widthElement || "100"}px;
+  background-color: ${({ bgColor }) => bgColor};
   display: inline-flex;
   cursor: pointer;
 `;
@@ -17,7 +17,7 @@ export const DropDownTitle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: ${(props) => props.heightElement || "30"}px;
+  height: ${({ heightElement }) => heightElement || "30"}px;
   width: 100%;
   transition: background 0.6s;
 
@@ -32,12 +32,12 @@ export const DropDownTitle = styled.div`
 export const DropDownContent = styled.div`
   position: absolute;
   overflow: hidden;
-  background-color: ${(props) => props.bgColor};
-  width: ${(props) => props.widthElement || "100"}px;
+  background-color: ${({ bgColor }) => bgColor};
+  width: ${({ widthElement }) => widthElement || "100"}px;
   z-index: 1;
-  margin-top: ${(props) => props.heightElement || 36}px;
+  margin-top: ${({ heightElement }) => heightElement || 36}px;
 
-  max-height: ${(props) => (props.isOpen ? props.totalHeight : 0)}px;
+  max-height: ${({ isOpen, totalHeight }) => (isOpen ? totalHeight : 0)}px;
 
   transition: max-height 0.5s ease-in-out;
 

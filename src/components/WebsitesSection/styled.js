@@ -37,7 +37,7 @@ export const ContainerScrollElement = Styled.div`
     height: 100%;
     padding-left: calc(50% - 120px);
     padding-right: calc(50% - 120px);
-    width: ${(props) => props.numberOfElement * 240}px;
+    width: ${({ numberOfElement }) => numberOfElement * 240}px;
 `;
 
 export const ElementScrolling = Styled.div`

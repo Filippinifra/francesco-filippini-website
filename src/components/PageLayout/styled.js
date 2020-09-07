@@ -6,8 +6,7 @@ export const FooterContainer = Styled.div`
     width: 100%;
     text-align: center;
     background-color: ${({ colors }) => colors.footerBgColor};
-    -webkit-box-shadow: 0px -5px 64px 4px ${(props) =>
-      props.colors.footerShade};
+    -webkit-box-shadow: 0px -5px 64px 4px ${({ colors }) => colors.footerShade};
     -moz-box-shadow: 0px -5px 64px 4px ${({ colors }) => colors.footerShade};
     box-shadow: 0px -5px 64px 4px ${({ colors }) => colors.footerShade};
 `;

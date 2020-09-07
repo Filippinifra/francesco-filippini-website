@@ -9,8 +9,7 @@ export const GridItem = Styled(Grid)`
 export const NavbarHeader = Styled.div`
     background-color: ${({ colors }) => colors.headerBgColor};
     height: auto;
-    -webkit-box-shadow: 0px 5px 20px -9px ${(props) =>
-      props.colors.headerShade};
+    -webkit-box-shadow: 0px 5px 20px -9px ${({ colors }) => colors.headerShade};
     -moz-box-shadow: 0px 5px 20px -9px ${({ colors }) => colors.headerShade};
     box-shadow: 0px 5px 20px -9px ${({ colors }) => colors.headerShade};
 `;
@@ -87,7 +86,7 @@ export const NavMobileButton = Styled.button`
 `;
 
 export const ContainerMobileLink = Styled.div`
-    max-height: ${(props) => (props.hamburgerActive ? "162px" : "0")};
+    max-height: ${({ hamburgerActive }) => (hamburgerActive ? "162px" : "0")};
     transition: max-height 0.6s ease-in-out;
     overflow: hidden;
 `;
