@@ -18,7 +18,7 @@ import { WebsitesSection } from "components/WebsitesSection";
 
 import { ParallaxElemenet } from "components/ParallaxElement";
 
-import { ContainerDivider } from "components/ContentDivider/styled";
+import { ContentDivider } from "components/ContentDivider";
 
 import { scrollAnimation } from "constants/animationSettings";
 
@@ -57,9 +57,9 @@ const PageLayout = ({ lightIsOn, handleLightClick, colors }) => {
         <Element name={t("labels.education")}>
           <EducationSection colors={colors} />
         </Element>
-        <ContainerDivider colors={colors} />
+        <ContentDivider colors={colors} />
         <WebsitesSection lightIsOn={lightIsOn} colors={colors} />
-        <ContainerDivider colors={colors} />
+        <ContentDivider colors={colors} />
         <Element name={t("labels.contacts")}>
           <ContactsSection colors={colors} />
         </Element>
