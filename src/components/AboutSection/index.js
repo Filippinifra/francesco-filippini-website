@@ -3,15 +3,15 @@ import { withSize } from "react-sizeme";
 
 import { Grid } from "@material-ui/core";
 
-import face from "../../img/faceImage.png";
+import face from "img/faceImage.png";
 
 import {
   textFirstParagraph,
   textSecondParagraph,
   cardDownloadSettings,
-} from "../../constants/commonsAbout";
+} from "constants/commonsAbout";
 
-import screenSizes from "../../constants/screenSizes";
+import screenSizes from "constants/screenSizes";
 
 import {
   FaceImg,
@@ -24,7 +24,7 @@ import {
   LabelDownload,
 } from "./styled";
 
-import curriculumImage from "../../img/contactLogos/curriculum.svg";
+import curriculumImage from "img/contactLogos/curriculum.svg";
 
 const AboutSection = ({ size, colors }) => {
   const GridItemPhoto = useCallback(

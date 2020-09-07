@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 
 import { withSize } from "react-sizeme";
 
-import { ChangeLangDropDown } from "../ChangeLangDropDown";
+import { ChangeLangDropDown } from "components/ChangeLangDropDown";
 
 import {
   ContainerNavbar,
@@ -18,11 +18,11 @@ import {
   BorderContainer,
 } from "./styled";
 
-import FFLogo from "../../img/myLogo.png";
-import lightOn from "../../img/lightOn.svg";
-import lightOff from "../../img/lightOff.svg";
+import FFLogo from "img/myLogo.png";
+import lightOn from "img/lightOn.svg";
+import lightOff from "img/lightOff.svg";
 
-import sizes from "../../constants/screenSizes";
+import sizes from "constants/screenSizes";
 
 import { useTranslation } from "react-i18next";
 

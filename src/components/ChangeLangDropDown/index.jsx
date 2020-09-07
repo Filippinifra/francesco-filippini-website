@@ -1,13 +1,10 @@
 import React from "react";
 import { useParams, useLocation, useHistory } from "react-router-dom";
-import {
-  AVAILABLE_LANGUAGES,
-  MAP_LANG_TO_FLAGS,
-} from "../../constants/languages";
+import { AVAILABLE_LANGUAGES, MAP_LANG_TO_FLAGS } from "constants/languages";
 
 import getUnicodeFlagIcon from "country-flag-icons/unicode";
 
-import { Dropdown } from "../Dropdown";
+import { Dropdown } from "components/Dropdown";
 import { useCallback } from "react";
 
 const ChangeLangDropDown = ({

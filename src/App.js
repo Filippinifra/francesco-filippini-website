@@ -6,18 +6,18 @@ import { animateScroll as scroll } from "react-scroll";
 
 import { ThemeProvider } from "@material-ui/core/styles";
 
-import PageLayout from "./components/PageLayout";
+import PageLayout from "components/PageLayout";
 
-import theme from "./constants/theme";
-import { CurtainOpening } from "./components/CurtainOpening";
-import { colorsLightOn, colorsLightOff } from "./constants/colors";
-import { AVAILABLE_LANGUAGES, defaultLanguage } from "./constants/languages";
+import theme from "constants/theme";
+import { CurtainOpening } from "components/CurtainOpening";
+import { colorsLightOn, colorsLightOff } from "constants/colors";
+import { AVAILABLE_LANGUAGES, defaultLanguage } from "constants/languages";
 
 import { Redirect, useParams } from "react-router-dom";
 import { HOME_RELATIVE_PATH } from "constants/paths.js";
 
 /*eslint-disable-next-line */
-import i18n from "./constants/translations";
+import i18n from "constants/translations";
 
 export const App = () => {
   const [pageIsLoading, setPageLoading] = useState(true);

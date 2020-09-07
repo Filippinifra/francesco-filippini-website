@@ -1,5 +1,5 @@
 import React from "react";
-import { LineTop, LineBottom, Line, Ham } from "./styles.js";
+import { LineTop, LineBottom, Line, Ham } from "./styled.js";
 
 const Hamburger = ({ handleHamburgerClick, active, colors }) => (
   <Ham

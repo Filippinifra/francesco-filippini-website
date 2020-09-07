@@ -11,7 +11,7 @@ import {
 
 import { Parallax } from "./styled";
 
-import { ContentDivider } from "../ContentDivider";
+import { ContentDivider } from "components/ContentDivider";
 
 export const ParallaxElemenet = ({ imgSrc, colors }) => {
   const conditionNoParallax =

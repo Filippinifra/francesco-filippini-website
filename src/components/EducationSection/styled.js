@@ -1,5 +1,5 @@
 import Styled from "styled-components";
-import screenSizes from "../../constants/screenSizes";
+import screenSizes from "constants/screenSizes";
 
 export const ContainerEducation = Styled.div`
     position: unset !important;

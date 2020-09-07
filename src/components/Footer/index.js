@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Drawer from "@material-ui/core/Drawer";
 
-import { footerLabel, contentModal } from "../../constants/commonsFooter";
+import { footerLabel, contentModal } from "constants/commonsFooter";
 
 import {
   delayModalFooterAppear,
   sideAppearModalFooter,
-} from "../../constants/animationSettings";
+} from "constants/animationSettings";
 
 import { ButtonModal, ContainerModal, TextRow, Link } from "./styled";
 

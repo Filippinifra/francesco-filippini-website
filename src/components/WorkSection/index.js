@@ -2,7 +2,7 @@ import React from "react";
 
 import { Grid } from "@material-ui/core";
 
-import workList from "../../constants/commonsWork";
+import workList from "constants/commonsWork";
 
 import { useTranslation } from "react-i18next";
 

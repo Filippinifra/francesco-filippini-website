@@ -11,10 +11,10 @@ import {
   ImgScrolling,
 } from "./styled";
 
-import blackFramePhone from "../../img/phoneFrameBlack.png";
-import whiteFramePhone from "../../img/phoneFrameWhite.png";
+import blackFramePhone from "img/phoneFrameBlack.png";
+import whiteFramePhone from "img/phoneFrameWhite.png";
 
-import { commonsWebsite } from "../../constants/commonsWebsites";
+import { commonsWebsite } from "constants/commonsWebsites";
 
 export const WebsitesSection = ({ lightIsOn, colors }) => {
   const { texts, imagesPreview } = commonsWebsite;

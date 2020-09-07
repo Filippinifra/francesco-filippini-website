@@ -1,29 +1,29 @@
 import React from "react";
 
-import Header from "../Header";
+import Header from "components/Header";
 import { Element, scroller, animateScroll as scroll } from "react-scroll";
 
-import { Footer } from "../Footer";
+import { Footer } from "components/Footer";
 
 import { FooterContainer, HeaderContainer, ContentContainer } from "./styled";
 
 import { useTranslation } from "react-i18next";
 
-import AboutSection from "../AboutSection";
-import { WorkSection } from "../WorkSection";
-import { EducationSection } from "../EducationSection";
-import { ContactsSection } from "../ContactsSection";
-import { HeroSection } from "../HeroSection";
-import { WebsitesSection } from "../WebsitesSection";
+import AboutSection from "components/AboutSection";
+import { WorkSection } from "components/WorkSection";
+import { EducationSection } from "components/EducationSection";
+import { ContactsSection } from "components/ContactsSection";
+import { HeroSection } from "components/HeroSection";
+import { WebsitesSection } from "components/WebsitesSection";
 
-import { ParallaxElemenet } from "../ParallaxElement";
+import { ParallaxElemenet } from "components/ParallaxElement";
 
-import { ContainerDivider } from "../ContentDivider/styled";
+import { ContainerDivider } from "components/ContentDivider/styled";
 
-import { scrollAnimation } from "../../constants/animationSettings";
+import { scrollAnimation } from "constants/animationSettings";
 
-import bigImgPolimi from "../../img/bigImgPolimi.png";
-import bigImgSmb from "../../img/bigImgSmb.png";
+import bigImgPolimi from "img/bigImgPolimi.png";
+import bigImgSmb from "img/bigImgSmb.png";
 
 const PageLayout = ({ lightIsOn, handleLightClick, colors }) => {
   const handleMenuClick = (idElement) =>

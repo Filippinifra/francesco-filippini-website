@@ -1,6 +1,6 @@
 import Styled from "styled-components";
 import { Grid } from "@material-ui/core";
-import screenSizes from "../../constants/screenSizes";
+import screenSizes from "constants/screenSizes";
 
 export const ContainerContacts = Styled.div`
     position: unset !important;

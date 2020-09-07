@@ -1,8 +1,8 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { DEFAULT_LANG } from "./languages";
+import { DEFAULT_LANG } from "constants/languages";
 
-import { LABELS } from "./labels";
+import { LABELS } from "constants/labels";
 
 const resources = {
   en: {

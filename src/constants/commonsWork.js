@@ -1,13 +1,13 @@
-import finleapLogo from "../img/finleapLogo.png";
-import smbLogo from "../img/smbLogo.png";
-import boomLogo from "../img/boomLogo.png";
+import finleapLogo from "img/finleapLogo.png";
+import smbLogo from "img/smbLogo.png";
+import boomLogo from "img/boomLogo.png";
 
-import smb1 from "../img/smbImages/smb1.png";
-import smb2 from "../img/smbImages/smb2.png";
-import smb3 from "../img/smbImages/smb3.png";
-import smb4 from "../img/smbImages/smb4.png";
-import smb5 from "../img/smbImages/smb5.png";
-import smb6 from "../img/smbImages/smb6.png";
+import smb1 from "img/smbImages/smb1.png";
+import smb2 from "img/smbImages/smb2.png";
+import smb3 from "img/smbImages/smb3.png";
+import smb4 from "img/smbImages/smb4.png";
+import smb5 from "img/smbImages/smb5.png";
+import smb6 from "img/smbImages/smb6.png";
 
 const workList = [
   {

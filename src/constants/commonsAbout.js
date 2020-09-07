@@ -1,4 +1,4 @@
-import curriculumPdf from "../files/FilippiniFCV.pdf";
+import curriculumPdf from "files/FilippiniFCV.pdf";
 
 export const cardDownloadSettings = {
   curriculumPdf: curriculumPdf,

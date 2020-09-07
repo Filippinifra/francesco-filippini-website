@@ -12,12 +12,12 @@ import {
   TextContainer,
 } from "./styled";
 
-import phoneIcon from "../../img/contactLogos/phonebookLogo.svg";
-import mailIcon from "../../img/contactLogos/emailLogo.svg";
-import addressIcon from "../../img/contactLogos/locationLogo.svg";
-import linkedinIcon from "../../img/contactLogos/linkedinLogo.svg";
+import phoneIcon from "img/contactLogos/phonebookLogo.svg";
+import mailIcon from "img/contactLogos/emailLogo.svg";
+import addressIcon from "img/contactLogos/locationLogo.svg";
+import linkedinIcon from "img/contactLogos/linkedinLogo.svg";
 
-import { commonsContacts } from "../../constants/commonsContacts";
+import { commonsContacts } from "constants/commonsContacts";
 
 export const ContactsSection = ({ colors }) => (
   <ContainerContacts colors={colors}>

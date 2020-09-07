@@ -1,6 +1,6 @@
-import politecnicoLogo from "../img/politecnicoMilanoLogo.png";
-import fracastoroLogo from "../img/liceoFracastoroLogo.png";
-import stJonesLogo from "../img/stJonesLogo.png";
+import politecnicoLogo from "img/politecnicoMilanoLogo.png";
+import fracastoroLogo from "img/liceoFracastoroLogo.png";
+import stJonesLogo from "img/stJonesLogo.png";
 
 const educationList = [
   {

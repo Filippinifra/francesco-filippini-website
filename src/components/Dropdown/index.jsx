@@ -6,7 +6,7 @@ import {
   DropDownTitle,
   DropDownIndicator,
   ChoiceContainer,
-} from "./styles";
+} from "./styled";
 
 import { ExpandMore } from "@material-ui/icons";
 import { ExpandLess } from "@material-ui/icons";

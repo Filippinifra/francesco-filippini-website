@@ -1,18 +1,18 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
-import typography from "./typography";
+import typography from "constants/typography";
 
 const theme = createMuiTheme({
   typography: {
-    fontFamily: typography.fontFamily
+    fontFamily: typography.fontFamily,
   },
   overrides: {
     MuiPaper: {
       root: {
-        backgroundColor: "transparent"
-      }
-    }
-  }
+        backgroundColor: "transparent",
+      },
+    },
+  },
 });
 
 export default theme;

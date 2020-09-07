@@ -10,7 +10,7 @@ import {
   RightTitle,
 } from "./styled.js";
 
-import { leftPanelText, rightPanelText } from "../../constants/commonsCurtain";
+import { leftPanelText, rightPanelText } from "constants/commonsCurtain";
 
 export const CurtainOpening = ({ isloading, children, colors }) => (
   <Curtain>

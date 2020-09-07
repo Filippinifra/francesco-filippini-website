@@ -1,8 +1,8 @@
-import rondinella from "../img/previewWebsites/rondinella.png";
-import hypermedia from "../img/previewWebsites/hypermedia.png";
-import laRuota from "../img/previewWebsites/laruota.png";
-import myWebsite from "../img/previewWebsites/myWebsite.png";
-import uristudio from "../img/previewWebsites/uristudio.png";
+import rondinella from "img/previewWebsites/rondinella.png";
+import hypermedia from "img/previewWebsites/hypermedia.png";
+import laRuota from "img/previewWebsites/laruota.png";
+import myWebsite from "img/previewWebsites/myWebsite.png";
+import uristudio from "img/previewWebsites/uristudio.png";
 
 export const commonsWebsite = {
   texts: [
