@@ -11,6 +11,13 @@ import PageLayout from "./components/PageLayout";
 import theme from "./constants/theme";
 import { CurtainOpening } from "./components/CurtainOpening";
 import { colorsLightOn, colorsLightOff } from "./constants/colors";
+import { AVAILABLE_LANGUAGES, defaultLanguage } from "./constants/languages";
+
+import { Redirect, useParams } from "react-router-dom";
+import { HOME_RELATIVE_PATH } from "constants/paths.js";
+
+/*eslint-disable-next-line */
+import i18n from "./constants/translations";
 
 export const App = () => {
   const [pageIsLoading, setPageLoading] = useState(true);
@@ -25,6 +32,8 @@ export const App = () => {
   const handleLightClick = () =>
     lightOn ? setLightOn(false) : setLightOn(true);
 
+  const { language } = useParams();
+
   useEffect(() => {
     scroll.scrollToTop();
     setTimeout(() => {
@@ -32,7 +41,11 @@ export const App = () => {
     }, 2000);
   }, []);
 
-  return (
+  useEffect(() => {
+    i18n.changeLanguage(language);
+  }, [language]);
+
+  return AVAILABLE_LANGUAGES.includes(language) ? (
     <ThemeProvider theme={theme}>
       <GlobalStyle colors={getColors()} />
       <CurtainOpening isloading={pageIsLoading} colors={getColors()}>
@@ -43,5 +56,7 @@ export const App = () => {
         />
       </CurtainOpening>
     </ThemeProvider>
+  ) : (
+    <Redirect to={HOME_RELATIVE_PATH + defaultLanguage} />
   );
 };
