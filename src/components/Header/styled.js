@@ -56,6 +56,8 @@ export const RightGrid = Styled.div`
     text-align: right;
     margin-right: 15px;
     height: 50px;
+    display: flex;
+    justify-content: flex-end;
 `;
 
 export const LeftGrid = Styled.div`

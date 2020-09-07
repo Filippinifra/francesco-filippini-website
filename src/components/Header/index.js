@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 import { withSize } from "react-sizeme";
+
+import { ChangeLangDropDown } from "../ChangeLangDropDown";
 
 import {
   ContainerNavbar,
@@ -20,14 +22,9 @@ import FFLogo from "../../img/myLogo.png";
 import lightOn from "../../img/lightOn.svg";
 import lightOff from "../../img/lightOff.svg";
 
-import {
-  aboutLabel,
-  educationLabel,
-  workLabel,
-  contactsLabel,
-} from "../../constants/labels";
-
 import sizes from "../../constants/screenSizes";
+
+import { useTranslation } from "react-i18next";
 
 import Hamburger from "./Hamburger";
 
@@ -43,16 +40,33 @@ const Header = ({
 
   const getLightImage = () => (lightIsOn ? lightOn : lightOff);
 
+  const { t } = useTranslation();
+
   const handleClick = (name) => {
-    if (hamburgerActive === true) setHamburgerActive(false);
+    if (hamburgerActive) setHamburgerActive(false);
     handleNavClick(name);
   };
 
-  const handleHamburgerClick = () => {
-    hamburgerActive === true
-      ? setHamburgerActive(false)
-      : setHamburgerActive(true);
-  };
+  const handleHamburgerClick = () => setHamburgerActive(!hamburgerActive);
+
+  const isDesktopView = size.width > sizes.headerStep;
+
+  const DropdownLangs = useCallback(
+    () => (
+      <ChangeLangDropDown
+        widthElement={50}
+        heightElement={50}
+        color={colors.headerColor}
+        bgColor={colors.headerBgColor}
+        style={{
+          marginLeft: isDesktopView ? 15 : 0,
+          marginRight: isDesktopView ? 0 : 15,
+        }}
+        onClick={(e) => e.preventDefault()}
+      />
+    ),
+    [isDesktopView, colors]
+  );
 
   return (
     <NavbarHeader colors={colors}>
@@ -71,39 +85,43 @@ const Header = ({
           </GridItem>
           <GridItem item xs={6} sm={9}>
             <RightGrid>
-              {size.width > sizes.headerStep ? (
+              {isDesktopView ? (
                 <>
                   <NavButton
                     colors={colors}
-                    onClick={() => handleClick(aboutLabel)}
+                    onClick={() => handleClick(t("labels.about"))}
                   >
-                    {aboutLabel}
+                    {t("labels.about")}
                   </NavButton>
                   <NavButton
                     colors={colors}
-                    onClick={() => handleClick(workLabel)}
+                    onClick={() => handleClick(t("labels.work"))}
                   >
-                    {workLabel}
+                    {t("labels.work")}
                   </NavButton>
                   <NavButton
                     colors={colors}
-                    onClick={() => handleClick(educationLabel)}
+                    onClick={() => handleClick(t("labels.education"))}
                   >
-                    {educationLabel}
+                    {t("labels.education")}
                   </NavButton>
                   <NavButton
                     colors={colors}
-                    onClick={() => handleClick(contactsLabel)}
+                    onClick={() => handleClick(t("labels.contacts"))}
                   >
-                    {contactsLabel}
+                    {t("labels.contacts")}
                   </NavButton>
+                  <DropdownLangs />
                 </>
               ) : (
-                <Hamburger
-                  handleHamburgerClick={handleHamburgerClick}
-                  active={hamburgerActive}
-                  colors={colors}
-                />
+                <>
+                  <DropdownLangs />
+                  <Hamburger
+                    handleHamburgerClick={handleHamburgerClick}
+                    active={hamburgerActive}
+                    colors={colors}
+                  />
+                </>
               )}
             </RightGrid>
           </GridItem>
@@ -113,27 +131,27 @@ const Header = ({
         <BorderContainer colors={colors}>
           <NavMobileButton
             colors={colors}
-            onClick={() => handleClick(aboutLabel)}
+            onClick={() => handleClick(t("labels.about"))}
           >
-            {aboutLabel}
+            {t("labels.about")}
           </NavMobileButton>
           <NavMobileButton
             colors={colors}
-            onClick={() => handleClick(workLabel)}
+            onClick={() => handleClick(t("labels.work"))}
           >
-            {workLabel}
+            {t("labels.work")}
           </NavMobileButton>
           <NavMobileButton
             colors={colors}
-            onClick={() => handleClick(educationLabel)}
+            onClick={() => handleClick(t("labels.education"))}
           >
-            {educationLabel}
+            {t("labels.education")}
           </NavMobileButton>
           <NavMobileButton
             colors={colors}
-            onClick={() => handleClick(contactsLabel)}
+            onClick={() => handleClick(t("labels.contacts"))}
           >
-            {contactsLabel}
+            {t("labels.contacts")}
           </NavMobileButton>
         </BorderContainer>
       </ContainerMobileLink>
