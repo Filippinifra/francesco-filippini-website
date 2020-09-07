@@ -14,6 +14,7 @@ const ChangeLangDropDown = ({
   bgColor,
   style,
   onClick,
+  shadeColor,
 }) => {
   const { language } = useParams();
   const { pathname } = useLocation();
@@ -59,6 +60,7 @@ const ChangeLangDropDown = ({
       bgColor={bgColor}
       style={style}
       onClick={onClick}
+      shadeColor={shadeColor}
     />
   );
 };

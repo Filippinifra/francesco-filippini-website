@@ -20,6 +20,7 @@ export const Dropdown = ({
   bgColor,
   style,
   onClick,
+  shadeColor,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -58,6 +59,7 @@ export const Dropdown = ({
           isOpen={isOpen}
           totalHeight={heightElement * dropDownElementsArray.length}
           bgColor={bgColor}
+          shadeColor={shadeColor}
         >
           {dropDownElementsArray.map((element) => (
             <ChoiceContainer

@@ -41,9 +41,9 @@ export const DropDownContent = styled.div`
 
   transition: max-height 0.5s ease-in-out;
 
-  -webkit-box-shadow: 0px 0px 5px 0.1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 0px 5px 0.1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 5px 0.1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 5px 0.1px ${({ shadeColor }) => shadeColor};
+  -moz-box-shadow: 0px 0px 5px 0.1px ${({ shadeColor }) => shadeColor};
+  box-shadow: 0px 0px 5px 0.1px ${({ shadeColor }) => shadeColor};
 `;
 
 export const ChoiceContainer = styled.div`

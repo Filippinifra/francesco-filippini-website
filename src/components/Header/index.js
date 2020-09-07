@@ -58,6 +58,7 @@ const Header = ({
         heightElement={50}
         color={colors.headerColor}
         bgColor={colors.headerBgColor}
+        shadeColor={colors.headerShade}
         style={{
           marginLeft: isDesktopView ? 15 : 0,
           marginRight: isDesktopView ? 0 : 15,
