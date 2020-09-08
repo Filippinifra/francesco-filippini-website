@@ -79,7 +79,7 @@ export const textWork = {
       logoImg: boomLogo,
       title: "BOOM Image Studio",
       position: "Junior Frontend Engineer",
-      period: "Aprile 2020 - Ongoing",
+      period: "Aprile 2020 - Oggi",
       location: "Milano",
       textList: [
         {
@@ -91,7 +91,7 @@ export const textWork = {
             "Ho contribuito sviluppano la parte frontend della piattaforma.",
         },
         {
-          text: `Per un mese sono stato impegnato nello sviluppo "SalesBook", un progetto lanciato da BOOM che serve a completare le il business flow nell'ambito delle foto.`,
+          text: `Per un mese sono stato impegnato nello sviluppo "SalesBook", un progetto lanciato da BOOM che serve a completare il business flow nell'ambito delle foto.`,
         },
       ],
       tools: "React, Redux, Typescript, Git, Jira.",
@@ -107,10 +107,10 @@ export const textWork = {
           text:
             "Il mio team sviluppa un prodotto SaaS per la 'cessione del Quinto', un processo amministrativo italiano per ottenere finanziamenti.",
         },
-        { text: "Ho contribuito sviluppando il frontend della piattaforma" },
+        { text: "Ho contribuito sviluppando il frontend della piattaforma." },
         {
           text:
-            "Ho lavorato con React e ho imparato dal punto di vista tecnico (sviluppo software, best practices e lavoro di squadra) e allo stesso tempo mi sono divertito in un ambiente giovane e mi sono fatto coinvolgere dall'almbiente aziendale.",
+            "Ho lavorato con React e ho imparato dal punto di vista tecnico (sviluppo software, best practices e lavoro di squadra), mi sono divertito in un ambiente giovane e mi sono fatto coinvolgere dall'ambiente aziendale.",
         },
       ],
       tools: "React, Apollo GraphQL, NodeJS, Git, ClickUp.",
@@ -132,7 +132,7 @@ export const textWork = {
         },
         {
           text:
-            "Durante questi anni ho imparato come gestire un'impresa e tutti le dinamiche che girano attorno: dalle relazioni con i clienti a quelle dei fornitori, gestione delle tasse, tattiche di marketing e gestione del proprio business.",
+            "Durante questi anni ho imparato come gestire un'impresa e tutte le dinamiche che girano attorno: dalle relazioni con i clienti a quelle con i fornitori, gestione delle tasse, tattiche di marketing e gestione del proprio business.",
         },
       ],
       images: [smb1, smb2, smb3, smb4, smb5, smb6],

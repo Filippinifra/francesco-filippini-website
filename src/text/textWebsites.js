@@ -24,7 +24,7 @@ export const textWebsites = {
     texts: [
       "Sono innamorato della programmazione web!",
       "Gli ultimi anni sono stati importanti per affinare le mie skills tecniche.",
-      "Questi sono alcuni esempi delle mie creazioni.",
+      "Questi sono alcune mie creazioni.",
     ],
   },
 };

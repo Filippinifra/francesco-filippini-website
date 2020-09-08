@@ -44,7 +44,7 @@ export const textAbout = {
       {
         text: `Amo tutto riguardo la tecnologia: dai robot ai supermercati senza casse, dalle cuffie bluetooth ai razzi di Elon Musk.
         Ogni aspetto della tecnologia mi fa impazzire e quando qualcosa mi incuriosisce voglio conoscere come è fatto, come funziona e che logica c'è dietro.
-        Considero come preferita la branca della tecnologia che si interessa alla programmazione web, come siti internet e app.`,
+        La branca della tecnologia che preferisco è quella che si interessa al progresso della programmazione web, come siti internet e app.`,
       },
       {
         text: `Arrivare su un sito web è come scartare una caramella. Entrare sulla home page è come rimuovere la cartina. Scrollare le pagine e vedere le animazioni è come gustare la caramella.`,
@@ -53,14 +53,14 @@ export const textAbout = {
     textSecondParagraph: [
       {
         text: `La mia istruzione è iniziata al Politecnico di Milano dove mi sono laureato e ho completato la triennale in Ingegneria dell'Informazione.
-      Amo la mia università, ma la cosa che mi ha fatto impazzire è stato lavorare ai progetti di programmazione dove ho sempre conseguito i massimi risultati.`,
+      Sono grato alla mia università, quello che mi è piaciuto di più è stato lavorare ai progetti di programmazione per i quali ho sempre conseguito i massimi risultati.`,
       },
       {
         text: `Durante il periodo universitario ho iniziato un progetto: con mio fratello abbiamo fondato Saint Mary Boulevard, una startup incentrata sulla vendita di abbigliamento streetwear che valorizzava il nostro paese di origine. Con il passare del tempo si è rivelato un business capace di coinvolgere tutta la città di Verona.`,
       },
       {
         text: `La mia prima esperienza lavorativa è stata nel 2019 come stagista Ingegnere informatico a Finleap, una compagnia fintech. 
-      Durante questa esperienza mi sono specializzato in frontend, imparando React ho scoperto un mondo nuovo.`,
+      Durante questa esperienza mi sono specializzato in frontend e imparando React ho scoperto nuove prospettive.`,
       },
     ],
   },

@@ -65,7 +65,7 @@ export const textEducation = {
           text: `Progetto di Hypermedia - Linguaggi: HTML, CSS, Javascript. La consegna è stata creato un sito a proposito di una conferenza riguardo le crypto valute. Uno dei requisiti è stato usare PostgreSQL (servizio per gestire database) per gestire i dati.`,
         },
         {
-          text: `Progetto di Ingegneria del Software - Linguaggi: Java e le librerie Java per costruire un video game con pattern MVC. Il risultato è stato di circa 30 mila righe di codice, implementazione server e client e per giocare una simpatica GUI e CLI.`,
+          text: `Progetto di Ingegneria del Software - Linguaggi: Java e le librerie Java per costruire un video game con pattern MVC. Il risultato è stato di circa 30 mila righe di codice, implementazione server e client e una simpatica GUI e CLI per giocare.`,
         },
         {
           text: `Progetto di Algoritmi e Principi dell'Informatica - Lo scopo del progetto è stato creare una macchina di Touring usando il linguaggio di programmazione C. È stato richiesto di prestare attenzione a complessità temporale e spaziale.`,
@@ -89,7 +89,7 @@ export const textEducation = {
       logoImg: stJonesLogo,
       title: "Università St. John's",
       extraInfo: "Corso di inglese durato 1 mese",
-      period: "July 2012",
+      period: "Luglio 2012",
       location: "New York (USA)",
       textList: [],
       images: [],
