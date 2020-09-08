@@ -4,36 +4,36 @@ import { DEFAULT_LANG } from "constants/languages";
 
 import { LABELS } from "constants/labels";
 import { commonsCurtain } from "constants/commonsCurtain";
-import { commonsAbout } from "constants/commonsAbout";
-import { contentFooter } from "constants/commonsFooter";
 import { commonsHeroSection } from "constants/commonsHeroSection";
-import { commonsWebsites } from "constants/commonsWebsites";
-import { commonsEducation } from "constants/commonsEducation";
+import { commonsAbout } from "constants/commonsAbout";
 import { commonsWork } from "constants/commonsWork";
+import { commonsEducation } from "constants/commonsEducation";
+import { commonsWebsites } from "constants/commonsWebsites";
+import { commonsFooter } from "constants/commonsFooter";
 
 const resources = {
   en: {
     translation: {
       labels: LABELS.en,
       commonsCurtain: commonsCurtain.en,
-      commonsAbout: commonsAbout.en,
-      contentFooter: contentFooter.en,
       commonsHeroSection: commonsHeroSection.en,
-      commonsWebsites: commonsWebsites.en,
-      commonsEducation: commonsEducation.en,
+      commonsAbout: commonsAbout.en,
       commonsWork: commonsWork.en,
+      commonsEducation: commonsEducation.en,
+      commonsWebsites: commonsWebsites.en,
+      commonsFooter: commonsFooter.en,
     },
   },
   it: {
     translation: {
       labels: LABELS.it,
       commonsCurtain: commonsCurtain.it,
-      commonsAbout: commonsAbout.it,
-      contentFooter: contentFooter.it,
       commonsHeroSection: commonsHeroSection.it,
-      commonsWebsites: commonsWebsites.it,
-      commonsEducation: commonsEducation.it,
+      commonsAbout: commonsAbout.it,
       commonsWork: commonsWork.it,
+      commonsEducation: commonsEducation.it,
+      commonsWebsites: commonsWebsites.it,
+      commonsFooter: commonsFooter.it,
     },
   },
 };
