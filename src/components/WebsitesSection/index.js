@@ -14,10 +14,11 @@ import {
 import blackFramePhone from "img/phoneFrameBlack.png";
 import whiteFramePhone from "img/phoneFrameWhite.png";
 
-import { commonsWebsite } from "constants/commonsWebsites";
+import { imagesWebsitePreview } from "constants/commonsWebsites";
+import { useTranslation } from "react-i18next";
 
 export const WebsitesSection = ({ lightIsOn, colors }) => {
-  const { texts, imagesPreview } = commonsWebsite;
+  const { t } = useTranslation();
 
   const getRightFrame = useCallback(
     () => (lightIsOn ? blackFramePhone : whiteFramePhone),
@@ -26,15 +27,15 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
 
   return (
     <ContainerWebsites colors={colors}>
-      {texts.map((text) => (
+      {t("commonsWebsites.texts", { returnObjects: true }).map((text) => (
         <Text colors={colors}>{text}</Text>
       ))}
       <ContainerFrame>
         <PhoneFrame src={getRightFrame()} />
       </ContainerFrame>
       <ContainerScrollingSnap>
-        <ContainerScrollElement numberOfElement={imagesPreview.length}>
-          {imagesPreview.map((img) => (
+        <ContainerScrollElement numberOfElement={imagesWebsitePreview.length}>
+          {imagesWebsitePreview.map((img) => (
             <ElementScrolling>
               <ImgScrolling src={img} />
             </ElementScrolling>

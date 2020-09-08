@@ -2,8 +2,6 @@ import React from "react";
 
 import { Grid } from "@material-ui/core";
 
-import workList from "constants/commonsWork";
-
 import { useTranslation } from "react-i18next";
 
 import {
@@ -25,7 +23,7 @@ export const WorkSection = ({ colors }) => {
 
   return (
     <ContainerWork colors={colors}>
-      {workList.map(
+      {t("commonsWork", { returnObjects: true }).map(
         ({
           logoImg,
           title,

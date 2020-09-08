@@ -1,2 +1,10 @@
-export const leftPanelText = `WELCOME TO\nFILIPPINI`;
-export const rightPanelText = `FRANCESCO\nWEBSITE`;
+export const commonsCurtain = {
+  it: {
+    leftPanelText: `BENARRIVATO\nFRANCESCO`,
+    rightPanelText: `SUL SITO DI\nFILIPPINI`,
+  },
+  en: {
+    leftPanelText: `WELCOME TO\nFILIPPINI`,
+    rightPanelText: `FRANCESCO\nWEBSITE`,
+  },
+};

@@ -10,18 +10,26 @@ import {
   RightTitle,
 } from "./styled.js";
 
-import { leftPanelText, rightPanelText } from "constants/commonsCurtain";
+import { useTranslation } from "react-i18next";
 
-export const CurtainOpening = ({ isloading, children, colors }) => (
-  <Curtain>
-    <CurtainWrapper>
-      <CurtainLeftPanel loaded={isloading} colors={colors}>
-        <LeftTitle colors={colors}>{leftPanelText}</LeftTitle>
-      </CurtainLeftPanel>
-      <CurtainContent>{children}</CurtainContent>
-      <CurtainRightPanel colors={colors} loaded={isloading}>
-        <RightTitle colors={colors}>{rightPanelText}</RightTitle>
-      </CurtainRightPanel>
-    </CurtainWrapper>
-  </Curtain>
-);
+export const CurtainOpening = ({ isloading, children, colors }) => {
+  const { t } = useTranslation();
+
+  return (
+    <Curtain>
+      <CurtainWrapper>
+        <CurtainLeftPanel loaded={isloading} colors={colors}>
+          <LeftTitle colors={colors}>
+            {t("commonsCurtain.leftPanelText")}
+          </LeftTitle>
+        </CurtainLeftPanel>
+        <CurtainContent>{children}</CurtainContent>
+        <CurtainRightPanel colors={colors} loaded={isloading}>
+          <RightTitle colors={colors}>
+            {t("commonsCurtain.rightPanelText")}
+          </RightTitle>
+        </CurtainRightPanel>
+      </CurtainWrapper>
+    </Curtain>
+  );
+};
