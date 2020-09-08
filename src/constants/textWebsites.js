@@ -12,7 +12,7 @@ export const imagesWebsitePreview = [
   uristudio,
 ];
 
-export const commonsWebsites = {
+export const textWebsites = {
   en: {
     texts: [
       "In love with websites production!",

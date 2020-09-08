@@ -19,7 +19,7 @@ export const EducationSection = ({ colors }) => {
   const { t } = useTranslation();
   return (
     <ContainerEducation colors={colors}>
-      {t("commonsEducation", { returnObjects: true }).map(
+      {t("textEducation", { returnObjects: true }).map(
         ({ logoImg, title, extraInfo, period, location, textList, images }) => (
           <ContainerGrid>
             <Grid

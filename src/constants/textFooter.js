@@ -1,4 +1,4 @@
-export const commonsFooter = {
+export const textFooter = {
   en: {
     footerLabel: "Created from scratch using React",
     firstText: "Made with ❤️ using",

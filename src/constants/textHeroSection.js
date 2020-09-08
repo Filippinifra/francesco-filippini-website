@@ -1,4 +1,4 @@
-export const commonsHeroSection = {
+export const textHeroSection = {
   en: {
     leftContent: "Let me introduce myself, I'm",
     centerContent: "Francesco Filippini",

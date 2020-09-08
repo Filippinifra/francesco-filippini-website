@@ -20,13 +20,13 @@ export const CurtainOpening = ({ isloading, children, colors }) => {
       <CurtainWrapper>
         <CurtainLeftPanel loaded={isloading} colors={colors}>
           <LeftTitle colors={colors}>
-            {t("commonsCurtain.leftPanelText")}
+            {t("textCurtain.leftPanelText")}
           </LeftTitle>
         </CurtainLeftPanel>
         <CurtainContent>{children}</CurtainContent>
         <CurtainRightPanel colors={colors} loaded={isloading}>
           <RightTitle colors={colors}>
-            {t("commonsCurtain.rightPanelText")}
+            {t("textCurtain.rightPanelText")}
           </RightTitle>
         </CurtainRightPanel>
       </CurtainWrapper>

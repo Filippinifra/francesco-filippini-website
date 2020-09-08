@@ -22,7 +22,7 @@ export const Footer = ({ colors }) => {
   return (
     <>
       <ButtonModal colors={colors} onClick={openModalWithDelay}>
-        {t("contentFooter.footerLabel")}
+        {t("textFooter.footerLabel")}
       </ButtonModal>
       <Drawer
         anchor={sideAppearModalFooter}
@@ -30,8 +30,8 @@ export const Footer = ({ colors }) => {
         onClose={() => setModalOpen(false)}
       >
         <ContainerModal colors={colors}>
-          <TextRow>{t("contentFooter.firstText")}</TextRow>
-          {t("contentFooter.libraries", { returnObjects: true }).map((row) => (
+          <TextRow>{t("textFooter.firstText")}</TextRow>
+          {t("textFooter.libraries", { returnObjects: true }).map((row) => (
             <TextRow>
               <Link colors={colors} href={row[0].link} target="_blank">
                 {row[0].label}
@@ -45,10 +45,10 @@ export const Footer = ({ colors }) => {
           <TextRow>
             <Link
               colors={colors}
-              href={t("contentFooter.repoLink")}
+              href={t("textFooter.repoLink")}
               target="_blank"
             >
-              {t("contentFooter.repoText")}
+              {t("textFooter.repoText")}
             </Link>
           </TextRow>
         </ContainerModal>

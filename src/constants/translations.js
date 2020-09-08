@@ -3,37 +3,37 @@ import { initReactI18next } from "react-i18next";
 import { DEFAULT_LANG } from "constants/languages";
 
 import { LABELS } from "constants/labels";
-import { commonsCurtain } from "constants/commonsCurtain";
-import { commonsHeroSection } from "constants/commonsHeroSection";
-import { commonsAbout } from "constants/commonsAbout";
-import { commonsWork } from "constants/commonsWork";
-import { commonsEducation } from "constants/commonsEducation";
-import { commonsWebsites } from "constants/commonsWebsites";
-import { commonsFooter } from "constants/commonsFooter";
+import { textCurtain } from "constants/textCurtain";
+import { textHeroSection } from "constants/textHeroSection";
+import { textAbout } from "constants/textAbout";
+import { textWork } from "constants/textWork";
+import { textEducation } from "constants/textEducation";
+import { textWebsites } from "constants/textWebsites";
+import { textFooter } from "constants/textFooter";
 
 const resources = {
   en: {
     translation: {
       labels: LABELS.en,
-      commonsCurtain: commonsCurtain.en,
-      commonsHeroSection: commonsHeroSection.en,
-      commonsAbout: commonsAbout.en,
-      commonsWork: commonsWork.en,
-      commonsEducation: commonsEducation.en,
-      commonsWebsites: commonsWebsites.en,
-      commonsFooter: commonsFooter.en,
+      textCurtain: textCurtain.en,
+      textHeroSection: textHeroSection.en,
+      textAbout: textAbout.en,
+      textWork: textWork.en,
+      textEducation: textEducation.en,
+      textWebsites: textWebsites.en,
+      textFooter: textFooter.en,
     },
   },
   it: {
     translation: {
       labels: LABELS.it,
-      commonsCurtain: commonsCurtain.it,
-      commonsHeroSection: commonsHeroSection.it,
-      commonsAbout: commonsAbout.it,
-      commonsWork: commonsWork.it,
-      commonsEducation: commonsEducation.it,
-      commonsWebsites: commonsWebsites.it,
-      commonsFooter: commonsFooter.it,
+      textCurtain: textCurtain.it,
+      textHeroSection: textHeroSection.it,
+      textAbout: textAbout.it,
+      textWork: textWork.it,
+      textEducation: textEducation.it,
+      textWebsites: textWebsites.it,
+      textFooter: textFooter.it,
     },
   },
 };

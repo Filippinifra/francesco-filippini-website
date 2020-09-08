@@ -18,10 +18,10 @@ export const HeroSection = ({ colors }) => {
         spacing={0}
       >
         <Grid item xs={12} md={3}>
-          <TextLeft>{t("commonsHeroSection.leftContent")}</TextLeft>
+          <TextLeft>{t("textHeroSection.leftContent")}</TextLeft>
         </Grid>
         <Grid item xs={12} md={6}>
-          <TextCenter>{t("commonsHeroSection.centerContent")}</TextCenter>
+          <TextCenter>{t("textHeroSection.centerContent")}</TextCenter>
         </Grid>
         <Grid item xs={12} md={3}></Grid>
       </Grid>

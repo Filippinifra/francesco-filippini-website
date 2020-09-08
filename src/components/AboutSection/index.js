@@ -5,7 +5,7 @@ import { Grid } from "@material-ui/core";
 
 import face from "img/faceImage.png";
 
-import { cardDownloadSettings } from "constants/commonsAbout";
+import { cardDownloadSettings } from "constants/textAbout";
 
 import screenSizes from "constants/screenSizes";
 
@@ -48,7 +48,7 @@ const AboutSection = ({ size, colors }) => {
       >
         {size.width <= screenSizes.tablet && <GridItemPhoto />}
         <Grid item xs={12} md={9}>
-          {t("commonsAbout.textFirstParagraph", { returnObjects: true }).map(
+          {t("textAbout.textFirstParagraph", { returnObjects: true }).map(
             (value) => (
               <Text colors={colors}>{value.text}</Text>
             )
@@ -73,14 +73,14 @@ const AboutSection = ({ size, colors }) => {
               <ContainerDownloadElement>
                 <ImageCurriculum src={curriculumImage} />
                 <LabelDownload colors={colors}>
-                  {t("commonsAbout.downloadLabel")}
+                  {t("textAbout.downloadLabel")}
                 </LabelDownload>
               </ContainerDownloadElement>
             </LinkDownload>
           </ContainerImg>
         </Grid>
         <Grid item xs={12} md={9}>
-          {t("commonsAbout.textSecondParagraph", { returnObjects: true }).map(
+          {t("textAbout.textSecondParagraph", { returnObjects: true }).map(
             (value) => (
               <Text colors={colors}>{value.text}</Text>
             )

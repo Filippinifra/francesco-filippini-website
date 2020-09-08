@@ -1,4 +1,4 @@
-export const commonsCurtain = {
+export const textCurtain = {
   en: {
     leftPanelText: `WELCOME TO\nFILIPPINI`,
     rightPanelText: `FRANCESCO\nWEBSITE`,

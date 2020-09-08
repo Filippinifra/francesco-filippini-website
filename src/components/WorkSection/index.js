@@ -23,7 +23,7 @@ export const WorkSection = ({ colors }) => {
 
   return (
     <ContainerWork colors={colors}>
-      {t("commonsWork", { returnObjects: true }).map(
+      {t("textWork", { returnObjects: true }).map(
         ({
           logoImg,
           title,

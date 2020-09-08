@@ -4,7 +4,7 @@ export const cardDownloadSettings = {
   curriculumPdf: curriculumPdf,
 };
 
-export const commonsAbout = {
+export const textAbout = {
   en: {
     downloadLabel: "myCurriculum.pdf",
     textFirstParagraph: [

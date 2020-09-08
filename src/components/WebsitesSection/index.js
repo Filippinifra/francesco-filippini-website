@@ -14,7 +14,7 @@ import {
 import blackFramePhone from "img/phoneFrameBlack.png";
 import whiteFramePhone from "img/phoneFrameWhite.png";
 
-import { imagesWebsitePreview } from "constants/commonsWebsites";
+import { imagesWebsitePreview } from "constants/textWebsites";
 import { useTranslation } from "react-i18next";
 
 export const WebsitesSection = ({ lightIsOn, colors }) => {
@@ -27,7 +27,7 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
 
   return (
     <ContainerWebsites colors={colors}>
-      {t("commonsWebsites.texts", { returnObjects: true }).map((text) => (
+      {t("textWebsites.texts", { returnObjects: true }).map((text) => (
         <Text colors={colors}>{text}</Text>
       ))}
       <ContainerFrame>

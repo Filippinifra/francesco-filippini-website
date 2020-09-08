@@ -2,7 +2,7 @@ import politecnicoLogo from "img/politecnicoMilanoLogo.png";
 import fracastoroLogo from "img/liceoFracastoroLogo.png";
 import stJonesLogo from "img/stJonesLogo.png";
 
-export const commonsEducation = {
+export const textEducation = {
   en: [
     {
       logoImg: politecnicoLogo,
