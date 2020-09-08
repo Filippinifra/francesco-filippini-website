@@ -5,7 +5,7 @@ import { Grid } from "@material-ui/core";
 
 import face from "img/faceImage.png";
 
-import { cardDownloadSettings } from "constants/textAbout";
+import { cardDownloadSettings } from "text/textAbout";
 
 import screenSizes from "constants/screenSizes";
 

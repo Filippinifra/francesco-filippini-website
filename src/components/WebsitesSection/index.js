@@ -14,7 +14,7 @@ import {
 import blackFramePhone from "img/phoneFrameBlack.png";
 import whiteFramePhone from "img/phoneFrameWhite.png";
 
-import { imagesWebsitePreview } from "constants/textWebsites";
+import { imagesWebsitePreview } from "text/textWebsites";
 import { useTranslation } from "react-i18next";
 
 export const WebsitesSection = ({ lightIsOn, colors }) => {

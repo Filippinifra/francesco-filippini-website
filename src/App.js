@@ -17,7 +17,7 @@ import { Redirect, useParams } from "react-router-dom";
 import { HOME_RELATIVE_PATH } from "constants/paths.js";
 
 /*eslint-disable-next-line */
-import i18n from "constants/translations";
+import i18n from "text/translations";
 
 export const App = () => {
   const [pageIsLoading, setPageLoading] = useState(true);

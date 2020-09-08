@@ -17,7 +17,7 @@ import mailIcon from "img/contactLogos/emailLogo.svg";
 import addressIcon from "img/contactLogos/locationLogo.svg";
 import linkedinIcon from "img/contactLogos/linkedinLogo.svg";
 
-import { textContacts } from "constants/textContacts";
+import { textContacts } from "text/textContacts";
 
 export const ContactsSection = ({ colors }) => (
   <ContainerContacts colors={colors}>
