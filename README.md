@@ -15,10 +15,10 @@ You can change these values in order to change EVERY color of page's elements, a
 ```python
 src
 ├── components      # All components (piece of reusable code)
-├── constants       # Editable constants to change colors, content etc
+├── constants       # Editable constants to change colors, settings etc
 ├── files           # Files PDF format
 ├── img             # Images in svg and png format
-└── utils           # Tools and utilities
+└── text            # Editable text to change contents
 ```
 
 ## Available Scripts
