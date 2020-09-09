@@ -4,13 +4,13 @@ import { withSize } from "react-sizeme";
 import { Grid } from "@material-ui/core";
 
 import face from "img/faceImage.png";
+import meGiovaAranzulla from "img/meGiovaAranzulla.jpeg";
 
 import { cardDownloadSettings } from "text/textAbout";
 
 import screenSizes from "constants/screenSizes";
 
 import {
-  FaceImg,
   Text,
   ContainerAbout,
   ContainerDownloadElement,
@@ -22,6 +22,7 @@ import {
 
 import curriculumImage from "img/contactLogos/curriculum.svg";
 import { useTranslation } from "react-i18next";
+import { FlippingImages } from "components/FlippingImages";
 
 const AboutSection = ({ size, colors }) => {
   const { t } = useTranslation();
@@ -30,7 +31,12 @@ const AboutSection = ({ size, colors }) => {
     () => (
       <Grid item xs={12} md={3}>
         <ContainerImg>
-          <FaceImg src={face} colors={colors} />
+          <FlippingImages
+            colors={colors}
+            imgFront={face}
+            imgBack={meGiovaAranzulla}
+            size={200}
+          />
         </ContainerImg>
       </Grid>
     ),

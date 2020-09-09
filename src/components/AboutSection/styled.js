@@ -1,19 +1,6 @@
 import Styled from "styled-components";
 import screenSizes from "constants/screenSizes";
 
-export const FaceImg = Styled.img`
-    text-align:center;
-    width: 100%;
-    border-radius:50%;
-    max-width: 200px;
-
-    -webkit-box-shadow: 20px 20px 142px -42px ${({ colors }) =>
-      colors.contentImgShadow};
-    -moz-box-shadow: 20px 20px 142px -42px ${(colors) =>
-      colors.contentImgShadow};
-    box-shadow: 20px 20px 142px -42px ${(colors) => colors.contentImgShadow};
-`;
-
 export const Text = Styled.div`
     color: ${({ colors }) => colors.contentColor};
     line-height: 30px;
@@ -35,14 +22,17 @@ export const LinkDownload = Styled.a`
 `;
 
 export const ContainerImg = Styled.div`
-    width: 100%;
-    margin: auto;
-    max-width: 200px;
+    display: flex;
+    justify-content: center;
 `;
 
 export const ContainerDownloadElement = Styled.div`
     width: 100%;
     text-align: center;
+
+    :hover{
+        filter: brightness(80%);
+    }
 `;
 
 export const ImageCurriculum = Styled.img`
