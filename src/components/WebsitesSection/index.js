@@ -1,5 +1,8 @@
 import React, { useCallback } from "react";
 
+import Lottie from "react-lottie";
+import animationData from "./rainbow-animation.json";
+
 import {
   ContainerWebsites,
   Text,
@@ -25,8 +28,26 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
     [lightIsOn]
   );
 
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
     <ContainerWebsites colors={colors}>
+      <div style={{ marginBottom: 60 }}>
+        <Lottie
+          options={defaultOptions}
+          height={160}
+          width={320}
+          isStopped={false}
+          isPaused={false}
+        />
+      </div>
       {t("textWebsites.texts", { returnObjects: true }).map((text) => (
         <Text colors={colors}>{text}</Text>
       ))}
