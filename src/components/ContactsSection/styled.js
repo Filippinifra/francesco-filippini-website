@@ -45,6 +45,10 @@ export const ContentCentered = Styled.div`
 
 export const ContainerImgAndText = Styled.div`
     padding: 20px;
+
+    :hover{
+        filter: brightness(80%);
+    }
 `;
 
 export const WrapperImg = Styled.div`
