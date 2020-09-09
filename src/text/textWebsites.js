@@ -3,8 +3,10 @@ import hypermedia from "img/previewWebsites/hypermedia.png";
 import laRuota from "img/previewWebsites/laruota.png";
 import myWebsite from "img/previewWebsites/myWebsite.png";
 import uristudio from "img/previewWebsites/uristudio.png";
+import iubes from "img/previewWebsites/iubes.png";
 
 export const imagesWebsitePreview = [
+  iubes,
   rondinella,
   hypermedia,
   laRuota,
@@ -24,7 +26,7 @@ export const textWebsites = {
     texts: [
       "Sono innamorato della programmazione web!",
       "Gli ultimi anni sono stati importanti per affinare le mie skills tecniche.",
-      "Questi sono alcune mie creazioni.",
+      "Queste sono alcune preview delle mie creazioni.",
     ],
   },
 };

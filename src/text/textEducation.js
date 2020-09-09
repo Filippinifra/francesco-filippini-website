@@ -62,7 +62,7 @@ export const textEducation = {
             "Corsi frequentati: Fondamenti di Informatica - Fondamenti di Internet e Reti - Architettura dei Calcolatori e Sistemi Operativi - Algoritmi e Principi dell'Informatica - Fondamenti di Automatica - Probabilità e Statistica per l'Informatica - Database - Reti Logiche - Hypermedia Applications - Ingegneria del Software - Sistemi Informativi",
         },
         {
-          text: `Progetto di Hypermedia - Linguaggi: HTML, CSS, Javascript. La consegna è stata creato un sito a proposito di una conferenza riguardo le crypto valute. Uno dei requisiti è stato usare PostgreSQL (servizio per gestire database) per gestire i dati.`,
+          text: `Progetto di Hypermedia - Linguaggi: HTML, CSS, Javascript. La consegna è stata creare il sito presentazione di una conferenza riguardo le crypto valute. Uno dei requisiti è stato usare PostgreSQL, servizio per gestire database.`,
         },
         {
           text: `Progetto di Ingegneria del Software - Linguaggi: Java e le librerie Java per costruire un video game con pattern MVC. Il risultato è stato di circa 30 mila righe di codice, implementazione server e client e una simpatica GUI e CLI per giocare.`,

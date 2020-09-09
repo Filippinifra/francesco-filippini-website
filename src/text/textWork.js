@@ -84,14 +84,14 @@ export const textWork = {
       textList: [
         {
           text:
-            "Il mio team sviluppa il prodotto core dell'azienda: una piattaforma digitale nella quale fotografi professionisti possono connettersi a aziende che hanno bisogno di grandi quantità di shootings per i loro prodotti.",
+            "Il mio team sviluppa il prodotto core dell'azienda: una piattaforma digitale nella quale fotografi professionisti possono connettersi ad aziende che hanno bisogno di grandi quantità di shootings per i loro prodotti.",
         },
         {
           text:
-            "Ho contribuito sviluppano la parte frontend della piattaforma.",
+            "Ho contribuito sviluppando parte del frontend della piattaforma.",
         },
         {
-          text: `Per un mese sono stato impegnato nello sviluppo "SalesBook", un progetto lanciato da BOOM che serve a completare il business flow nell'ambito delle foto.`,
+          text: `Per un mese sono stato impegnato nello sviluppo di "SalesBook", un progetto lanciato per completare il business flow aziendale.`,
         },
       ],
       tools: "React, Redux, Typescript, Git, Jira.",
@@ -110,7 +110,7 @@ export const textWork = {
         { text: "Ho contribuito sviluppando il frontend della piattaforma." },
         {
           text:
-            "Ho lavorato con React e ho imparato dal punto di vista tecnico (sviluppo software, best practices e lavoro di squadra), mi sono divertito in un ambiente giovane e mi sono fatto coinvolgere dall'ambiente aziendale.",
+            "Ho lavorato con React e ho imparato molto dal punto di vista tecnico (sviluppo software, best practices e lavoro di squadra), mi sono divertito in un ambiente giovane e mi sono fatto coinvolgere dallo spirito aziendale.",
         },
       ],
       tools: "React, Apollo GraphQL, NodeJS, Git, ClickUp.",
@@ -128,7 +128,7 @@ export const textWork = {
         },
         {
           text:
-            "Il nostro concept era di creare un brand di abbigliamento con il nome della città dove siamo vissuti. È iniziato come un gioco ma ben presto è diventato un business solido capace di diventare un marchio tra i più conosciuti a Verona e città vicine. Siamo entrati a far parte anche delle partnership con scuole e medie piccole imprese creando abbigliamento personalizzato.",
+            "Il nostro concept era di creare un brand di abbigliamento con il nome della città dove siamo vissuti. È iniziato come un gioco ma ben presto è diventato un business solido capace di diventare un marchio tra i più conosciuti a Verona e città vicine. Abbiamo creato parecchie partnership con scuole e medie piccole imprese creando per loro abbigliamento personalizzato.",
         },
         {
           text:

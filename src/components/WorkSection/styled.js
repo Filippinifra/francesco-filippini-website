@@ -60,7 +60,7 @@ export const ImgSectionGallery = Styled.img`
 `;
 
 export const ContainerGallery = Styled.div`
-    margin-top: 50px;
+    margin-top: 80px;
 `;
 
 export const ToolsText = Styled.div`
