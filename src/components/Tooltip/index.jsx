@@ -2,7 +2,13 @@ import React, { useState, useRef } from "react";
 import { usePopper } from "react-popper";
 import { PopperContainer } from "./styled";
 
-export const Tooltip = ({ targetRef, isVisible, placement, message }) => {
+export const Tooltip = ({
+  targetRef,
+  isVisible,
+  placement,
+  message,
+  colors,
+}) => {
   const popperRef = useRef(null);
   const [arrowRef, setArrowRed] = useState(null);
 
@@ -32,10 +38,11 @@ export const Tooltip = ({ targetRef, isVisible, placement, message }) => {
     <PopperContainer
       ref={popperRef}
       style={styles.popper}
+      colors={colors}
       {...attributes.popper}
     >
       <div ref={setArrowRed} style={styles.arrow} className="arrow" />
-      <div>{message}</div>
+      <div style={{ color: colors.tooltipColor, fontSize: 10 }}>{message}</div>
     </PopperContainer>
   ) : null;
 };

@@ -65,6 +65,7 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
         placement="top"
         isVisible={isTooltipVisible}
         targetRef={buttonRef}
+        colors={colors}
       />
       <ContainerFrame>
         <PhoneFrame src={getRightFrame()} ref={buttonRef} />

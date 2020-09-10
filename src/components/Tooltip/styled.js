@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const PopperContainer = styled.div`
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
-  background-color: white;
+  background-color: ${({ colors }) => colors.tooltipBgColor};
   padding: 5px 8px;
   text-align: center;
 
@@ -19,7 +19,7 @@ export const PopperContainer = styled.div`
       transform: rotate(45deg);
       width: 10px;
       height: 10px;
-      background-color: white;
+      background-color: ${({ colors }) => colors.tooltipBgColor};
     }
   }
   &[data-popper-placement^="top"] > .arrow {
