@@ -21,6 +21,7 @@ export const textWebsites = {
       "The last few years have been very for me important to improve my tech skills.",
       "Here are some examples of my previous creations.",
     ],
+    tootlipMessage: "Swipe left and swipe right",
   },
   it: {
     texts: [
@@ -28,5 +29,6 @@ export const textWebsites = {
       "Gli ultimi anni sono stati importanti per affinare le mie skills tecniche.",
       "Queste sono alcune preview delle mie creazioni.",
     ],
+    tootlipMessage: "Scorri verso sinistra e verso destra",
   },
 };

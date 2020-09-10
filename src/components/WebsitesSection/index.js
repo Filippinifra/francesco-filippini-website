@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useRef, useState } from "react";
 
 import Lottie from "react-lottie";
 import animationData from "./rainbow-animation.json";
@@ -19,6 +19,8 @@ import whiteFramePhone from "img/phoneFrameWhite.png";
 
 import { imagesWebsitePreview } from "text/textWebsites";
 import { useTranslation } from "react-i18next";
+import { Tooltip } from "components/Tooltip";
+import { tooltipRemoveAfterHover } from "constants/animationSettings";
 
 export const WebsitesSection = ({ lightIsOn, colors }) => {
   const { t } = useTranslation();
@@ -28,6 +30,9 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
     [lightIsOn]
   );
 
+  const buttonRef = useRef(null);
+  const [isTooltipVisible, setTooltipVisible] = useState(true);
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -35,6 +40,10 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
+  };
+
+  const removeTooltip = () => {
+    setTimeout(() => setTooltipVisible(false), tooltipRemoveAfterHover);
   };
 
   return (
@@ -51,11 +60,20 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
       {t("textWebsites.texts", { returnObjects: true }).map((text) => (
         <Text colors={colors}>{text}</Text>
       ))}
+      <Tooltip
+        message={t("textWebsites.tootlipMessage")}
+        placement="top"
+        isVisible={isTooltipVisible}
+        targetRef={buttonRef}
+      />
       <ContainerFrame>
-        <PhoneFrame src={getRightFrame()} />
+        <PhoneFrame src={getRightFrame()} ref={buttonRef} />
       </ContainerFrame>
       <ContainerScrollingSnap>
-        <ContainerScrollElement numberOfElement={imagesWebsitePreview.length}>
+        <ContainerScrollElement
+          numberOfElement={imagesWebsitePreview.length}
+          onMouseEnter={removeTooltip}
+        >
           {imagesWebsitePreview.map((img) => (
             <ElementScrolling>
               <ImgScrolling src={img} />
