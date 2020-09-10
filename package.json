@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "@popperjs/core": "^2.4.4",
     "country-flag-icons": "^1.2.3",
     "express": "^4.17.1",
     "express-favicon": "^2.0.1",
@@ -15,6 +16,7 @@
     "react-dom": "^16.13.1",
     "react-i18next": "^11.7.2",
     "react-lottie": "^1.2.3",
+    "react-popper": "^2.2.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
     "react-scroll": "^1.8.1",
