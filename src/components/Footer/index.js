@@ -6,6 +6,8 @@ import {
   sideAppearModalFooter,
 } from "constants/animationSettings";
 
+import { librariesUsed } from "text/textFooter";
+
 import { ButtonModal, ContainerModal, TextRow, Link } from "./styled";
 import { useTranslation } from "react-i18next";
 
@@ -31,7 +33,7 @@ export const Footer = ({ colors }) => {
       >
         <ContainerModal colors={colors}>
           <TextRow>{t("textFooter.firstText")}</TextRow>
-          {t("textFooter.libraries", { returnObjects: true }).map((row) => (
+          {librariesUsed.map((row) => (
             <TextRow>
               <Link colors={colors} href={row[0].link} target="_blank">
                 {row[0].label}

@@ -1,4 +1,4 @@
-const libraries = [
+export const librariesUsed = [
   [
     { label: "React", link: "https://reactjs.org/" },
     { label: "Material UI", link: "https://material-ui.com/" },
@@ -21,20 +21,28 @@ const libraries = [
       link: "https://github.com/ctrlplusb/react-sizeme",
     },
   ],
+  [
+    {
+      label: "Popper js",
+      link: "https://popper.js.org/",
+    },
+    {
+      label: "React Lottie",
+      link: "https://www.npmjs.com/package/react-lottie",
+    },
+  ],
 ];
 
 export const textFooter = {
   en: {
     footerLabel: "Created from scratch using React",
     firstText: "Made with ❤️ using",
-    libraries,
     repoText: "Click for website repo",
     repoLink: "https://github.com/Filippinifra/francesco-filippini-website",
   },
   it: {
     footerLabel: "Creato da zero usando React",
     firstText: "Fatto con ❤️ usando",
-    libraries,
     repoText: "Clicca qui per vedere la repo",
     repoLink: "https://github.com/Filippinifra/francesco-filippini-website",
   },
