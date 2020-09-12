@@ -38,14 +38,14 @@ export const LogoImg = Styled.img`
 `;
 
 export const StrongTitle = Styled.div`
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 900;
     margin-bottom: 20px;
     color: ${({ colors }) => colors.contentColor};
 `;
 
 export const MediumTitle = Styled.div`
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 3px;
     color: ${({ colors }) => colors.contentColor};
