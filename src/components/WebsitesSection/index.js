@@ -20,7 +20,7 @@ import whiteFramePhone from "img/phoneFrameWhite.png";
 import { imagesWebsitePreview } from "text/textWebsites";
 import { useTranslation } from "react-i18next";
 import { Tooltip } from "components/Tooltip";
-import { tooltipRemoveAfterHover } from "constants/animationSettings";
+import { tooltipWebsiteRemoveAfterHover } from "constants/animationSettings";
 
 export const WebsitesSection = ({ lightIsOn, colors }) => {
   const { t } = useTranslation();
@@ -43,7 +43,7 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
   };
 
   const removeTooltip = () => {
-    setTimeout(() => setTooltipVisible(false), tooltipRemoveAfterHover);
+    setTimeout(() => setTooltipVisible(false), tooltipWebsiteRemoveAfterHover);
   };
 
   return (

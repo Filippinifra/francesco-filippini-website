@@ -2,7 +2,7 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import { DEFAULT_LANG } from "constants/languages";
 
-import { LABELS } from "text/labels";
+import { textHeader } from "text/textHeader";
 import { textCurtain } from "text/textCurtain";
 import { textHeroSection } from "text/textHeroSection";
 import { textAbout } from "text/textAbout";
@@ -14,7 +14,7 @@ import { textFooter } from "text/textFooter";
 const resources = {
   en: {
     translation: {
-      labels: LABELS.en,
+      textHeader: textHeader.en,
       textCurtain: textCurtain.en,
       textHeroSection: textHeroSection.en,
       textAbout: textAbout.en,
@@ -26,7 +26,7 @@ const resources = {
   },
   it: {
     translation: {
-      labels: LABELS.it,
+      textHeader: textHeader.it,
       textCurtain: textCurtain.it,
       textHeroSection: textHeroSection.it,
       textAbout: textAbout.it,

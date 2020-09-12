@@ -46,21 +46,21 @@ const PageLayout = ({ lightIsOn, handleLightClick, colors }) => {
       </HeaderContainer>
       <ContentContainer>
         <HeroSection colors={colors} />
-        <Element name={t("labels.about")}>
+        <Element name={t("textHeader.about")}>
           <AboutSection colors={colors} />
         </Element>
         <ParallaxElemenet imgSrc={bigImgSmb} colors={colors} />
-        <Element name={t("labels.work")}>
+        <Element name={t("textHeader.work")}>
           <WorkSection colors={colors} />
         </Element>
         <ParallaxElemenet imgSrc={bigImgPolimi} colors={colors} />
-        <Element name={t("labels.education")}>
+        <Element name={t("textHeader.education")}>
           <EducationSection colors={colors} />
         </Element>
         <ContentDivider colors={colors} />
         <WebsitesSection lightIsOn={lightIsOn} colors={colors} />
         <ContentDivider colors={colors} />
-        <Element name={t("labels.contacts")}>
+        <Element name={t("textHeader.contacts")}>
           <ContactsSection colors={colors} />
         </Element>
       </ContentContainer>

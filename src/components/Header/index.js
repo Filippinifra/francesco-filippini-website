@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect, useRef } from "react";
 
 import { withSize } from "react-sizeme";
 
@@ -27,6 +27,11 @@ import sizes from "constants/screenSizes";
 import { useTranslation } from "react-i18next";
 
 import Hamburger from "./Hamburger";
+import { Tooltip } from "components/Tooltip";
+import {
+  tooltipHeaderAppearAfterLoading,
+  tooltipHeaderRemoveAfterLoading,
+} from "constants/animationSettings";
 
 const Header = ({
   handleNavClick,
@@ -50,6 +55,18 @@ const Header = ({
   const handleHamburgerClick = () => setHamburgerActive(!hamburgerActive);
 
   const isDesktopView = size.width > sizes.headerStep;
+
+  const buttonRef = useRef(null);
+  const [isTooltipVisible, setTooltipVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTooltipVisible(true);
+    }, tooltipHeaderAppearAfterLoading);
+    setTimeout(() => {
+      setTooltipVisible(false);
+    }, tooltipHeaderRemoveAfterLoading);
+  }, []);
 
   const DropdownLangs = useCallback(
     () => (
@@ -81,7 +98,21 @@ const Header = ({
           <GridItem item xs={6} sm={3}>
             <LeftGrid>
               <LogoImg src={FFLogo} onClick={scrollToTop} />
-              <LogoImg src={getLightImage()} onClick={handleLightClick} />
+              <LogoImg
+                src={getLightImage()}
+                onClick={() => {
+                  handleLightClick();
+                  setTooltipVisible(false);
+                }}
+                ref={buttonRef}
+              />
+              <Tooltip
+                message={t("textHeader.tootlipMessage")}
+                placement="top"
+                isVisible={isTooltipVisible}
+                targetRef={buttonRef}
+                colors={colors}
+              />
             </LeftGrid>
           </GridItem>
           <GridItem item xs={6} sm={9}>
@@ -90,27 +121,27 @@ const Header = ({
                 <>
                   <NavButton
                     colors={colors}
-                    onClick={() => handleClick(t("labels.about"))}
+                    onClick={() => handleClick(t("textHeader.about"))}
                   >
-                    {t("labels.about")}
+                    {t("textHeader.about")}
                   </NavButton>
                   <NavButton
                     colors={colors}
-                    onClick={() => handleClick(t("labels.work"))}
+                    onClick={() => handleClick(t("textHeader.work"))}
                   >
-                    {t("labels.work")}
+                    {t("textHeader.work")}
                   </NavButton>
                   <NavButton
                     colors={colors}
-                    onClick={() => handleClick(t("labels.education"))}
+                    onClick={() => handleClick(t("textHeader.education"))}
                   >
-                    {t("labels.education")}
+                    {t("textHeader.education")}
                   </NavButton>
                   <NavButton
                     colors={colors}
-                    onClick={() => handleClick(t("labels.contacts"))}
+                    onClick={() => handleClick(t("textHeader.contacts"))}
                   >
-                    {t("labels.contacts")}
+                    {t("textHeader.contacts")}
                   </NavButton>
                   <DropdownLangs />
                 </>
@@ -132,27 +163,27 @@ const Header = ({
         <BorderContainer colors={colors}>
           <NavMobileButton
             colors={colors}
-            onClick={() => handleClick(t("labels.about"))}
+            onClick={() => handleClick(t("textHeader.about"))}
           >
-            {t("labels.about")}
+            {t("textHeader.about")}
           </NavMobileButton>
           <NavMobileButton
             colors={colors}
-            onClick={() => handleClick(t("labels.work"))}
+            onClick={() => handleClick(t("textHeader.work"))}
           >
-            {t("labels.work")}
+            {t("textHeader.work")}
           </NavMobileButton>
           <NavMobileButton
             colors={colors}
-            onClick={() => handleClick(t("labels.education"))}
+            onClick={() => handleClick(t("textHeader.education"))}
           >
-            {t("labels.education")}
+            {t("textHeader.education")}
           </NavMobileButton>
           <NavMobileButton
             colors={colors}
-            onClick={() => handleClick(t("labels.contacts"))}
+            onClick={() => handleClick(t("textHeader.contacts"))}
           >
-            {t("labels.contacts")}
+            {t("textHeader.contacts")}
           </NavMobileButton>
         </BorderContainer>
       </ContainerMobileLink>
