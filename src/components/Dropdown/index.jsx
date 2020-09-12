@@ -61,7 +61,7 @@ export const Dropdown = ({
           bgColor={bgColor}
           shadeColor={shadeColor}
         >
-          {dropDownElementsArray.map((element) => (
+          {dropDownElementsArray.map((element, index) => (
             <ChoiceContainer
               height={heightElement}
               onClick={() => {
@@ -69,6 +69,7 @@ export const Dropdown = ({
                 setIsOpen(false);
               }}
               color={color}
+              key={`dropdown-element-${index}`}
             >
               {element.text}
             </ChoiceContainer>

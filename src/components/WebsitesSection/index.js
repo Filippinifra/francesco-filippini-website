@@ -57,8 +57,10 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
           isPaused={false}
         />
       </div>
-      {t("textWebsites.texts", { returnObjects: true }).map((text) => (
-        <Text colors={colors}>{text}</Text>
+      {t("textWebsites.texts", { returnObjects: true }).map((text, index) => (
+        <Text colors={colors} key={`text-row-website-${index}`}>
+          {text}
+        </Text>
       ))}
       <Tooltip
         message={t("textWebsites.tootlipMessage")}
@@ -75,8 +77,8 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
           numberOfElement={imagesWebsitePreview.length}
           onMouseEnter={removeTooltip}
         >
-          {imagesWebsitePreview.map((img) => (
-            <ElementScrolling>
+          {imagesWebsitePreview.map((img, index) => (
+            <ElementScrolling key={`image-preview-website-${index}`}>
               <ImgScrolling src={img} />
             </ElementScrolling>
           ))}

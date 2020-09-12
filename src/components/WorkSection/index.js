@@ -24,17 +24,20 @@ export const WorkSection = ({ colors }) => {
   return (
     <ContainerWork colors={colors}>
       {t("textWork", { returnObjects: true }).map(
-        ({
-          logoImg,
-          title,
-          position,
-          period,
-          location,
-          textList,
-          images,
-          tools,
-        }) => (
-          <ContainerGrid>
+        (
+          {
+            logoImg,
+            title,
+            position,
+            period,
+            location,
+            textList,
+            images,
+            tools,
+          },
+          index
+        ) => (
+          <ContainerGrid key={`container-work-${index}`}>
             <Grid
               container
               direction="row"
@@ -52,8 +55,10 @@ export const WorkSection = ({ colors }) => {
                 <MediumTitle colors={colors}>{position}</MediumTitle>
                 <MediumTitle colors={colors}>{period}</MediumTitle>
                 <MediumTitle colors={colors}>{location}</MediumTitle>
-                {textList.map((paragraph) => (
-                  <Text colors={colors}>{paragraph.text}</Text>
+                {textList.map((paragraph, indexText) => (
+                  <Text colors={colors} key={`text-work-${index}-${indexText}`}>
+                    {paragraph.text}
+                  </Text>
                 ))}
                 {tools && (
                   <StackRowWrapper>
@@ -70,8 +75,13 @@ export const WorkSection = ({ colors }) => {
                       alignItems="flex-start"
                       spacing={4}
                     >
-                      {images.map((image) => (
-                        <Grid item xs={6} md={4}>
+                      {images.map((image, indexImage) => (
+                        <Grid
+                          item
+                          xs={6}
+                          md={4}
+                          key={`image-work-${index}-${indexImage}`}
+                        >
                           <ImgSectionGallery src={image} />
                         </Grid>
                       ))}

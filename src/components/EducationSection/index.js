@@ -20,8 +20,11 @@ export const EducationSection = ({ colors }) => {
   return (
     <ContainerEducation colors={colors}>
       {t("textEducation", { returnObjects: true }).map(
-        ({ logoImg, title, extraInfo, period, location, textList, images }) => (
-          <ContainerGrid>
+        (
+          { logoImg, title, extraInfo, period, location, textList, images },
+          index
+        ) => (
+          <ContainerGrid key={`container-education-${index}`}>
             <Grid
               container
               direction="row"
@@ -39,8 +42,13 @@ export const EducationSection = ({ colors }) => {
                 <MediumTitle colors={colors}>{extraInfo}</MediumTitle>
                 <MediumTitle colors={colors}>{period}</MediumTitle>
                 <MediumTitle colors={colors}>{location}</MediumTitle>
-                {textList.map((paragraph) => (
-                  <Text colors={colors}>{paragraph.text}</Text>
+                {textList.map((paragraph, textIndex) => (
+                  <Text
+                    colors={colors}
+                    key={`text-education-${index}-${textIndex}`}
+                  >
+                    {paragraph.text}
+                  </Text>
                 ))}
                 <ContainerGallery>
                   <Grid
@@ -50,8 +58,14 @@ export const EducationSection = ({ colors }) => {
                     alignItems="flex-start"
                     spacing={4}
                   >
-                    {images.map((image) => (
-                      <Grid item xs={12} sm={6} md={4}>
+                    {images.map((image, imagesIndex) => (
+                      <Grid
+                        item
+                        xs={12}
+                        sm={6}
+                        md={4}
+                        key={`image-education-${index}-${imagesIndex}`}
+                      >
                         <ImgSectionGallery src={image} />
                       </Grid>
                     ))}

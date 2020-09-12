@@ -55,8 +55,10 @@ const AboutSection = ({ size, colors }) => {
         {size.width <= screenSizes.tablet && <GridItemPhoto />}
         <Grid item xs={12} md={9}>
           {t("textAbout.textFirstParagraph", { returnObjects: true }).map(
-            (value) => (
-              <Text colors={colors}>{value.text}</Text>
+            (value, index) => (
+              <Text colors={colors} key={`text-first-paragraph-about-${index}`}>
+                {value.text}
+              </Text>
             )
           )}
         </Grid>
@@ -87,8 +89,13 @@ const AboutSection = ({ size, colors }) => {
         </Grid>
         <Grid item xs={12} md={9}>
           {t("textAbout.textSecondParagraph", { returnObjects: true }).map(
-            (value) => (
-              <Text colors={colors}>{value.text}</Text>
+            (value, index) => (
+              <Text
+                colors={colors}
+                key={`text-second-paragraph-about-${index}`}
+              >
+                {value.text}
+              </Text>
             )
           )}
         </Grid>

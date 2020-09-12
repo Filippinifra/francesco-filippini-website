@@ -33,8 +33,8 @@ export const Footer = ({ colors }) => {
       >
         <ContainerModal colors={colors}>
           <TextRow>{t("textFooter.firstText")}</TextRow>
-          {librariesUsed.map((row) => (
-            <TextRow>
+          {librariesUsed.map((row, index) => (
+            <TextRow key={`text-library-used-footer-${index}`}>
               <Link colors={colors} href={row[0].link} target="_blank">
                 {row[0].label}
               </Link>
