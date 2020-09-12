@@ -44,7 +44,7 @@ export const Footer = ({ colors }) => {
               </Link>
             </TextRow>
           ))}
-          <TextRow>
+          <TextRow style={{ marginTop: 30, fontWeight: 800 }}>
             <Link
               colors={colors}
               href={t("textFooter.repoLink")}
