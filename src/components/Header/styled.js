@@ -28,6 +28,7 @@ export const GridContainer = Styled(Grid)`
 
 export const LogoImg = Styled.img`
     height: 30px;
+    width: 30px;
     margin: 10px;
     cursor: pointer;
 `;

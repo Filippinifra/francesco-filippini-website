@@ -56,7 +56,7 @@ const Header = ({
 
   const isDesktopView = size.width > sizes.headerStep;
 
-  const buttonRef = useRef(null);
+  const lightButtonRef = useRef(null);
   const [isTooltipVisible, setTooltipVisible] = useState(false);
 
   useEffect(() => {
@@ -104,13 +104,13 @@ const Header = ({
                   handleLightClick();
                   setTooltipVisible(false);
                 }}
-                ref={buttonRef}
+                ref={lightButtonRef}
               />
               <Tooltip
                 message={t("textHeader.tootlipMessage")}
-                placement="top"
+                placement="bottom"
                 isVisible={isTooltipVisible}
-                targetRef={buttonRef}
+                targetRef={lightButtonRef}
                 colors={colors}
               />
             </LeftGrid>

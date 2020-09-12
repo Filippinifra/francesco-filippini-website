@@ -34,15 +34,16 @@ export const Tooltip = ({
     }
   );
 
-  return isVisible ? (
+  return (
     <PopperContainer
       ref={popperRef}
       style={styles.popper}
       colors={colors}
+      isVisible={isVisible}
       {...attributes.popper}
     >
       <div ref={setArrowRed} style={styles.arrow} className="arrow" />
       <div style={{ color: colors.tooltipColor, fontSize: 10 }}>{message}</div>
     </PopperContainer>
-  ) : null;
+  );
 };
