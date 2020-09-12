@@ -1,7 +1,7 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useRef, useState } from 'react';
 
-import Lottie from "react-lottie";
-import animationData from "./rainbow-animation.json";
+import Lottie from 'react-lottie';
+import animationData from './rainbow-animation.json';
 
 import {
   ContainerWebsites,
@@ -12,23 +12,20 @@ import {
   PhoneFrame,
   ContainerFrame,
   ImgScrolling,
-} from "./styled";
+} from './styled';
 
-import blackFramePhone from "img/phoneFrameBlack.png";
-import whiteFramePhone from "img/phoneFrameWhite.png";
+import blackFramePhone from 'img/phoneFrameBlack.png';
+import whiteFramePhone from 'img/phoneFrameWhite.png';
 
-import { imagesWebsitePreview } from "text/textWebsites";
-import { useTranslation } from "react-i18next";
-import { Tooltip } from "components/Tooltip";
-import { tooltipWebsiteRemoveAfterHover } from "constants/animationSettings";
+import { imagesWebsitePreview } from 'text/textWebsites';
+import { useTranslation } from 'react-i18next';
+import { Tooltip } from 'components/Tooltip';
+import { tooltipWebsiteRemoveAfterHover } from 'constants/animationSettings';
 
 export const WebsitesSection = ({ lightIsOn, colors }) => {
   const { t } = useTranslation();
 
-  const getRightFrame = useCallback(
-    () => (lightIsOn ? blackFramePhone : whiteFramePhone),
-    [lightIsOn]
-  );
+  const getRightFrame = useCallback(() => (lightIsOn ? blackFramePhone : whiteFramePhone), [lightIsOn]);
 
   const buttonRef = useRef(null);
   const [isTooltipVisible, setTooltipVisible] = useState(true);
@@ -38,7 +35,7 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
+      preserveAspectRatio: 'xMidYMid slice',
     },
   };
 
@@ -49,21 +46,15 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
   return (
     <ContainerWebsites colors={colors}>
       <div style={{ marginBottom: 60 }}>
-        <Lottie
-          options={defaultOptions}
-          height={160}
-          width={320}
-          isStopped={false}
-          isPaused={false}
-        />
+        <Lottie options={defaultOptions} height={160} width={320} isStopped={false} isPaused={false} />
       </div>
-      {t("textWebsites.texts", { returnObjects: true }).map((text, index) => (
+      {t('textWebsites.texts', { returnObjects: true }).map((text, index) => (
         <Text colors={colors} key={`text-row-website-${index}`}>
           {text}
         </Text>
       ))}
       <Tooltip
-        message={t("textWebsites.tootlipMessage")}
+        message={t('textWebsites.tootlipMessage')}
         placement="top"
         isVisible={isTooltipVisible}
         targetRef={buttonRef}
@@ -73,10 +64,7 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
         <PhoneFrame src={getRightFrame()} ref={buttonRef} />
       </ContainerFrame>
       <ContainerScrollingSnap>
-        <ContainerScrollElement
-          numberOfElement={imagesWebsitePreview.length}
-          onMouseEnter={removeTooltip}
-        >
+        <ContainerScrollElement numberOfElement={imagesWebsitePreview.length} onMouseEnter={removeTooltip}>
           {imagesWebsitePreview.map((img, index) => (
             <ElementScrolling key={`image-preview-website-${index}`}>
               <ImgScrolling src={img} />

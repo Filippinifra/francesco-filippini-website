@@ -1,13 +1,8 @@
-import React from "react";
-import { LineTop, LineBottom, Line, Ham } from "./styled.js";
+import React from 'react';
+import { LineTop, LineBottom, Line, Ham } from './styled.js';
 
 const Hamburger = ({ handleHamburgerClick, active, colors }) => (
-  <Ham
-    active={active}
-    viewBox="0 0 100 100"
-    width="50"
-    onClick={() => handleHamburgerClick()}
-  >
+  <Ham active={active} viewBox="0 0 100 100" width="50" onClick={() => handleHamburgerClick()}>
     <LineTop
       active={active}
       color={colors.headerColor}

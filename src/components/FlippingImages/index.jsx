@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { Wrapper, FrontBox, BackBox, InnerBox, FlippingImg } from "./styled";
+import { Wrapper, FrontBox, BackBox, InnerBox, FlippingImg } from './styled';
 
 export const FlippingImages = ({ imgFront, imgBack, colors, size }) => (
   <Wrapper size={size}>

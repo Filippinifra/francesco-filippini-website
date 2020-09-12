@@ -1,4 +1,4 @@
-import curriculumPdf from "files/FilippiniFCV.pdf";
+import curriculumPdf from 'files/FilippiniFCV.pdf';
 
 export const cardDownloadSettings = {
   curriculumPdf: curriculumPdf,
@@ -6,7 +6,7 @@ export const cardDownloadSettings = {
 
 export const textAbout = {
   en: {
-    downloadLabel: "myCurriculum.pdf",
+    downloadLabel: 'myCurriculum.pdf',
     textFirstParagraph: [
       {
         text: `I was born in Verona where I lived for 18 years, before moving to Milan.`,
@@ -36,7 +36,7 @@ export const textAbout = {
     ],
   },
   it: {
-    downloadLabel: "mioCurriculum.pdf",
+    downloadLabel: 'mioCurriculum.pdf',
     textFirstParagraph: [
       {
         text: `Sono nato a Verona dove sono vissuto per 18 anni prima di trasferirmi a Milano.`,

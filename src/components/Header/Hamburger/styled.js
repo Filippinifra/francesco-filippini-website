@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Line = styled.path`
   fill: none;
@@ -10,12 +10,12 @@ export const Line = styled.path`
 
 export const LineTop = styled(Line)`
   stroke-dasharray: 40 139;
-  ${({ active }) => active && "stroke-dashoffset: -98px"};
+  ${({ active }) => active && 'stroke-dashoffset: -98px'};
 `;
 
 export const LineBottom = styled(Line)`
   stroke-dasharray: 40 180;
-  ${({ active }) => active && "stroke-dashoffset: -138px"};
+  ${({ active }) => active && 'stroke-dashoffset: -138px'};
 `;
 
 export const Ham = styled.svg`
@@ -27,5 +27,5 @@ export const Ham = styled.svg`
   -ms-user-select: none;
   user-select: none;
 
-  ${({ active }) => active && "transform: rotate(45deg);"};
+  ${({ active }) => active && 'transform: rotate(45deg);'};
 `;

@@ -1,4 +1,4 @@
-import Styled from "styled-components";
+import Styled from 'styled-components';
 
 export const Parallax = Styled.div`
     position: unset !important;

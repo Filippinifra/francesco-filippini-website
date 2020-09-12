@@ -1,5 +1,5 @@
-import Styled from "styled-components";
-import screenSizes from "constants/screenSizes";
+import Styled from 'styled-components';
+import screenSizes from 'constants/screenSizes';
 
 export const ContainerEducation = Styled.div`
     position: unset !important;
@@ -29,12 +29,9 @@ export const LogoImg = Styled.img`
     border-radius:50%;
     max-width: 200px;
 
-    -webkit-box-shadow: 20px 20px 142px -42px ${({ colors }) =>
-      colors.contentImgShadow};
-    -moz-box-shadow: 20px 20px 142px -42px ${({ colors }) =>
-      colors.contentImgShadow};
-    box-shadow: 20px 20px 142px -42px ${({ colors }) =>
-      colors.contentImgShadow};
+    -webkit-box-shadow: 20px 20px 142px -42px ${({ colors }) => colors.contentImgShadow};
+    -moz-box-shadow: 20px 20px 142px -42px ${({ colors }) => colors.contentImgShadow};
+    box-shadow: 20px 20px 142px -42px ${({ colors }) => colors.contentImgShadow};
 `;
 
 export const StrongTitle = Styled.div`

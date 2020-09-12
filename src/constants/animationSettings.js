@@ -1,5 +1,5 @@
 export const delayModalFooterAppear = 300;
-export const sideAppearModalFooter = "bottom";
+export const sideAppearModalFooter = 'bottom';
 
 export const tooltipTransitionVisibility = 500;
 export const tooltipTransitionHover = 500;
@@ -12,6 +12,6 @@ export const tooltipHeaderRemoveAfterLoading = 20000;
 export const scrollAnimation = {
   duration: 800,
   delay: 0,
-  smooth: "easeInOutQuart",
+  smooth: 'easeInOutQuart',
   offset: -50,
 };

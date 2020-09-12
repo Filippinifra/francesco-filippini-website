@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const DropDownContainer = styled.div`
   position: relative;
-  width: ${({ widthElement }) => widthElement || "100"}px;
+  width: ${({ widthElement }) => widthElement || '100'}px;
   background-color: ${({ bgColor }) => bgColor};
   display: inline-flex;
   cursor: pointer;
@@ -17,7 +17,7 @@ export const DropDownTitle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: ${({ heightElement }) => heightElement || "30"}px;
+  height: ${({ heightElement }) => heightElement || '30'}px;
   width: 100%;
   transition: background 0.6s;
 
@@ -33,7 +33,7 @@ export const DropDownContent = styled.div`
   position: absolute;
   overflow: hidden;
   background-color: ${({ bgColor }) => bgColor};
-  width: ${({ widthElement }) => widthElement || "100"}px;
+  width: ${({ widthElement }) => widthElement || '100'}px;
   z-index: 1;
   margin-top: ${({ heightElement }) => heightElement || 36}px;
 

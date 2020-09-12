@@ -1,6 +1,6 @@
-import Styled from "styled-components";
+import Styled from 'styled-components';
 
-import { Grid } from "@material-ui/core";
+import { Grid } from '@material-ui/core';
 
 export const GridItem = Styled(Grid)`
     height:100%;
@@ -87,7 +87,7 @@ export const NavMobileButton = Styled.button`
 `;
 
 export const ContainerMobileLink = Styled.div`
-    max-height: ${({ hamburgerActive }) => (hamburgerActive ? "162px" : "0")};
+    max-height: ${({ hamburgerActive }) => (hamburgerActive ? '162px' : '0')};
     transition: max-height 0.6s ease-in-out;
     overflow: hidden;
 `;

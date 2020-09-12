@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
   ContainerContacts,
@@ -10,14 +10,14 @@ import {
   ContainerImgAndText,
   WrapperImg,
   TextContainer,
-} from "./styled";
+} from './styled';
 
-import phoneIcon from "img/contactLogos/phonebookLogo.svg";
-import mailIcon from "img/contactLogos/emailLogo.svg";
-import addressIcon from "img/contactLogos/locationLogo.svg";
-import linkedinIcon from "img/contactLogos/linkedinLogo.svg";
+import phoneIcon from 'img/contactLogos/phonebookLogo.svg';
+import mailIcon from 'img/contactLogos/emailLogo.svg';
+import addressIcon from 'img/contactLogos/locationLogo.svg';
+import linkedinIcon from 'img/contactLogos/linkedinLogo.svg';
 
-import { textContacts } from "text/textContacts";
+import { textContacts } from 'text/textContacts';
 
 export const ContactsSection = ({ colors }) => (
   <ContainerContacts colors={colors}>
@@ -35,11 +35,7 @@ export const ContactsSection = ({ colors }) => (
         </Link>
       </GridItem>
       <GridItem item xs={12} sm={6} md={3}>
-        <Link
-          colors={colors}
-          href={`mailto:${textContacts.email}?subject=Richiesta`}
-          target="_blank"
-        >
+        <Link colors={colors} href={`mailto:${textContacts.email}?subject=Richiesta`} target="_blank">
           <ContainerImgAndText>
             <WrapperImg>
               <Icon src={mailIcon} />
@@ -51,11 +47,7 @@ export const ContactsSection = ({ colors }) => (
         </Link>
       </GridItem>
       <GridItem item xs={12} sm={6} md={3}>
-        <Link
-          colors={colors}
-          href={textContacts.mapsLinkToAddress}
-          target="_blank"
-        >
+        <Link colors={colors} href={textContacts.mapsLinkToAddress} target="_blank">
           <ContainerImgAndText>
             <WrapperImg>
               <Icon src={addressIcon} />

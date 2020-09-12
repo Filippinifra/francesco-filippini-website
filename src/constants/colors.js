@@ -1,14 +1,14 @@
-const TRANSPARENT = "transparent";
-const BLACK = "black";
-const WHITE = "white";
+const TRANSPARENT = 'transparent';
+const BLACK = 'black';
+const WHITE = 'white';
 
-const BRIGHT_NAVY_BLUE = "#007df7";
-const SEA_SERPENT = "#40BCD8";
+const BRIGHT_NAVY_BLUE = '#007df7';
+const SEA_SERPENT = '#40BCD8';
 
-const DEEP_SAFFRON = "#F39237";
-const PERSIAN_RED = "#D63230";
+const DEEP_SAFFRON = '#F39237';
+const PERSIAN_RED = '#D63230';
 
-const LIGHT_GREY = "#f6f6f6";
+const LIGHT_GREY = '#f6f6f6';
 
 const primaryColor = BRIGHT_NAVY_BLUE;
 const secondaryColor = SEA_SERPENT;

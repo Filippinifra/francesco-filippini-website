@@ -1,19 +1,19 @@
-import politecnicoLogo from "img/politecnicoMilanoLogo.png";
-import fracastoroLogo from "img/liceoFracastoroLogo.png";
-import stJonesLogo from "img/stJonesLogo.png";
+import politecnicoLogo from 'img/politecnicoMilanoLogo.png';
+import fracastoroLogo from 'img/liceoFracastoroLogo.png';
+import stJonesLogo from 'img/stJonesLogo.png';
 
 export const textEducation = {
   en: [
     {
       logoImg: politecnicoLogo,
-      title: "Politecnico Di Milano",
-      extraInfo: "Bachelor of Computer Engineering",
-      period: "2015 - 2020",
-      location: "Milan",
+      title: 'Politecnico Di Milano',
+      extraInfo: 'Bachelor of Computer Engineering',
+      period: '2015 - 2020',
+      location: 'Milan',
       textList: [
         {
           text:
-            "Courses attended: Fundamentals of Computer Science - Fundamentals of Internet and Networks - Computer Architecture and Operating Systems - Algorithms and Principles of Computer Science - Fundamentals of Automatic - Probability and Statistics for Information Technology - Databases - Logical Networking - Hypermedia Applications - Software Engineering - Information System",
+            'Courses attended: Fundamentals of Computer Science - Fundamentals of Internet and Networks - Computer Architecture and Operating Systems - Algorithms and Principles of Computer Science - Fundamentals of Automatic - Probability and Statistics for Information Technology - Databases - Logical Networking - Hypermedia Applications - Software Engineering - Information System',
         },
         {
           text: `Hypermedia project - Using HTML, CSS, Javascript. Assignment was to create a crypto conference website and one of the requirements was to create a PostgreSQL database in order to store data.`,
@@ -32,19 +32,19 @@ export const textEducation = {
     },
     {
       logoImg: fracastoroLogo,
-      title: "Liceo Scientifico Girolamo Fracastoro",
-      extraInfo: "Italian High School Diploma",
-      period: "2010 - 2015",
-      location: "Verona",
+      title: 'Liceo Scientifico Girolamo Fracastoro',
+      extraInfo: 'Italian High School Diploma',
+      period: '2010 - 2015',
+      location: 'Verona',
       textList: [],
       images: [],
     },
     {
       logoImg: stJonesLogo,
       title: "St. John's University",
-      extraInfo: "English 1 month course",
-      period: "July 2012",
-      location: "New York (USA)",
+      extraInfo: 'English 1 month course',
+      period: 'July 2012',
+      location: 'New York (USA)',
       textList: [],
       images: [],
     },
@@ -52,10 +52,10 @@ export const textEducation = {
   it: [
     {
       logoImg: politecnicoLogo,
-      title: "Politecnico Di Milano",
-      extraInfo: "Laurea triennale in Ingegneria Informatica",
-      period: "2015 - 2020",
-      location: "Milano",
+      title: 'Politecnico Di Milano',
+      extraInfo: 'Laurea triennale in Ingegneria Informatica',
+      period: '2015 - 2020',
+      location: 'Milano',
       textList: [
         {
           text:
@@ -78,19 +78,19 @@ export const textEducation = {
     },
     {
       logoImg: fracastoroLogo,
-      title: "Liceo Scientifico Girolamo Fracastoro",
-      extraInfo: "Diploma di Scuola Superiore",
-      period: "2010 - 2015",
-      location: "Verona",
+      title: 'Liceo Scientifico Girolamo Fracastoro',
+      extraInfo: 'Diploma di Scuola Superiore',
+      period: '2010 - 2015',
+      location: 'Verona',
       textList: [],
       images: [],
     },
     {
       logoImg: stJonesLogo,
       title: "Università St. John's",
-      extraInfo: "Corso di inglese durato 1 mese",
-      period: "Luglio 2012",
-      location: "New York (USA)",
+      extraInfo: 'Corso di inglese durato 1 mese',
+      period: 'Luglio 2012',
+      location: 'New York (USA)',
       textList: [],
       images: [],
     },

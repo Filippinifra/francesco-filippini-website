@@ -1,6 +1,6 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme } from '@material-ui/core/styles';
 
-import typography from "constants/typography";
+import typography from 'constants/typography';
 
 const theme = createMuiTheme({
   typography: {
@@ -9,7 +9,7 @@ const theme = createMuiTheme({
   overrides: {
     MuiPaper: {
       root: {
-        backgroundColor: "transparent",
+        backgroundColor: 'transparent',
       },
     },
   },

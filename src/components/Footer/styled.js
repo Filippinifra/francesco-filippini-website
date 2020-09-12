@@ -1,5 +1,5 @@
-import Styled from "styled-components";
-import Button from "@material-ui/core/Button";
+import Styled from 'styled-components';
+import Button from '@material-ui/core/Button';
 
 export const ButtonModal = Styled(Button)`
     text-transform: none !important;

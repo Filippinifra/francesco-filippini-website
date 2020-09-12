@@ -1,4 +1,4 @@
-import Styled from "styled-components";
+import Styled from 'styled-components';
 
 export const FooterContainer = Styled.div`
     bottom:0;

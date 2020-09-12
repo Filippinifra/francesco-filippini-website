@@ -1,4 +1,4 @@
-import Styled from "styled-components";
+import Styled from 'styled-components';
 
 export const ContainerDivider = Styled.div`
     position: unset !important;

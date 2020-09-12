@@ -1,15 +1,15 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import { DEFAULT_LANG } from "constants/languages";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import { DEFAULT_LANG } from 'constants/languages';
 
-import { textHeader } from "text/textHeader";
-import { textCurtain } from "text/textCurtain";
-import { textHeroSection } from "text/textHeroSection";
-import { textAbout } from "text/textAbout";
-import { textWork } from "text/textWork";
-import { textEducation } from "text/textEducation";
-import { textWebsites } from "text/textWebsites";
-import { textFooter } from "text/textFooter";
+import { textHeader } from 'text/textHeader';
+import { textCurtain } from 'text/textCurtain';
+import { textHeroSection } from 'text/textHeroSection';
+import { textAbout } from 'text/textAbout';
+import { textWork } from 'text/textWork';
+import { textEducation } from 'text/textEducation';
+import { textWebsites } from 'text/textWebsites';
+import { textFooter } from 'text/textFooter';
 
 const resources = {
   en: {

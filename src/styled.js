@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
-import typography from "constants/typography";
+import typography from 'constants/typography';
 
 const GlobalStyle = createGlobalStyle`
     body {

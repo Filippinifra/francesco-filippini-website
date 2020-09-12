@@ -1,27 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import {
-  DropDownContainer,
-  DropDownContent,
-  DropDownTitle,
-  DropDownIndicator,
-  ChoiceContainer,
-} from "./styled";
+import { DropDownContainer, DropDownContent, DropDownTitle, DropDownIndicator, ChoiceContainer } from './styled';
 
-import { ExpandMore } from "@material-ui/icons";
-import { ExpandLess } from "@material-ui/icons";
+import { ExpandMore } from '@material-ui/icons';
+import { ExpandLess } from '@material-ui/icons';
 
-export const Dropdown = ({
-  title,
-  dropDownElementsArray,
-  widthElement,
-  heightElement,
-  color,
-  bgColor,
-  style,
-  onClick,
-  shadeColor,
-}) => {
+export const Dropdown = ({ title, dropDownElementsArray, widthElement, heightElement, color, bgColor, style, onClick, shadeColor }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleBlur = () => {
@@ -31,19 +15,9 @@ export const Dropdown = ({
   };
 
   return (
-    <div tabIndex="0" onBlur={handleBlur} style={{ outline: "none" }}>
-      <DropDownContainer
-        widthElement={widthElement}
-        isOpen={isOpen}
-        style={{ ...style }}
-        onClick={onClick}
-      >
-        <DropDownTitle
-          onClick={() => setIsOpen(!isOpen)}
-          heightElement={heightElement}
-          color={color}
-          bgColor={bgColor}
-        >
+    <div tabIndex="0" onBlur={handleBlur} style={{ outline: 'none' }}>
+      <DropDownContainer widthElement={widthElement} isOpen={isOpen} style={{ ...style }} onClick={onClick}>
+        <DropDownTitle onClick={() => setIsOpen(!isOpen)} heightElement={heightElement} color={color} bgColor={bgColor}>
           <div style={{ marginLeft: 5 }}>{title}</div>
           <DropDownIndicator color={color} bgColor={bgColor}>
             {isOpen ? (

@@ -1,4 +1,4 @@
-import Styled from "styled-components";
+import Styled from 'styled-components';
 
 export const Wrapper = Styled.div`
     height: ${({ size }) => size}px;
@@ -39,9 +39,7 @@ export const FlippingImg = Styled.img`
     width: 100%;
     border-radius:50%;
 
-    -webkit-box-shadow: 20px 20px 142px -42px ${({ colors }) =>
-      colors.contentImgShadow};
-    -moz-box-shadow: 20px 20px 142px -42px ${(colors) =>
-      colors.contentImgShadow};
+    -webkit-box-shadow: 20px 20px 142px -42px ${({ colors }) => colors.contentImgShadow};
+    -moz-box-shadow: 20px 20px 142px -42px ${(colors) => colors.contentImgShadow};
     box-shadow: 20px 20px 142px -42px ${(colors) => colors.contentImgShadow};
 `;

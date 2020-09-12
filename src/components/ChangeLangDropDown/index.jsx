@@ -1,21 +1,13 @@
-import React from "react";
-import { useParams, useLocation, useHistory } from "react-router-dom";
-import { AVAILABLE_LANGUAGES, MAP_LANG_TO_FLAGS } from "constants/languages";
+import React from 'react';
+import { useParams, useLocation, useHistory } from 'react-router-dom';
+import { AVAILABLE_LANGUAGES, MAP_LANG_TO_FLAGS } from 'constants/languages';
 
-import getUnicodeFlagIcon from "country-flag-icons/unicode";
+import getUnicodeFlagIcon from 'country-flag-icons/unicode';
 
-import { Dropdown } from "components/Dropdown";
-import { useCallback } from "react";
+import { Dropdown } from 'components/Dropdown';
+import { useCallback } from 'react';
 
-const ChangeLangDropDown = ({
-  heightElement,
-  widthElement,
-  color,
-  bgColor,
-  style,
-  onClick,
-  shadeColor,
-}) => {
+const ChangeLangDropDown = ({ heightElement, widthElement, color, bgColor, style, onClick, shadeColor }) => {
   const { language } = useParams();
   const { pathname } = useLocation();
 
@@ -23,18 +15,16 @@ const ChangeLangDropDown = ({
 
   const getSamePageInAnotherLang = useCallback(
     (newLang) => {
-      const pathsArray = pathname.split("/");
+      const pathsArray = pathname.split('/');
       pathsArray[1] = newLang;
-      const newPath = pathsArray.join("/");
+      const newPath = pathsArray.join('/');
       history.push(newPath);
     },
     [pathname, history]
   );
 
   const getUnicodeFlags = useCallback(() => {
-    const availableChangeLang = AVAILABLE_LANGUAGES.filter(
-      (element) => element !== language
-    );
+    const availableChangeLang = AVAILABLE_LANGUAGES.filter((element) => element !== language);
 
     const flagArray = availableChangeLang.map((element) => {
       return {
@@ -45,10 +35,7 @@ const ChangeLangDropDown = ({
     return flagArray;
   }, [getSamePageInAnotherLang, language]);
 
-  const currentFlag = useCallback(
-    () => getUnicodeFlagIcon(MAP_LANG_TO_FLAGS[language]),
-    [language]
-  );
+  const currentFlag = useCallback(() => getUnicodeFlagIcon(MAP_LANG_TO_FLAGS[language]), [language]);
 
   return (
     <Dropdown
