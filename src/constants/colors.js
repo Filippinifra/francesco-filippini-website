@@ -17,7 +17,7 @@ const tertiary = DEEP_SAFFRON;
 const quaternary = PERSIAN_RED;
 
 export const colorsLightOn = {
-  bodyBgColor: WHITE,
+  bodyBgColor: LIGHT_GREY,
   heroSectionBgColor: primaryColor,
   heroSectionColor: WHITE,
   contentBgColor: LIGHT_GREY,
