@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 import GlobalStyle from "./styled.js";
 
@@ -24,10 +24,9 @@ export const App = () => {
 
   const [lightOn, setLightOn] = useState(true);
 
-  const getColors = useCallback(
-    () => (lightOn ? colorsLightOn : colorsLightOff),
-    [lightOn]
-  );
+  const colors = useMemo(() => (lightOn ? colorsLightOn : colorsLightOff), [
+    lightOn,
+  ]);
 
   const handleLightClick = () =>
     lightOn ? setLightOn(false) : setLightOn(true);
@@ -47,12 +46,12 @@ export const App = () => {
 
   return AVAILABLE_LANGUAGES.includes(language) ? (
     <ThemeProvider theme={theme}>
-      <GlobalStyle colors={getColors()} />
-      <CurtainOpening isloading={pageIsLoading} colors={getColors()}>
+      <GlobalStyle colors={colors} />
+      <CurtainOpening isloading={pageIsLoading} colors={colors}>
         <PageLayout
           lightIsOn={lightOn}
           handleLightClick={handleLightClick}
-          colors={getColors()}
+          colors={colors}
         />
       </CurtainOpening>
     </ThemeProvider>
