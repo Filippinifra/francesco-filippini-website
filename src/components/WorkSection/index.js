@@ -17,6 +17,7 @@ import {
   ToolsText,
   StackRowWrapper,
 } from './styled';
+import { stackLabel } from 'text/textWork';
 
 export const WorkSection = ({ colors }) => {
   const { t } = useTranslation();
@@ -43,7 +44,7 @@ export const WorkSection = ({ colors }) => {
               ))}
               {tools && (
                 <StackRowWrapper>
-                  <Text colors={colors}>{t('labels.stack')}</Text>
+                  <Text colors={colors}>{stackLabel}</Text>
                   <ToolsText colors={colors}>{tools}</ToolsText>
                 </StackRowWrapper>
               )}

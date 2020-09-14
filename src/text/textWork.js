@@ -9,6 +9,8 @@ import smb4 from 'img/smbImages/smb4.png';
 import smb5 from 'img/smbImages/smb5.png';
 import smb6 from 'img/smbImages/smb6.png';
 
+export const stackLabel = 'Stack:';
+
 export const textWork = {
   en: [
     {
