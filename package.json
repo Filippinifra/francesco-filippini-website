@@ -21,7 +21,7 @@
     "react-scripts": "^3.4.3",
     "react-scroll": "^1.8.1",
     "react-sizeme": "^2.6.12",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
     "prettier": "^2.0.4"
