@@ -31,6 +31,10 @@ export const ContainerScrollingSnap = Styled.div`
     overflow-y: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
 `;
 
 export const ContainerScrollElement = Styled.div`
