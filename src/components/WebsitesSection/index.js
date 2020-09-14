@@ -45,8 +45,8 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
 
   return (
     <ContainerWebsites colors={colors}>
-      <div style={{ marginBottom: 60 }}>
-        <Lottie options={defaultOptions} height={160} width={320} isStopped={false} isPaused={false} />
+      <div style={{ margin: '0 auto 60px', maxWidth: 320 }}>
+        <Lottie options={defaultOptions} isStopped={false} isPaused={false} />
       </div>
       {t('textWebsites.texts', { returnObjects: true }).map((text, index) => (
         <Text colors={colors} key={`text-row-website-${index}`}>
