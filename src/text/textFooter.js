@@ -35,13 +35,13 @@ export const librariesUsed = [
 
 export const textFooter = {
   en: {
-    footerLabel: 'Created from scratch using React',
+    footerLabel: 'Created using React',
     firstText: 'Made with ❤️ using',
     repoText: 'Click for website repo',
     repoLink: 'https://github.com/Filippinifra/francesco-filippini-website',
   },
   it: {
-    footerLabel: 'Creato da zero usando React',
+    footerLabel: 'Creato usando React',
     firstText: 'Fatto con ❤️ usando',
     repoText: 'Clicca qui per vedere la repo',
     repoLink: 'https://github.com/Filippinifra/francesco-filippini-website',
