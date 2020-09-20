@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import Lottie from 'react-lottie';
 import animationData from './rainbow-animation.json';
@@ -25,7 +25,10 @@ import { tooltipWebsiteRemoveAfterHover } from 'constants/animationSettings';
 export const WebsitesSection = ({ lightIsOn, colors }) => {
   const { t } = useTranslation();
 
-  const getRightFrame = useCallback(() => (lightIsOn ? blackFramePhone : whiteFramePhone), [lightIsOn]);
+  const correctFrame = useMemo(() => {
+    console.log('ciao');
+    return lightIsOn ? blackFramePhone : whiteFramePhone;
+  }, [lightIsOn]);
 
   const buttonRef = useRef(null);
   const [isTooltipVisible, setTooltipVisible] = useState(true);
@@ -81,7 +84,7 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
         colors={colors}
       />
       <ContainerFrame>
-        <PhoneFrame src={getRightFrame()} ref={buttonRef} />
+        <PhoneFrame src={correctFrame} ref={buttonRef} />
       </ContainerFrame>
       <ContainerScrollingSnap>
         <ContainerScrollElement numberOfElement={imagesWebsitePreview.length} onMouseEnter={removeTooltip}>
