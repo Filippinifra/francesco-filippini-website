@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useMemo } from 'react';
 import { withSize } from 'react-sizeme';
 
 import { Grid } from '@material-ui/core';
@@ -19,7 +19,7 @@ import { FlippingImages } from 'components/FlippingImages';
 const AboutSection = ({ size, colors }) => {
   const { t } = useTranslation();
 
-  const GridItemPhoto = useCallback(
+  const GridItemPhoto = useMemo(
     () => (
       <Grid item xs={12} md={3}>
         <ContainerImg>
@@ -33,7 +33,7 @@ const AboutSection = ({ size, colors }) => {
   return (
     <ContainerAbout colors={colors}>
       <Grid container direction="row" justify="center" alignItems="flex-start" spacing={7}>
-        {size.width <= screenSizes.tablet && <GridItemPhoto />}
+        {size.width <= screenSizes.tablet && GridItemPhoto}
         <Grid item xs={12} md={9}>
           {t('textAbout.textFirstParagraph', { returnObjects: true }).map((value, index) => (
             <Text colors={colors} key={`text-first-paragraph-about-${index}`}>
@@ -41,7 +41,7 @@ const AboutSection = ({ size, colors }) => {
             </Text>
           ))}
         </Grid>
-        {size.width > screenSizes.tablet && <GridItemPhoto />}
+        {size.width > screenSizes.tablet && GridItemPhoto}
       </Grid>
       <Grid container direction="row" justify="center" alignItems="flex-start" spacing={7}>
         <Grid item xs={12} md={3}>

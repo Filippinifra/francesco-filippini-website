@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { useParams, useLocation, useHistory } from 'react-router-dom';
 import { AVAILABLE_LANGUAGES, MAP_LANG_TO_FLAGS } from 'constants/languages';
 
 import getUnicodeFlagIcon from 'country-flag-icons/unicode';
 
 import { Dropdown } from 'components/Dropdown';
-import { useCallback } from 'react';
 
 const ChangeLangDropDown = ({ heightElement, widthElement, color, bgColor, style, onClick, shadeColor }) => {
   const { language } = useParams();
@@ -23,7 +22,7 @@ const ChangeLangDropDown = ({ heightElement, widthElement, color, bgColor, style
     [pathname, history]
   );
 
-  const getUnicodeFlags = useCallback(() => {
+  const unicodeFlags = useMemo(() => {
     const availableChangeLang = AVAILABLE_LANGUAGES.filter((element) => element !== language);
 
     const flagArray = availableChangeLang.map((element) => {
@@ -35,12 +34,12 @@ const ChangeLangDropDown = ({ heightElement, widthElement, color, bgColor, style
     return flagArray;
   }, [getSamePageInAnotherLang, language]);
 
-  const currentFlag = useCallback(() => getUnicodeFlagIcon(MAP_LANG_TO_FLAGS[language]), [language]);
+  const currentFlag = useMemo(() => getUnicodeFlagIcon(MAP_LANG_TO_FLAGS[language]), [language]);
 
   return (
     <Dropdown
-      title={currentFlag()}
-      dropDownElementsArray={getUnicodeFlags()}
+      title={currentFlag}
+      dropDownElementsArray={unicodeFlags}
       heightElement={heightElement}
       widthElement={widthElement}
       color={color}

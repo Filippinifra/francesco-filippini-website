@@ -25,10 +25,7 @@ import { tooltipWebsiteRemoveAfterHover } from 'constants/animationSettings';
 export const WebsitesSection = ({ lightIsOn, colors }) => {
   const { t } = useTranslation();
 
-  const correctFrame = useMemo(() => {
-    console.log('ciao');
-    return lightIsOn ? blackFramePhone : whiteFramePhone;
-  }, [lightIsOn]);
+  const correctFrame = useMemo(() => (lightIsOn ? blackFramePhone : whiteFramePhone), [lightIsOn]);
 
   const buttonRef = useRef(null);
   const [isTooltipVisible, setTooltipVisible] = useState(true);

@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 
 import { withSize } from 'react-sizeme';
 
@@ -58,7 +58,7 @@ const Header = ({ handleNavClick, handleLightClick, scrollToTop, lightIsOn, size
     }, tooltipHeaderRemoveAfterLoading);
   }, []);
 
-  const DropdownLangs = useCallback(
+  const DropdownLangs = useMemo(
     () => (
       <ChangeLangDropDown
         widthElement={60}
@@ -116,11 +116,11 @@ const Header = ({ handleNavClick, handleLightClick, scrollToTop, lightIsOn, size
                   <NavButton colors={colors} onClick={() => handleClick(t('textHeader.contacts'))}>
                     {t('textHeader.contacts')}
                   </NavButton>
-                  <DropdownLangs />
+                  {DropdownLangs}
                 </>
               ) : (
                 <>
-                  <DropdownLangs />
+                  {DropdownLangs}
                   <Hamburger handleHamburgerClick={handleHamburgerClick} active={hamburgerActive} colors={colors} />
                 </>
               )}
