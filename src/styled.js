@@ -20,6 +20,10 @@ const GlobalStyle = createGlobalStyle`
             background-color: ${({ colors }) => colors.selectionBgColor};
             color: ${({ colors }) => colors.selectionColor};
         }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
     }
 `;
 
