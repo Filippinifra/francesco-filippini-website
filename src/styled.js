@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         font-family: ${typography.fontFamily} !important;
         background-color: ${({ colors }) => colors.bodyBgColor};
-        height: 100vh;
+        height: 100%;
         width: 100%;
     }
   

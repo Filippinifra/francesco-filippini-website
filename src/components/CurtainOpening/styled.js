@@ -2,7 +2,7 @@ import Styled from 'styled-components';
 
 export const Curtain = Styled.div`
   width: 100%; 
-  height: 100vh;
+  height: 100%;
 `;
 
 export const CurtainWrapper = Styled.div`
@@ -13,7 +13,7 @@ export const CurtainWrapper = Styled.div`
 export const CurtainLeftPanel = Styled.div`
   background-color: ${({ colors }) => colors.curtainBgColor};
   width: 50%; 
-  height: 100vh;
+  height: 100%;
   float: left;
   position: fixed; 
   z-index: 2; 
@@ -30,7 +30,7 @@ export const CurtainRightPanel = Styled.div`
   background-color: ${({ colors }) => colors.curtainBgColor};
   margin-left: 50%;
   width: 50%; 
-  height: 100vh; 
+  height: 100%; 
   float: left; 
   position: fixed;
   z-index: 2; 
