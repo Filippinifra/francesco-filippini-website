@@ -7,7 +7,7 @@ export const ContainerEducation = Styled.div`
     background-color: ${({ colors }) => colors.contentBgColor};
 
     @media screen and (max-width: ${screenSizes.phone}px) {
-        padding:60px 60px;
+        padding:60px 30px;
     }
 `;
 

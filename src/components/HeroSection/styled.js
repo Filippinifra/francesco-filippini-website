@@ -18,9 +18,18 @@ export const TextLeft = Styled.div`
         margin-top: 0;
         margin-bottom: 20px;
     }
+
 `;
 
 export const TextCenter = Styled.div`
     text-align: center;
     font-size: 35px;
+
+    @media screen and (max-width: ${screenSizes.phone}px) {
+        font-size: 32px;
+    }
+
+    @media screen and (max-width: ${screenSizes.phone}px) {
+        font-size: 30px;
+    }
 `;
