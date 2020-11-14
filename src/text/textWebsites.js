@@ -4,8 +4,9 @@ import laRuota from 'img/previewWebsites/laruota.png';
 import myWebsite from 'img/previewWebsites/myWebsite.png';
 import uristudio from 'img/previewWebsites/uristudio.png';
 import iubes from 'img/previewWebsites/iubes.png';
+import smb_for_schools from 'img/previewWebsites/smb_for_schools.png';
 
-export const imagesWebsitePreview = [iubes, rondinella, hypermedia, laRuota, myWebsite, uristudio];
+export const imagesWebsitePreview = [smb_for_schools, iubes, rondinella, hypermedia, laRuota, myWebsite, uristudio];
 
 export const textWebsites = {
   en: {
