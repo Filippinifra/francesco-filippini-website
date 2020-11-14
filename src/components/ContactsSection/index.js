@@ -26,7 +26,7 @@ export const ContactsSection = ({ colors }) => (
         <Link colors={colors} href={`tel:${textContacts.phoneNumber}`}>
           <ContainerImgAndText>
             <WrapperImg>
-              <Icon src={phoneIcon} />
+              <Icon src={phoneIcon} alt="phoneIcon" />
             </WrapperImg>
             <TextContainer>
               <TextInformation>{textContacts.phoneNumber}</TextInformation>
@@ -38,7 +38,7 @@ export const ContactsSection = ({ colors }) => (
         <Link colors={colors} href={`mailto:${textContacts.email}?subject=Richiesta`} target="_blank">
           <ContainerImgAndText>
             <WrapperImg>
-              <Icon src={mailIcon} />
+              <Icon src={mailIcon} alt="mailIcon" />
             </WrapperImg>
             <TextContainer>
               <TextInformation>{textContacts.email}</TextInformation>
@@ -47,20 +47,20 @@ export const ContactsSection = ({ colors }) => (
         </Link>
       </GridItem>
       <GridItem item xs={12} sm={6} md={3}>
-        <Link colors={colors} href={textContacts.mapsLinkToAddress} target="_blank">
+        <Link colors={colors} href={textContacts.mapsLinkToAddress} target="_blank" rel="noreferrer">
           <ContainerImgAndText>
             <WrapperImg>
-              <Icon src={addressIcon} />
+              <Icon src={addressIcon} alt="addressIcon" />
             </WrapperImg>
             <TextInformation>{textContacts.address}</TextInformation>
           </ContainerImgAndText>
         </Link>
       </GridItem>
       <GridItem item xs={12} sm={6} md={3}>
-        <Link colors={colors} href={textContacts.linkedinLink} target="_blank">
+        <Link colors={colors} href={textContacts.linkedinLink} target="_blank" rel="noreferrer">
           <ContainerImgAndText>
             <WrapperImg>
-              <Icon src={linkedinIcon} />
+              <Icon src={linkedinIcon} alt="linkedinIcon" />
             </WrapperImg>
             <TextInformation>{textContacts.linkedinId}</TextInformation>
           </ContainerImgAndText>

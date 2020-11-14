@@ -82,7 +82,7 @@ const Header = ({ handleNavClick, handleLightClick, scrollToTop, lightIsOn, size
         <GridContainer container direction="row" justify="center" alignItems="center">
           <GridItem item xs={6} sm={3}>
             <LeftGrid>
-              <LogoImg src={FFLogo} onClick={scrollToTop} />
+              <LogoImg src={FFLogo} onClick={scrollToTop} alt="headerPersonalLogo" />
               <LogoImg
                 src={getLightImage()}
                 onClick={() => {
@@ -90,6 +90,7 @@ const Header = ({ handleNavClick, handleLightClick, scrollToTop, lightIsOn, size
                   setTooltipVisible(false);
                 }}
                 ref={lightButtonRef}
+                alt="lightIcon"
               />
               <Tooltip
                 message={t('textHeader.tootlipMessage')}

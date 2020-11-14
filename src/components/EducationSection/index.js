@@ -24,7 +24,7 @@ export const EducationSection = ({ colors }) => {
           <Grid container direction="row" justify="center" alignItems="flex-start" spacing={10}>
             <Grid item xs={12} md={3}>
               <ContainerImg>
-                <LogoImg src={logoImg} colors={colors} />
+                <LogoImg src={logoImg} colors={colors} alt="personalLogo" />
               </ContainerImg>
             </Grid>
             <Grid item xs={12} md={9}>
@@ -41,7 +41,7 @@ export const EducationSection = ({ colors }) => {
                 <Grid container direction="row" justify="center" alignItems="flex-start" spacing={4}>
                   {images.map((image, imagesIndex) => (
                     <Grid item xs={12} sm={6} md={4} key={`image-education-${index}-${imagesIndex}`}>
-                      <ImgSectionGallery src={image} />
+                      <ImgSectionGallery src={image} alt={`educationImage${imagesIndex}`} />
                     </Grid>
                   ))}
                 </Grid>

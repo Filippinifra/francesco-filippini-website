@@ -81,13 +81,13 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
         colors={colors}
       />
       <ContainerFrame>
-        <PhoneFrame src={correctFrame} ref={buttonRef} />
+        <PhoneFrame src={correctFrame} ref={buttonRef} alt="mobileFrame" />
       </ContainerFrame>
       <ContainerScrollingSnap>
         <ContainerScrollElement numberOfElement={imagesWebsitePreview.length} onMouseEnter={removeTooltip}>
           {imagesWebsitePreview.map((img, index) => (
             <ElementScrolling key={`image-preview-website-${index}`}>
-              <ImgScrolling src={img} />
+              <ImgScrolling src={img} alt={`websitePreview${index}`} />
             </ElementScrolling>
           ))}
         </ContainerScrollElement>

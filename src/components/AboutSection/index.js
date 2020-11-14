@@ -48,7 +48,7 @@ const AboutSection = ({ size, colors }) => {
           <ContainerImg>
             <LinkDownload href={cardDownloadSettings.curriculumPdf} download colors={colors}>
               <ContainerDownloadElement>
-                <ImageCurriculum src={curriculumImage} />
+                <ImageCurriculum src={curriculumImage} alt="curriculum" />
                 <LabelDownload colors={colors}>{t('textAbout.downloadLabel')}</LabelDownload>
               </ContainerDownloadElement>
             </LinkDownload>

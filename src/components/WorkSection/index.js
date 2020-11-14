@@ -29,7 +29,7 @@ export const WorkSection = ({ colors }) => {
           <Grid container direction="row" justify="center" alignItems="flex-start" spacing={10}>
             <Grid item xs={12} md={3}>
               <ContainerImg>
-                <LogoImg colors={colors} src={logoImg} />
+                <LogoImg colors={colors} src={logoImg} alt="personalLogo" />
               </ContainerImg>
             </Grid>
             <Grid item xs={12} md={9}>
@@ -53,7 +53,7 @@ export const WorkSection = ({ colors }) => {
                   <Grid container direction="row" justify="center" alignItems="flex-start" spacing={4}>
                     {images.map((image, indexImage) => (
                       <Grid item xs={6} md={4} key={`image-work-${index}-${indexImage}`}>
-                        <ImgSectionGallery src={image} />
+                        <ImgSectionGallery src={image} alt={`logoCompany${indexImage}`} />
                       </Grid>
                     ))}
                   </Grid>
