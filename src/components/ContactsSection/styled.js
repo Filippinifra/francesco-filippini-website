@@ -2,7 +2,7 @@ import Styled from 'styled-components';
 import { Grid } from '@material-ui/core';
 import screenSizes from 'constants/screenSizes';
 
-export const ContainerContacts = Styled.div`
+export const WrapperContacts = Styled.div`
     position: unset !important;
     padding:80px 100px;
     background-color: ${({ colors }) => colors.contentBgColor};
@@ -43,7 +43,7 @@ export const ContentCentered = Styled.div`
     text-align: center;
 `;
 
-export const ContainerImgAndText = Styled.div`
+export const WrapperImgAndText = Styled.div`
     padding: 20px;
 
     :hover{
@@ -56,6 +56,6 @@ export const WrapperImg = Styled.div`
     padding: 20px;
 `;
 
-export const TextContainer = Styled.div`
+export const TextWrapper = Styled.div`
     width:100%;
 `;

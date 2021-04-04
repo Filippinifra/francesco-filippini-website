@@ -1,5 +1,9 @@
 import React from 'react';
+import { useTheme } from 'hook/useTheme';
+import { WrapperDivider } from './styled';
 
-import { ContainerDivider } from './styled';
+export const ContentDivider = () => {
+  const { colors } = useTheme();
 
-export const ContentDivider = ({ colors }) => <ContainerDivider colors={colors} />;
+  return <WrapperDivider colors={colors} />;
+};

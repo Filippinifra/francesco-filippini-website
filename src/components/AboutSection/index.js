@@ -1,37 +1,33 @@
 import React, { useMemo } from 'react';
 import { withSize } from 'react-sizeme';
-
 import { Grid } from '@material-ui/core';
-
 import face from 'img/faceImage.png';
 import meGiovaAranzulla from 'img/meGiovaAranzulla.jpeg';
-
 import { cardDownloadSettings } from 'text/textAbout';
-
 import screenSizes from 'constants/screenSizes';
-
-import { Text, ContainerAbout, ContainerDownloadElement, LinkDownload, ContainerImg, ImageCurriculum, LabelDownload } from './styled';
-
+import { Text, WrapperAbout, WrapperDownloadElement, LinkDownload, WrapperImg, ImageCurriculum, LabelDownload } from './styled';
 import curriculumImage from 'img/contactLogos/curriculum.svg';
 import { useTranslation } from 'react-i18next';
 import { FlippingImages } from 'components/FlippingImages';
+import { useTheme } from 'hook/useTheme';
 
-const AboutSection = ({ size, colors }) => {
+const AboutSection = ({ size }) => {
   const { t } = useTranslation();
+  const { colors } = useTheme();
 
   const GridItemPhoto = useMemo(
     () => (
       <Grid item xs={12} md={3}>
-        <ContainerImg>
-          <FlippingImages colors={colors} imgFront={face} imgBack={meGiovaAranzulla} size={200} />
-        </ContainerImg>
+        <WrapperImg>
+          <FlippingImages imgFront={face} imgBack={meGiovaAranzulla} size={200} />
+        </WrapperImg>
       </Grid>
     ),
-    [colors]
+    []
   );
 
   return (
-    <ContainerAbout colors={colors}>
+    <WrapperAbout colors={colors}>
       <Grid container direction="row" justify="center" alignItems="flex-start" spacing={7}>
         {size.width <= screenSizes.tablet && GridItemPhoto}
         <Grid item xs={12} md={9}>
@@ -45,14 +41,14 @@ const AboutSection = ({ size, colors }) => {
       </Grid>
       <Grid container direction="row" justify="center" alignItems="flex-start" spacing={7}>
         <Grid item xs={12} md={3}>
-          <ContainerImg>
+          <WrapperImg>
             <LinkDownload href={cardDownloadSettings.curriculumPdf} download colors={colors}>
-              <ContainerDownloadElement>
+              <WrapperDownloadElement>
                 <ImageCurriculum src={curriculumImage} alt="curriculum" />
                 <LabelDownload colors={colors}>{t('textAbout.downloadLabel')}</LabelDownload>
-              </ContainerDownloadElement>
+              </WrapperDownloadElement>
             </LinkDownload>
-          </ContainerImg>
+          </WrapperImg>
         </Grid>
         <Grid item xs={12} md={9}>
           {t('textAbout.textSecondParagraph', { returnObjects: true }).map((value, index) => (
@@ -62,7 +58,7 @@ const AboutSection = ({ size, colors }) => {
           ))}
         </Grid>
       </Grid>
-    </ContainerAbout>
+    </WrapperAbout>
   );
 };
 

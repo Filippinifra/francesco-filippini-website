@@ -16,7 +16,7 @@ const secondaryColor = SEA_SERPENT;
 const tertiary = DEEP_SAFFRON;
 const quaternary = PERSIAN_RED;
 
-export const colorsLightOn = {
+export const colorslightIsOn = {
   bodyBgColor: LIGHT_GREY,
   heroSectionBgColor: primaryColor,
   heroSectionColor: WHITE,

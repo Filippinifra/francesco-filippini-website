@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const DropDownContainer = styled.div`
+export const DropDownWrapper = styled.div`
   position: relative;
   width: ${({ widthElement }) => widthElement || '100'}px;
   background-color: ${({ bgColor }) => bgColor};
@@ -46,7 +46,7 @@ export const DropDownContent = styled.div`
   box-shadow: 0px 0px 5px 0.1px ${({ shadeColor }) => shadeColor};
 `;
 
-export const ChoiceContainer = styled.div`
+export const ChoiceWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

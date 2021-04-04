@@ -1,7 +1,7 @@
 import Styled from 'styled-components';
 import screenSizes from 'constants/screenSizes';
 
-export const ContainerHeroSection = Styled.div`
+export const WrapperHeroSection = Styled.div`
     width: 100%;
     background-color: ${({ colors }) => colors.heroSectionBgColor};
     color: ${({ colors }) => colors.heroSectionColor};

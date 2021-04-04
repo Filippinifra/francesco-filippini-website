@@ -5,17 +5,17 @@ import { withSize } from 'react-sizeme';
 import { ChangeLangDropDown } from 'components/ChangeLangDropDown';
 
 import {
-  ContainerNavbar,
+  WrapperNavbar,
   NavbarHeader,
-  GridContainer,
+  GridWrapper,
   LogoImg,
   NavButton,
   RightGrid,
   LeftGrid,
   GridItem,
   NavMobileButton,
-  ContainerMobileLink,
-  BorderContainer,
+  WrapperMobileLink,
+  BorderWrapper,
 } from './styled';
 
 import FFLogo from 'img/myLogo.png';
@@ -29,9 +29,12 @@ import { useTranslation } from 'react-i18next';
 import Hamburger from './Hamburger';
 import { Tooltip } from 'components/Tooltip';
 import { tooltipHeaderAppearAfterLoading, tooltipHeaderRemoveAfterLoading } from 'constants/animationSettings';
+import { useTheme } from 'hook/useTheme';
 
-const Header = ({ handleNavClick, handleLightClick, scrollToTop, lightIsOn, size, colors }) => {
+const Header = ({ handleNavClick, scrollToTop, size }) => {
   const [hamburgerActive, setHamburgerActive] = useState(false);
+
+  const { lightIsOn, onLightClick, colors } = useTheme();
 
   const getLightImage = () => (lightIsOn ? lightOn : lightOff);
 
@@ -78,15 +81,15 @@ const Header = ({ handleNavClick, handleLightClick, scrollToTop, lightIsOn, size
 
   return (
     <NavbarHeader colors={colors}>
-      <ContainerNavbar colors={colors}>
-        <GridContainer container direction="row" justify="center" alignItems="center">
+      <WrapperNavbar colors={colors}>
+        <GridWrapper container direction="row" justify="center" alignItems="center">
           <GridItem item xs={6} sm={3}>
             <LeftGrid>
               <LogoImg src={FFLogo} onClick={scrollToTop} alt="headerPersonalLogo" />
               <LogoImg
                 src={getLightImage()}
                 onClick={() => {
-                  handleLightClick();
+                  onLightClick();
                   setTooltipVisible(false);
                 }}
                 ref={lightButtonRef}
@@ -97,7 +100,6 @@ const Header = ({ handleNavClick, handleLightClick, scrollToTop, lightIsOn, size
                 placement="bottom"
                 isVisible={isTooltipVisible}
                 targetRef={lightButtonRef}
-                colors={colors}
               />
             </LeftGrid>
           </GridItem>
@@ -122,15 +124,15 @@ const Header = ({ handleNavClick, handleLightClick, scrollToTop, lightIsOn, size
               ) : (
                 <>
                   {DropdownLangs}
-                  <Hamburger handleHamburgerClick={handleHamburgerClick} active={hamburgerActive} colors={colors} />
+                  <Hamburger handleHamburgerClick={handleHamburgerClick} active={hamburgerActive} />
                 </>
               )}
             </RightGrid>
           </GridItem>
-        </GridContainer>
-      </ContainerNavbar>
-      <ContainerMobileLink hamburgerActive={hamburgerActive}>
-        <BorderContainer colors={colors}>
+        </GridWrapper>
+      </WrapperNavbar>
+      <WrapperMobileLink hamburgerActive={hamburgerActive}>
+        <BorderWrapper colors={colors}>
           <NavMobileButton colors={colors} onClick={() => handleClick(t('textHeader.about'))}>
             {t('textHeader.about')}
           </NavMobileButton>
@@ -143,8 +145,8 @@ const Header = ({ handleNavClick, handleLightClick, scrollToTop, lightIsOn, size
           <NavMobileButton colors={colors} onClick={() => handleClick(t('textHeader.contacts'))}>
             {t('textHeader.contacts')}
           </NavMobileButton>
-        </BorderContainer>
-      </ContainerMobileLink>
+        </BorderWrapper>
+      </WrapperMobileLink>
     </NavbarHeader>
   );
 };

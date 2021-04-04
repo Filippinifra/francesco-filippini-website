@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { DropDownContainer, DropDownContent, DropDownTitle, DropDownIndicator, ChoiceContainer } from './styled';
+import { DropDownWrapper, DropDownContent, DropDownTitle, DropDownIndicator, ChoiceWrapper } from './styled';
 
 import { ExpandMore } from '@material-ui/icons';
 import { ExpandLess } from '@material-ui/icons';
@@ -16,7 +16,7 @@ export const Dropdown = ({ title, dropDownElementsArray, widthElement, heightEle
 
   return (
     <div tabIndex="0" onBlur={handleBlur} style={{ outline: 'none' }}>
-      <DropDownContainer widthElement={widthElement} isOpen={isOpen} style={{ ...style }} onClick={onClick}>
+      <DropDownWrapper widthElement={widthElement} isOpen={isOpen} style={{ ...style }} onClick={onClick}>
         <DropDownTitle onClick={() => setIsOpen(!isOpen)} heightElement={heightElement} color={color} bgColor={bgColor}>
           <div style={{ marginLeft: 5 }}>{title}</div>
           <DropDownIndicator color={color} bgColor={bgColor}>
@@ -36,7 +36,7 @@ export const Dropdown = ({ title, dropDownElementsArray, widthElement, heightEle
           shadeColor={shadeColor}
         >
           {dropDownElementsArray.map((element, index) => (
-            <ChoiceContainer
+            <ChoiceWrapper
               height={heightElement}
               onClick={() => {
                 element.onCta();
@@ -46,10 +46,10 @@ export const Dropdown = ({ title, dropDownElementsArray, widthElement, heightEle
               key={`dropdown-element-${index}`}
             >
               {element.text}
-            </ChoiceContainer>
+            </ChoiceWrapper>
           ))}
         </DropDownContent>
-      </DropDownContainer>
+      </DropDownWrapper>
     </div>
   );
 };

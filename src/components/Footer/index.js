@@ -5,11 +5,13 @@ import { delayModalFooterAppear, sideAppearModalFooter } from 'constants/animati
 
 import { librariesUsed } from 'text/textFooter';
 
-import { ButtonModal, ContainerModal, TextRow, Link } from './styled';
+import { ButtonModal, WrapperModal, TextRow, Link } from './styled';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from 'hook/useTheme';
 
-export const Footer = ({ colors }) => {
+export const Footer = () => {
   const { t } = useTranslation();
+  const { colors } = useTheme();
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModalWithDelay = () => {
@@ -24,7 +26,7 @@ export const Footer = ({ colors }) => {
         {t('textFooter.footerLabel')}
       </ButtonModal>
       <Drawer anchor={sideAppearModalFooter} open={modalOpen} onClose={() => setModalOpen(false)}>
-        <ContainerModal colors={colors}>
+        <WrapperModal colors={colors}>
           <TextRow>{t('textFooter.firstText')}</TextRow>
           {librariesUsed.map((row, index) => (
             <TextRow key={`text-library-used-footer-${index}`}>
@@ -42,7 +44,7 @@ export const Footer = ({ colors }) => {
               {t('textFooter.repoText')}
             </Link>
           </TextRow>
-        </ContainerModal>
+        </WrapperModal>
       </Drawer>
     </>
   );

@@ -4,13 +4,13 @@ import Lottie from 'react-lottie';
 import animationData from './rainbow-animation.json';
 
 import {
-  ContainerWebsites,
+  WrapperWebsites,
   Text,
-  ContainerScrollingSnap,
+  WrapperScrollingSnap,
   ElementScrolling,
-  ContainerScrollElement,
+  WrapperScrollElement,
   PhoneFrame,
-  ContainerFrame,
+  WrapperFrame,
   ImgScrolling,
 } from './styled';
 
@@ -21,9 +21,11 @@ import { imagesWebsitePreview } from 'text/textWebsites';
 import { useTranslation } from 'react-i18next';
 import { Tooltip } from 'components/Tooltip';
 import { tooltipWebsiteRemoveAfterHover } from 'constants/animationSettings';
+import { useTheme } from 'hook/useTheme';
 
-export const WebsitesSection = ({ lightIsOn, colors }) => {
+export const WebsitesSection = () => {
   const { t } = useTranslation();
+  const { colors, lightIsOn } = useTheme();
 
   const correctFrame = useMemo(() => (lightIsOn ? blackFramePhone : whiteFramePhone), [lightIsOn]);
 
@@ -64,7 +66,7 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
   }, [buttonRef, tooltipPlacement]);
 
   return (
-    <ContainerWebsites colors={colors}>
+    <WrapperWebsites colors={colors}>
       <div style={{ margin: '0 auto 60px', maxWidth: 320 }}>
         <Lottie options={defaultOptions} isStopped={false} isPaused={false} />
       </div>
@@ -73,25 +75,19 @@ export const WebsitesSection = ({ lightIsOn, colors }) => {
           {text}
         </Text>
       ))}
-      <Tooltip
-        message={t('textWebsites.tootlipMessage')}
-        placement={tooltipPlacement}
-        isVisible={isTooltipVisible}
-        targetRef={buttonRef}
-        colors={colors}
-      />
-      <ContainerFrame>
+      <Tooltip message={t('textWebsites.tootlipMessage')} placement={tooltipPlacement} isVisible={isTooltipVisible} targetRef={buttonRef} />
+      <WrapperFrame>
         <PhoneFrame src={correctFrame} ref={buttonRef} alt="mobileFrame" />
-      </ContainerFrame>
-      <ContainerScrollingSnap>
-        <ContainerScrollElement numberOfElement={imagesWebsitePreview.length} onMouseEnter={removeTooltip}>
+      </WrapperFrame>
+      <WrapperScrollingSnap>
+        <WrapperScrollElement numberOfElement={imagesWebsitePreview.length} onMouseEnter={removeTooltip}>
           {imagesWebsitePreview.map((img, index) => (
             <ElementScrolling key={`image-preview-website-${index}`}>
               <ImgScrolling src={img} alt={`websitePreview${index}`} />
             </ElementScrolling>
           ))}
-        </ContainerScrollElement>
-      </ContainerScrollingSnap>
-    </ContainerWebsites>
+        </WrapperScrollElement>
+      </WrapperScrollingSnap>
+    </WrapperWebsites>
   );
 };

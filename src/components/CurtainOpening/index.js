@@ -3,9 +3,12 @@ import React from 'react';
 import { Curtain, CurtainLeftPanel, CurtainContent, CurtainWrapper, CurtainRightPanel, LeftTitle, RightTitle } from './styled.js';
 
 import { useTranslation } from 'react-i18next';
+import { useTheme } from 'hook/useTheme.js';
 
-export const CurtainOpening = ({ isloading, children, colors }) => {
+export const CurtainOpening = ({ isloading, children }) => {
   const { t } = useTranslation();
+
+  const { colors } = useTheme();
 
   return (
     <Curtain>

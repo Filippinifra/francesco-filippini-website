@@ -14,7 +14,7 @@ export const NavbarHeader = Styled.div`
     box-shadow: 0px 5px 20px -9px ${({ colors }) => colors.headerShade};
 `;
 
-export const ContainerNavbar = Styled.div`
+export const WrapperNavbar = Styled.div`
     background-color: ${({ colors }) => colors.headerBgColor};
     color: ${({ colors }) => colors.headerColor};
     max-width: 1000px;
@@ -22,7 +22,7 @@ export const ContainerNavbar = Styled.div`
     height: 100%;
 `;
 
-export const GridContainer = Styled(Grid)`
+export const GridWrapper = Styled(Grid)`
     height: 100%;
 `;
 
@@ -86,12 +86,12 @@ export const NavMobileButton = Styled.button`
     }
 `;
 
-export const ContainerMobileLink = Styled.div`
+export const WrapperMobileLink = Styled.div`
     max-height: ${({ hamburgerActive }) => (hamburgerActive ? '162px' : '0')};
     transition: max-height 0.6s ease-in-out;
     overflow: hidden;
 `;
 
-export const BorderContainer = Styled.div`
+export const BorderWrapper = Styled.div`
     border: 1px ${({ colors }) => colors.headerColor} solid;
 `;

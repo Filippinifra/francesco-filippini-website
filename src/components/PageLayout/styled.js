@@ -1,6 +1,6 @@
 import Styled from 'styled-components';
 
-export const FooterContainer = Styled.div`
+export const FooterWrapper = Styled.div`
     bottom:0;
     position: fixed;
     width: 100%;
@@ -11,13 +11,13 @@ export const FooterContainer = Styled.div`
     box-shadow: 0px -5px 64px 4px ${({ colors }) => colors.footerShade};
 `;
 
-export const HeaderContainer = Styled.div`
+export const HeaderWrapper = Styled.div`
     position: fixed;
     width: 100%;
     z-index:1;
 `;
 
-export const ContentContainer = Styled.div`
+export const ContentWrapper = Styled.div`
     width: 100%;
     overflow: scroll;
     max-width: 1500px;

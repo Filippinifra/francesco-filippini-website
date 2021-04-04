@@ -8,7 +8,7 @@ export const ButtonModal = Styled(Button)`
     font-size: 12px !important;
 `;
 
-export const ContainerModal = Styled.div`
+export const WrapperModal = Styled.div`
     width:100%;
     display: block;
     justify-content: center;

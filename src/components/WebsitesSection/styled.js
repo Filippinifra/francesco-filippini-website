@@ -1,7 +1,7 @@
 import Styled from 'styled-components';
 import screenSizes from 'constants/screenSizes';
 
-export const ContainerWebsites = Styled.div`
+export const WrapperWebsites = Styled.div`
     position: unset !important;
     padding:80px 100px;
     background-color: ${({ colors }) => colors.contentBgColor};
@@ -16,7 +16,7 @@ export const Text = Styled.div`
     margin-bottom: 50px;
 `;
 
-export const ContainerScrollingSnap = Styled.div`
+export const WrapperScrollingSnap = Styled.div`
     position: relative;
     margin-top: 100px;
     width: 100%;
@@ -37,7 +37,7 @@ export const ContainerScrollingSnap = Styled.div`
     }
 `;
 
-export const ContainerScrollElement = Styled.div`
+export const WrapperScrollElement = Styled.div`
     height: 100%;
     padding-left: calc(50% - 120px);
     padding-right: calc(50% - 120px);
@@ -56,7 +56,7 @@ export const ElementScrolling = Styled.div`
     display: inline-block;
 `;
 
-export const ContainerFrame = Styled.div`
+export const WrapperFrame = Styled.div`
     margin-top: 50px;
     text-align: center;
     position: absolute;

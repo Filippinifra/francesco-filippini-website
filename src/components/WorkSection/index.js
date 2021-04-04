@@ -5,32 +5,34 @@ import { Grid } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 
 import {
-  ContainerWork,
+  WrapperWork,
   Text,
-  ContainerImg,
+  WrapperImg,
   LogoImg,
   StrongTitle,
   MediumTitle,
-  ContainerGrid,
+  WrapperGrid,
   ImgSectionGallery,
-  ContainerGallery,
+  WrapperGallery,
   ToolsText,
   StackRowWrapper,
 } from './styled';
 import { stackLabel } from 'text/textWork';
+import { useTheme } from 'hook/useTheme';
 
-export const WorkSection = ({ colors }) => {
+export const WorkSection = () => {
   const { t } = useTranslation();
+  const { colors } = useTheme();
 
   return (
-    <ContainerWork colors={colors}>
+    <WrapperWork colors={colors}>
       {t('textWork', { returnObjects: true }).map(({ logoImg, title, position, period, location, textList, images, tools }, index) => (
-        <ContainerGrid key={`container-work-${index}`}>
+        <WrapperGrid key={`container-work-${index}`}>
           <Grid container direction="row" justify="center" alignItems="flex-start" spacing={10}>
             <Grid item xs={12} md={3}>
-              <ContainerImg>
+              <WrapperImg>
                 <LogoImg colors={colors} src={logoImg} alt="personalLogo" />
-              </ContainerImg>
+              </WrapperImg>
             </Grid>
             <Grid item xs={12} md={9}>
               <StrongTitle colors={colors}>{title}</StrongTitle>
@@ -49,7 +51,7 @@ export const WorkSection = ({ colors }) => {
                 </StackRowWrapper>
               )}
               {images && (
-                <ContainerGallery>
+                <WrapperGallery>
                   <Grid container direction="row" justify="center" alignItems="flex-start" spacing={4}>
                     {images.map((image, indexImage) => (
                       <Grid item xs={6} md={4} key={`image-work-${index}-${indexImage}`}>
@@ -57,13 +59,13 @@ export const WorkSection = ({ colors }) => {
                       </Grid>
                     ))}
                   </Grid>
-                </ContainerGallery>
+                </WrapperGallery>
               )}
             </Grid>
             <br />
           </Grid>
-        </ContainerGrid>
+        </WrapperGrid>
       ))}
-    </ContainerWork>
+    </WrapperWork>
   );
 };

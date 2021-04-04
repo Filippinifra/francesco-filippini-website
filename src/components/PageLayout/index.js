@@ -5,7 +5,7 @@ import { Element, scroller, animateScroll as scroll } from 'react-scroll';
 
 import { Footer } from 'components/Footer';
 
-import { FooterContainer, HeaderContainer, ContentContainer } from './styled';
+import { FooterWrapper, HeaderWrapper, ContentWrapper } from './styled';
 
 import { useTranslation } from 'react-i18next';
 
@@ -24,48 +24,45 @@ import { scrollAnimation } from 'constants/animationSettings';
 
 import bigImgPolimi from 'img/bigImgPolimi.png';
 import bigImgSmb from 'img/bigImgSmb.png';
+import { useTheme } from 'hook/useTheme';
 
-const PageLayout = ({ lightIsOn, handleLightClick, colors }) => {
+const PageLayout = () => {
   const handleMenuClick = (idElement) => scroller.scrollTo(idElement, scrollAnimation);
 
   const scrollToTop = () => scroll.scrollToTop();
 
   const { t } = useTranslation();
 
+  const { colors } = useTheme();
+
   return (
     <>
-      <HeaderContainer>
-        <Header
-          handleNavClick={handleMenuClick}
-          handleLightClick={handleLightClick}
-          scrollToTop={scrollToTop}
-          lightIsOn={lightIsOn}
-          colors={colors}
-        />
-      </HeaderContainer>
-      <ContentContainer>
-        <HeroSection colors={colors} />
+      <HeaderWrapper>
+        <Header handleNavClick={handleMenuClick} scrollToTop={scrollToTop} />
+      </HeaderWrapper>
+      <ContentWrapper>
+        <HeroSection />
         <Element name={t('textHeader.about')}>
-          <AboutSection colors={colors} />
+          <AboutSection />
         </Element>
-        <ParallaxElemenet imgSrc={bigImgSmb} colors={colors} />
+        <ParallaxElemenet imgSrc={bigImgSmb} />
         <Element name={t('textHeader.work')}>
-          <WorkSection colors={colors} />
+          <WorkSection />
         </Element>
-        <ParallaxElemenet imgSrc={bigImgPolimi} colors={colors} />
+        <ParallaxElemenet imgSrc={bigImgPolimi} />
         <Element name={t('textHeader.education')}>
-          <EducationSection colors={colors} />
+          <EducationSection />
         </Element>
-        <ContentDivider colors={colors} />
-        <WebsitesSection lightIsOn={lightIsOn} colors={colors} />
-        <ContentDivider colors={colors} />
+        <ContentDivider />
+        <WebsitesSection />
+        <ContentDivider />
         <Element name={t('textHeader.contacts')}>
-          <ContactsSection colors={colors} />
+          <ContactsSection />
         </Element>
-      </ContentContainer>
-      <FooterContainer colors={colors}>
-        <Footer colors={colors} />
-      </FooterContainer>
+      </ContentWrapper>
+      <FooterWrapper colors={colors}>
+        <Footer />
+      </FooterWrapper>
     </>
   );
 };

@@ -1,7 +1,7 @@
 import Styled from 'styled-components';
 import screenSizes from 'constants/screenSizes';
 
-export const ContainerWork = Styled.div`
+export const WrapperWork = Styled.div`
     position: unset !important;
     padding:80px 100px;
     background-color: ${({ colors }) => colors.contentBgColor};
@@ -17,7 +17,7 @@ export const Text = Styled.div`
     margin-top: 50px;
 `;
 
-export const ContainerImg = Styled.div`
+export const WrapperImg = Styled.div`
     width: 100%;
     margin: auto;
     max-width: 150px;
@@ -48,7 +48,7 @@ export const MediumTitle = Styled.div`
     color: ${({ colors }) => colors.contentColor};
 `;
 
-export const ContainerGrid = Styled.div`
+export const WrapperGrid = Styled.div`
     margin-bottom: 50px;
 `;
 
@@ -56,7 +56,7 @@ export const ImgSectionGallery = Styled.img`
     width: 100%;
 `;
 
-export const ContainerGallery = Styled.div`
+export const WrapperGallery = Styled.div`
     margin-top: 80px;
 `;
 

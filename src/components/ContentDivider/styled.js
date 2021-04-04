@@ -1,6 +1,6 @@
 import Styled from 'styled-components';
 
-export const ContainerDivider = Styled.div`
+export const WrapperDivider = Styled.div`
     position: unset !important;
     height: 50px;
     background-color: ${({ colors }) => colors.dividerBgColor};

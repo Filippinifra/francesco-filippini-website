@@ -7,7 +7,7 @@ export const Text = Styled.div`
     margin-bottom: 50px;
 `;
 
-export const ContainerAbout = Styled.div`
+export const WrapperAbout = Styled.div`
     position: unset !important;
     padding:80px 100px;
     background-color: ${({ colors }) => colors.contentBgColor};
@@ -21,12 +21,12 @@ export const LinkDownload = Styled.a`
     text-decoration: none;   
 `;
 
-export const ContainerImg = Styled.div`
+export const WrapperImg = Styled.div`
     display: flex;
     justify-content: center;
 `;
 
-export const ContainerDownloadElement = Styled.div`
+export const WrapperDownloadElement = Styled.div`
     width: 100%;
     text-align: center;
 

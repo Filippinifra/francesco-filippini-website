@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { tooltipTransitionVisibility, tooltipTransitionHover } from 'constants/animationSettings';
 
-export const PopperContainer = styled.div`
+export const PopperWrapper = styled.div`
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   background-color: ${({ colors }) => colors.tooltipBgColor};
