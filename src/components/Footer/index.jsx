@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import Drawer from '@material-ui/core/Drawer';
-
 import { delayModalFooterAppear, sideAppearModalFooter } from 'constants/animationSettings';
-
 import { librariesUsed } from 'text/textFooter';
-
 import { ButtonModal, WrapperModal, TextRow, Link } from './styled';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from 'hook/useTheme';

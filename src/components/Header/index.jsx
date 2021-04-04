@@ -1,9 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-
-import { withSize } from 'react-sizeme';
-
 import { ChangeLangDropDown } from 'components/ChangeLangDropDown';
-
 import {
   WrapperNavbar,
   NavbarHeader,
@@ -17,28 +13,26 @@ import {
   WrapperMobileLink,
   BorderWrapper,
 } from './styled';
-
 import FFLogo from 'img/myLogo.png';
 import lightOn from 'img/lightOn.svg';
 import lightOff from 'img/lightOff.svg';
-
 import sizes from 'constants/screenSizes';
-
 import { useTranslation } from 'react-i18next';
-
-import Hamburger from './Hamburger';
+import { Hamburger } from 'components/Hamburger';
 import { Tooltip } from 'components/Tooltip';
 import { tooltipHeaderAppearAfterLoading, tooltipHeaderRemoveAfterLoading } from 'constants/animationSettings';
 import { useTheme } from 'hook/useTheme';
+import { useSize } from 'hook/useSize';
 
-const Header = ({ handleNavClick, scrollToTop, size }) => {
+export const Header = ({ handleNavClick, scrollToTop }) => {
   const [hamburgerActive, setHamburgerActive] = useState(false);
-
+  const [isTooltipVisible, setTooltipVisible] = useState(false);
+  const lightButtonRef = useRef(null);
   const { lightIsOn, onLightClick, colors } = useTheme();
+  const { t } = useTranslation();
+  const { width } = useSize();
 
   const getLightImage = () => (lightIsOn ? lightOn : lightOff);
-
-  const { t } = useTranslation();
 
   const handleClick = (name) => {
     if (hamburgerActive) setHamburgerActive(false);
@@ -47,10 +41,7 @@ const Header = ({ handleNavClick, scrollToTop, size }) => {
 
   const handleHamburgerClick = () => setHamburgerActive(!hamburgerActive);
 
-  const isDesktopView = size.width > sizes.headerStep;
-
-  const lightButtonRef = useRef(null);
-  const [isTooltipVisible, setTooltipVisible] = useState(false);
+  const isDesktopView = width > sizes.headerStep;
 
   useEffect(() => {
     setTimeout(() => {
@@ -150,5 +141,3 @@ const Header = ({ handleNavClick, scrollToTop, size }) => {
     </NavbarHeader>
   );
 };
-
-export default withSize()(Header);

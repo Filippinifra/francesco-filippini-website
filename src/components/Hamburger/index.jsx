@@ -1,12 +1,12 @@
-import { useTheme } from 'hook/useTheme';
 import React from 'react';
+import { useTheme } from 'hook/useTheme';
 import { LineTop, LineBottom, Line, Ham } from './styled.js';
 
-const Hamburger = ({ handleHamburgerClick, active }) => {
+export const Hamburger = ({ handleHamburgerClick, active }) => {
   const { colors } = useTheme();
 
   return (
-    <Ham active={active} viewBox="0 0 100 100" width="50" onClick={() => handleHamburgerClick()}>
+    <Ham active={active} viewBox="0 0 100 100" width="50" onClick={handleHamburgerClick}>
       <LineTop
         active={active}
         color={colors.headerColor}
@@ -21,5 +21,3 @@ const Hamburger = ({ handleHamburgerClick, active }) => {
     </Ham>
   );
 };
-
-export default Hamburger;

@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-
 import typography from 'constants/typography';
 
 const GlobalStyle = createGlobalStyle`

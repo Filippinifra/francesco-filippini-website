@@ -1,8 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-
 import Lottie from 'react-lottie';
 import animationData from './rainbow-animation.json';
-
 import {
   WrapperWebsites,
   Text,
@@ -13,10 +11,8 @@ import {
   WrapperFrame,
   ImgScrolling,
 } from './styled';
-
 import blackFramePhone from 'img/phoneFrameBlack.png';
 import whiteFramePhone from 'img/phoneFrameWhite.png';
-
 import { imagesWebsitePreview } from 'text/textWebsites';
 import { useTranslation } from 'react-i18next';
 import { Tooltip } from 'components/Tooltip';
@@ -26,13 +22,11 @@ import { useTheme } from 'hook/useTheme';
 export const WebsitesSection = () => {
   const { t } = useTranslation();
   const { colors, lightIsOn } = useTheme();
-
-  const correctFrame = useMemo(() => (lightIsOn ? blackFramePhone : whiteFramePhone), [lightIsOn]);
-
   const buttonRef = useRef(null);
   const [isTooltipVisible, setTooltipVisible] = useState(true);
-
   const [tooltipPlacement, setTooltipPlacement] = useState('top');
+
+  const correctFrame = useMemo(() => (lightIsOn ? blackFramePhone : whiteFramePhone), [lightIsOn]);
 
   const defaultOptions = {
     loop: true,

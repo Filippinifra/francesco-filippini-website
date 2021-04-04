@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-
 import { DropDownWrapper, DropDownContent, DropDownTitle, DropDownIndicator, ChoiceWrapper } from './styled';
-
 import { ExpandMore } from '@material-ui/icons';
 import { ExpandLess } from '@material-ui/icons';
 
@@ -17,7 +15,7 @@ export const Dropdown = ({ title, dropDownElementsArray, widthElement, heightEle
   return (
     <div tabIndex="0" onBlur={handleBlur} style={{ outline: 'none' }}>
       <DropDownWrapper widthElement={widthElement} isOpen={isOpen} style={{ ...style }} onClick={onClick}>
-        <DropDownTitle onClick={() => setIsOpen(!isOpen)} heightElement={heightElement} color={color} bgColor={bgColor}>
+        <DropDownTitle onClick={() => setIsOpen((value) => !value)} heightElement={heightElement} color={color} bgColor={bgColor}>
           <div style={{ marginLeft: 5 }}>{title}</div>
           <DropDownIndicator color={color} bgColor={bgColor}>
             {isOpen ? (

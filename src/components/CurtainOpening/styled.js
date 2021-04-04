@@ -1,23 +1,23 @@
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
-export const Curtain = Styled.div`
-  width: 100%; 
-  height: 100%;
-`;
-
-export const CurtainWrapper = Styled.div`
+export const Curtain = styled.div`
   width: 100%;
   height: 100%;
 `;
 
-export const CurtainLeftPanel = Styled.div`
+export const CurtainWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
+export const CurtainLeftPanel = styled.div`
   background-color: ${({ colors }) => colors.curtainBgColor};
-  width: 50%; 
+  width: 50%;
   height: 100%;
   float: left;
-  position: fixed; 
-  z-index: 2; 
-  transition: 1s ease-in-out; 
+  position: fixed;
+  z-index: 2;
+  transition: 1s ease-in-out;
 
   transform: ${({ loaded }) => (loaded ? `translateX(0)` : `translateX(-100%)`)};
 
@@ -26,15 +26,15 @@ export const CurtainLeftPanel = Styled.div`
   justify-content: center;
 `;
 
-export const CurtainRightPanel = Styled.div`
+export const CurtainRightPanel = styled.div`
   background-color: ${({ colors }) => colors.curtainBgColor};
   margin-left: 50%;
-  width: 50%; 
-  height: 100%; 
-  float: left; 
+  width: 50%;
+  height: 100%;
+  float: left;
   position: fixed;
-  z-index: 2; 
-  transition: all 1s ease-in-out; 
+  z-index: 2;
+  transition: all 1s ease-in-out;
 
   transform: ${({ loaded }) => (loaded ? `translateX(0)` : `translateX(100%)`)};
 
@@ -43,22 +43,22 @@ export const CurtainRightPanel = Styled.div`
   justify-content: center;
 `;
 
-export const CurtainContent = Styled.div`
+export const CurtainContent = styled.div`
   position: absolute;
   z-index: 1;
   width: 100%;
   height: 100%;
 `;
 
-export const LeftTitle = Styled.div`
+export const LeftTitle = styled.div`
   text-align: right;
-  margin-right:3px;
+  margin-right: 3px;
   color: ${({ colors }) => colors.curtainColor};
   white-space: pre-line;
 `;
 
-export const RightTitle = Styled.div`
-  margin-left:5px;
+export const RightTitle = styled.div`
+  margin-left: 5px;
   color: ${({ colors }) => colors.curtainColor};
   white-space: pre-line;
 `;

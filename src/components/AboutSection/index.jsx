@@ -1,8 +1,7 @@
-import React, { useMemo } from 'react';
-import { withSize } from 'react-sizeme';
+import React from 'react';
 import { Grid } from '@material-ui/core';
-import face from 'img/faceImage.png';
-import meGiovaAranzulla from 'img/meGiovaAranzulla.jpeg';
+import faceImage from 'img/faceImage.png';
+import underFaceImage from 'img/underFaceImage.jpeg';
 import { cardDownloadSettings } from 'text/textAbout';
 import screenSizes from 'constants/screenSizes';
 import { Text, WrapperAbout, WrapperDownloadElement, LinkDownload, WrapperImg, ImageCurriculum, LabelDownload } from './styled';
@@ -10,26 +9,25 @@ import curriculumImage from 'img/contactLogos/curriculum.svg';
 import { useTranslation } from 'react-i18next';
 import { FlippingImages } from 'components/FlippingImages';
 import { useTheme } from 'hook/useTheme';
+import { useSize } from 'hook/useSize';
 
-const AboutSection = ({ size }) => {
+const GridItemPhoto = (
+  <Grid item xs={12} md={3}>
+    <WrapperImg>
+      <FlippingImages imgFront={faceImage} imgBack={underFaceImage} size={200} />
+    </WrapperImg>
+  </Grid>
+);
+
+export const AboutSection = () => {
   const { t } = useTranslation();
   const { colors } = useTheme();
-
-  const GridItemPhoto = useMemo(
-    () => (
-      <Grid item xs={12} md={3}>
-        <WrapperImg>
-          <FlippingImages imgFront={face} imgBack={meGiovaAranzulla} size={200} />
-        </WrapperImg>
-      </Grid>
-    ),
-    []
-  );
+  const { width } = useSize();
 
   return (
     <WrapperAbout colors={colors}>
       <Grid container direction="row" justify="center" alignItems="flex-start" spacing={7}>
-        {size.width <= screenSizes.tablet && GridItemPhoto}
+        {width <= screenSizes.tablet && GridItemPhoto}
         <Grid item xs={12} md={9}>
           {t('textAbout.textFirstParagraph', { returnObjects: true }).map((value, index) => (
             <Text colors={colors} key={`text-first-paragraph-about-${index}`}>
@@ -37,7 +35,7 @@ const AboutSection = ({ size }) => {
             </Text>
           ))}
         </Grid>
-        {size.width > screenSizes.tablet && GridItemPhoto}
+        {width > screenSizes.tablet && GridItemPhoto}
       </Grid>
       <Grid container direction="row" justify="center" alignItems="flex-start" spacing={7}>
         <Grid item xs={12} md={3}>
@@ -61,5 +59,3 @@ const AboutSection = ({ size }) => {
     </WrapperAbout>
   );
 };
-
-export default withSize()(AboutSection);

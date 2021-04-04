@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { Grid } from '@material-ui/core';
-
 import { WrapperHeroSection, TextLeft, TextCenter } from './styled';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from 'hook/useTheme';

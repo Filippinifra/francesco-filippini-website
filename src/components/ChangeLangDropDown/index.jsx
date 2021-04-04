@@ -1,15 +1,12 @@
 import React, { useCallback, useMemo } from 'react';
 import { useParams, useLocation, useHistory } from 'react-router-dom';
 import { AVAILABLE_LANGUAGES, MAP_LANG_TO_FLAGS } from 'constants/languages';
-
+import { Dropdown } from 'components/Dropdown';
 import getUnicodeFlagIcon from 'country-flag-icons/unicode';
 
-import { Dropdown } from 'components/Dropdown';
-
-const ChangeLangDropDown = ({ heightElement, widthElement, color, bgColor, style, onClick, shadeColor }) => {
+export const ChangeLangDropDown = ({ heightElement, widthElement, color, bgColor, style, onClick, shadeColor }) => {
   const { language } = useParams();
   const { pathname } = useLocation();
-
   const history = useHistory();
 
   const getSamePageInAnotherLang = useCallback(
@@ -50,5 +47,3 @@ const ChangeLangDropDown = ({ heightElement, widthElement, color, bgColor, style
     />
   );
 };
-
-export { ChangeLangDropDown };

@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { Grid } from '@material-ui/core';
-
 import {
   WrapperEducation,
   Text,
@@ -18,7 +16,6 @@ import { useTheme } from 'hook/useTheme';
 
 export const EducationSection = () => {
   const { t } = useTranslation();
-
   const { colors } = useTheme();
 
   return (

@@ -1,5 +1,5 @@
-import { useTheme } from 'hook/useTheme';
 import React, { useState, useRef } from 'react';
+import { useTheme } from 'hook/useTheme';
 import { usePopper } from 'react-popper';
 import { PopperWrapper } from './styled';
 

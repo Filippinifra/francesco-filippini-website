@@ -1,61 +1,61 @@
-import Styled from 'styled-components';
+import styled from 'styled-components';
 import { Grid } from '@material-ui/core';
 import screenSizes from 'constants/screenSizes';
 
-export const WrapperContacts = Styled.div`
-    position: unset !important;
-    padding:80px 100px;
-    background-color: ${({ colors }) => colors.contentBgColor};
+export const WrapperContacts = styled.div`
+  position: unset !important;
+  padding: 80px 100px;
+  background-color: ${({ colors }) => colors.contentBgColor};
 
-    @media screen and (max-width: ${screenSizes.phone}px) {
-        padding:60px 30px 80px;
-    }
+  @media screen and (max-width: ${screenSizes.phone}px) {
+    padding: 60px 30px 80px;
+  }
 `;
 
-export const GridRow = Styled(Grid)`
-    height: 100%;
+export const GridRow = styled(Grid)`
+  height: 100%;
 `;
 
-export const GridItem = Styled(Grid)`
-    width:100%;
+export const GridItem = styled(Grid)`
+  width: 100%;
 `;
 
-export const Icon = Styled.img`
-    height: 100%;
-    width:100%;
-    max-width: 120px;
+export const Icon = styled.img`
+  height: 100%;
+  width: 100%;
+  max-width: 120px;
 `;
 
-export const TextInformation = Styled.div`
-    font-size: 20px;
-    text-align:center;
-    width: 100%;
-    margin: 0 auto;
-    word-wrap: break-word;
+export const TextInformation = styled.div`
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  word-wrap: break-word;
 `;
 
-export const Link = Styled.a`
-    text-decoration: none;
-    color: ${({ colors }) => colors.contentColor};
+export const Link = styled.a`
+  text-decoration: none;
+  color: ${({ colors }) => colors.contentColor};
 `;
 
-export const ContentCentered = Styled.div`
-    text-align: center;
+export const ContentCentered = styled.div`
+  text-align: center;
 `;
 
-export const WrapperImgAndText = Styled.div`
-    padding: 20px;
+export const WrapperImgAndText = styled.div`
+  padding: 20px;
 
-    :hover{
-        filter: brightness(80%);
-    }
+  :hover {
+    filter: brightness(80%);
+  }
 `;
 
-export const WrapperImg = Styled.div`
-    text-align: center;
-    padding: 20px;
+export const WrapperImg = styled.div`
+  text-align: center;
+  padding: 20px;
 `;
 
-export const TextWrapper = Styled.div`
-    width:100%;
+export const TextWrapper = styled.div`
+  width: 100%;
 `;
