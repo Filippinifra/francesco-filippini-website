@@ -23,6 +23,7 @@ import { Tooltip } from 'components/Tooltip';
 import { tooltipHeaderAppearAfterLoading, tooltipHeaderRemoveAfterLoading } from 'constants/animationSettings';
 import { useTheme } from 'hook/useTheme';
 import { useSize } from 'hook/useSize';
+import { ButtonAnimation } from 'components/ButtonAnimation';
 
 export const Header = ({ handleNavClick, scrollToTop }) => {
   const [hamburgerActive, setHamburgerActive] = useState(false);
@@ -76,16 +77,20 @@ export const Header = ({ handleNavClick, scrollToTop }) => {
         <GridWrapper container direction="row" justify="center" alignItems="center">
           <GridItem item xs={6} sm={3}>
             <LeftGrid>
-              <LogoImg src={FFLogo} onClick={scrollToTop} alt="headerPersonalLogo" />
-              <LogoImg
-                src={getLightImage()}
-                onClick={() => {
-                  onLightClick();
-                  setTooltipVisible(false);
-                }}
-                ref={lightButtonRef}
-                alt="lightIcon"
-              />
+              <ButtonAnimation canTap>
+                <LogoImg src={FFLogo} onClick={scrollToTop} alt="headerPersonalLogo" />
+              </ButtonAnimation>
+              <ButtonAnimation canTap>
+                <LogoImg
+                  src={getLightImage()}
+                  onClick={() => {
+                    onLightClick();
+                    setTooltipVisible(false);
+                  }}
+                  ref={lightButtonRef}
+                  alt="lightIcon"
+                />
+              </ButtonAnimation>
               <Tooltip
                 message={t('textHeader.tootlipMessage')}
                 placement="bottom"
@@ -98,18 +103,26 @@ export const Header = ({ handleNavClick, scrollToTop }) => {
             <RightGrid>
               {isDesktopView ? (
                 <>
-                  <NavButton colors={colors} onClick={() => handleClick(t('textHeader.about'))}>
-                    {t('textHeader.about')}
-                  </NavButton>
-                  <NavButton colors={colors} onClick={() => handleClick(t('textHeader.work'))}>
-                    {t('textHeader.work')}
-                  </NavButton>
-                  <NavButton colors={colors} onClick={() => handleClick(t('textHeader.education'))}>
-                    {t('textHeader.education')}
-                  </NavButton>
-                  <NavButton colors={colors} onClick={() => handleClick(t('textHeader.contacts'))}>
-                    {t('textHeader.contacts')}
-                  </NavButton>
+                  <ButtonAnimation canTap>
+                    <NavButton colors={colors} onClick={() => handleClick(t('textHeader.about'))}>
+                      {t('textHeader.about')}
+                    </NavButton>
+                  </ButtonAnimation>
+                  <ButtonAnimation canTap>
+                    <NavButton colors={colors} onClick={() => handleClick(t('textHeader.work'))}>
+                      {t('textHeader.work')}
+                    </NavButton>
+                  </ButtonAnimation>
+                  <ButtonAnimation canTap>
+                    <NavButton colors={colors} onClick={() => handleClick(t('textHeader.education'))}>
+                      {t('textHeader.education')}
+                    </NavButton>
+                  </ButtonAnimation>
+                  <ButtonAnimation canTap>
+                    <NavButton colors={colors} onClick={() => handleClick(t('textHeader.contacts'))}>
+                      {t('textHeader.contacts')}
+                    </NavButton>
+                  </ButtonAnimation>
                   {DropdownLangs}
                 </>
               ) : (

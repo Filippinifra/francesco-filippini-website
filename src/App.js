@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import GlobalStyle from './styled.js';
-import { animateScroll as scroll } from 'react-scroll';
 import { PageLayout } from 'components/PageLayout';
 import { CurtainOpening } from 'components/CurtainOpening';
 import { AVAILABLE_LANGUAGES, defaultLanguage } from 'constants/languages';
@@ -9,18 +8,12 @@ import { HOME_RELATIVE_PATH } from 'constants/paths.js';
 import { useTheme } from 'hook/useTheme.js';
 /*eslint-disable-next-line */
 import i18n from 'text/translations';
+import { useAppLoading } from 'hook/useAppLoading.js';
 
 export const App = () => {
-  const [pageIsLoading, setPageLoading] = useState(true);
   const { colors } = useTheme();
   const { language } = useParams();
-
-  useEffect(() => {
-    scroll.scrollToTop();
-    setTimeout(() => {
-      setPageLoading(false);
-    }, 2000);
-  }, []);
+  const { appLoading } = useAppLoading();
 
   useEffect(() => {
     i18n.changeLanguage(language);
@@ -29,7 +22,7 @@ export const App = () => {
   return AVAILABLE_LANGUAGES.includes(language) ? (
     <>
       <GlobalStyle colors={colors} />
-      <CurtainOpening isloading={pageIsLoading}>
+      <CurtainOpening isloading={appLoading}>
         <PageLayout />
       </CurtainOpening>
     </>

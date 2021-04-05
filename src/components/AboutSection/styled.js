@@ -8,7 +8,6 @@ export const Text = styled.div`
 `;
 
 export const WrapperAbout = styled.div`
-  position: unset !important;
   padding: 80px 100px;
   background-color: ${({ colors }) => colors.contentBgColor};
 

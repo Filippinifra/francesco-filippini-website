@@ -42,13 +42,7 @@ export const NavButton = styled.button`
   color: ${({ colors }) => colors.headerColor};
   outline: none;
   cursor: pointer;
-  transition: background 0.6s;
   text-transform: uppercase;
-
-  :hover {
-    background: ${({ colors }) => colors.headerColor};
-    color: ${({ colors }) => colors.headerBgColor};
-  }
 `;
 
 export const RightGrid = styled.div`
@@ -63,6 +57,7 @@ export const LeftGrid = styled.div`
   text-align: left;
   margin-left: 15px;
   height: 50px;
+  display: flex;
 `;
 
 export const NavMobileButton = styled.button`

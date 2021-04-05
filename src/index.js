@@ -7,21 +7,24 @@ import { defaultLanguage } from 'constants/languages';
 import { ThemeProvider } from 'hook/useTheme';
 import { ThemeProvider as MaterialUiProvider } from '@material-ui/core/styles';
 import theme from 'constants/theme';
+import { AppLoadingProvider } from 'hook/useAppLoading';
 
 ReactDOM.render(
   <React.StrictMode>
     <MaterialUiProvider theme={theme}>
       <ThemeProvider>
-        <Router>
-          <Switch>
-            <Route exact path={HOME_PATH}>
-              <App />
-            </Route>
-            <Route path="*">
-              <Redirect to={HOME_RELATIVE_PATH + defaultLanguage} />
-            </Route>
-          </Switch>
-        </Router>
+        <AppLoadingProvider>
+          <Router>
+            <Switch>
+              <Route exact path={HOME_PATH}>
+                <App />
+              </Route>
+              <Route path="*">
+                <Redirect to={HOME_RELATIVE_PATH + defaultLanguage} />
+              </Route>
+            </Switch>
+          </Router>
+        </AppLoadingProvider>
       </ThemeProvider>
     </MaterialUiProvider>
   </React.StrictMode>,

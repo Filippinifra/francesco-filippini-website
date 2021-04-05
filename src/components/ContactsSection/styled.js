@@ -3,7 +3,6 @@ import { Grid } from '@material-ui/core';
 import screenSizes from 'constants/screenSizes';
 
 export const WrapperContacts = styled.div`
-  position: unset !important;
   padding: 80px 100px;
   background-color: ${({ colors }) => colors.contentBgColor};
 

@@ -18,6 +18,7 @@ import { useTranslation } from 'react-i18next';
 import { Tooltip } from 'components/Tooltip';
 import { tooltipWebsiteRemoveAfterHover } from 'constants/animationSettings';
 import { useTheme } from 'hook/useTheme';
+import { FadeAnimation } from 'components/FadeAnimation';
 
 export const WebsitesSection = () => {
   const { t } = useTranslation();
@@ -62,24 +63,32 @@ export const WebsitesSection = () => {
   return (
     <WrapperWebsites colors={colors}>
       <div style={{ margin: '0 auto 60px', maxWidth: 320 }}>
-        <Lottie options={defaultOptions} isStopped={false} isPaused={false} />
+        <FadeAnimation>
+          <Lottie options={defaultOptions} isStopped={false} isPaused={false} />
+        </FadeAnimation>
       </div>
       {t('textWebsites.texts', { returnObjects: true }).map((text, index) => (
-        <Text colors={colors} key={`text-row-website-${index}`}>
-          {text}
-        </Text>
+        <FadeAnimation>
+          <Text colors={colors} key={`text-row-website-${index}`}>
+            {text}
+          </Text>
+        </FadeAnimation>
       ))}
       <Tooltip message={t('textWebsites.tootlipMessage')} placement={tooltipPlacement} isVisible={isTooltipVisible} targetRef={buttonRef} />
       <WrapperFrame>
-        <PhoneFrame src={correctFrame} ref={buttonRef} alt="mobileFrame" />
+        <FadeAnimation>
+          <PhoneFrame src={correctFrame} ref={buttonRef} alt="mobileFrame" />
+        </FadeAnimation>
       </WrapperFrame>
       <WrapperScrollingSnap>
         <WrapperScrollElement numberOfElement={imagesWebsitePreview.length} onMouseEnter={removeTooltip}>
-          {imagesWebsitePreview.map((img, index) => (
-            <ElementScrolling key={`image-preview-website-${index}`}>
-              <ImgScrolling src={img} alt={`websitePreview${index}`} />
-            </ElementScrolling>
-          ))}
+          <FadeAnimation>
+            {imagesWebsitePreview.map((img, index) => (
+              <ElementScrolling key={`image-preview-website-${index}`}>
+                <ImgScrolling src={img} alt={`websitePreview${index}`} />
+              </ElementScrolling>
+            ))}
+          </FadeAnimation>
         </WrapperScrollElement>
       </WrapperScrollingSnap>
     </WrapperWebsites>

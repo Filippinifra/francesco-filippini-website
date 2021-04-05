@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const Parallax = styled.div`
-  position: unset !important;
-
   display: block;
   background-image: url(${({ imgSrc }) => imgSrc});
 

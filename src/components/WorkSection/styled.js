@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import screenSizes from 'constants/screenSizes';
 
 export const WrapperWork = styled.div`
-  position: unset !important;
   padding: 80px 100px;
   background-color: ${({ colors }) => colors.contentBgColor};
 

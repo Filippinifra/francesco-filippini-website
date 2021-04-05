@@ -10,12 +10,16 @@ import { useTranslation } from 'react-i18next';
 import { FlippingImages } from 'components/FlippingImages';
 import { useTheme } from 'hook/useTheme';
 import { useSize } from 'hook/useSize';
+import { FadeAnimation } from 'components/FadeAnimation';
+import { ButtonAnimation } from 'components/ButtonAnimation';
 
 const GridItemPhoto = (
   <Grid item xs={12} md={3}>
-    <WrapperImg>
-      <FlippingImages imgFront={faceImage} imgBack={underFaceImage} size={200} />
-    </WrapperImg>
+    <FadeAnimation>
+      <WrapperImg>
+        <FlippingImages imgFront={faceImage} imgBack={underFaceImage} size={200} />
+      </WrapperImg>
+    </FadeAnimation>
   </Grid>
 );
 
@@ -30,9 +34,11 @@ export const AboutSection = () => {
         {width <= screenSizes.tablet && GridItemPhoto}
         <Grid item xs={12} md={9}>
           {t('textAbout.textFirstParagraph', { returnObjects: true }).map((value, index) => (
-            <Text colors={colors} key={`text-first-paragraph-about-${index}`}>
-              {value.text}
-            </Text>
+            <FadeAnimation>
+              <Text colors={colors} key={`text-first-paragraph-about-${index}`}>
+                {value.text}
+              </Text>
+            </FadeAnimation>
           ))}
         </Grid>
         {width > screenSizes.tablet && GridItemPhoto}
@@ -40,19 +46,25 @@ export const AboutSection = () => {
       <Grid container direction="row" justify="center" alignItems="flex-start" spacing={7}>
         <Grid item xs={12} md={3}>
           <WrapperImg>
-            <LinkDownload href={cardDownloadSettings.curriculumPdf} download colors={colors}>
-              <WrapperDownloadElement>
-                <ImageCurriculum src={curriculumImage} alt="curriculum" />
-                <LabelDownload colors={colors}>{t('textAbout.downloadLabel')}</LabelDownload>
-              </WrapperDownloadElement>
-            </LinkDownload>
+            <FadeAnimation>
+              <ButtonAnimation>
+                <LinkDownload href={cardDownloadSettings.curriculumPdf} download colors={colors}>
+                  <WrapperDownloadElement>
+                    <ImageCurriculum src={curriculumImage} alt="curriculum" />
+                    <LabelDownload colors={colors}>{t('textAbout.downloadLabel')}</LabelDownload>
+                  </WrapperDownloadElement>
+                </LinkDownload>
+              </ButtonAnimation>
+            </FadeAnimation>
           </WrapperImg>
         </Grid>
         <Grid item xs={12} md={9}>
           {t('textAbout.textSecondParagraph', { returnObjects: true }).map((value, index) => (
-            <Text colors={colors} key={`text-second-paragraph-about-${index}`}>
-              {value.text}
-            </Text>
+            <FadeAnimation>
+              <Text colors={colors} key={`text-second-paragraph-about-${index}`}>
+                {value.text}
+              </Text>
+            </FadeAnimation>
           ))}
         </Grid>
       </Grid>
